@@ -1,27 +1,33 @@
 import React from 'react';
-import {BrowserRouter ,Routes, Route } from 'react-router-dom'; // Import Routes and Route
-import Navbar from './Components/navbar/Navbar';
-import Hero from './Components/Hero/Hero';
-import Programs from './Components/Programs/Programs';
-import Title from './Components/Title/title';
-import HomeServices from './Components/homeServices/homeServices';
-import BusinessUnit from './Components/BusinessUnit';
-import ChooseUs from './Components/chooseUs/ChooseUs';
-import FooterF from './Components/footer/FooterF';
-import Count from './Components/count/AchievementCounter';
-import Achievements from './Components/count/Achievements';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Components/Layout/Layout';
+import Home from './Components/Home/Home';
 import Data from './Components/Services/Data';
+import Infrastructure from './Components/Services/Infrastructure';
+import People from './Components/Services/People';
+import Process from './Components/Services/Process';
+import Organization from './Components/Services/Organization';
+import SDI from './Components/BusinessUnits/SDI';
+import AIM from './Components/BusinessUnits/AIM';
+import DCS from './Components/BusinessUnits/DCS';
+import Company from './Components/Company/Company';
 
 const App = () => {
   return (
-    <main className='overflow-x-hidden bg wihte text-primary'>
-      <Navbar />
-      <Hero />
-      <Achievements />
-      <BusinessUnit />
-      <ChooseUs />
-      <FooterF />
-    </main>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="data" element={<Data />} />
+        <Route path="infrastructure" element={<Infrastructure />} />
+        <Route path="people" element={<People />} />
+        <Route path="process" element={<Process />} />
+        <Route path="organization" element={<Organization />} />
+        <Route path="sdi" element={<SDI />} />
+        <Route path="aim" element={<AIM />} />
+        <Route path="dcs" element={<DCS />} />
+        <Route path="company" element={<Company />} />
+      </Route>
+    </Routes>
   );
 };
 

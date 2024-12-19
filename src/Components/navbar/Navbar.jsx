@@ -18,16 +18,16 @@ const Navbar = () => {
 
     const servicesOptions = [
         { title: 'Data', Link: '/data' },
-        { title: 'Infrastucture', Link: '#Infrastructure' },
-        { title: 'People', Link: '#People' },
-        { title: 'Process', Link: '#Process' },
-        { title: 'Organisation', Link: '#Organisation' },
+        { title: 'Infrastructure', Link: '/infrastructure' },
+        { title: 'People', Link: '/people' },
+        { title: 'Process', Link: '/process' },
+        { title: 'Organization', Link: '/organization' },
     ];
 
     const businessUnitsOptions = [
-        { title: 'Spatial Data Infrasturucture', Link: '#SDI' },
-        { title: 'Aeronautical Information Management', Link: '#AIM' },
-        { title: 'DCS', Link: '#DCS' },
+        { title: 'Spatial Data Infrastructure', Link: '/sdi' },
+        { title: 'Aeronautical Information Management', Link: '/aim' },
+        { title: 'DCS', Link: '/dcs' },
     ];
 
     const languageOptions = ['EN', 'DE'];
@@ -42,9 +42,9 @@ const Navbar = () => {
 
                 {/* Menu Section */}
                 <div className="hidden lg:flex items-center gap-8 font-medium">
-                    <a href="/" className="text-xl hover:text-secondary">
+                    <Link to="/" className="text-xl hover:text-secondary">
                         Home
-                    </a>
+                    </Link>
 
                     {/* Services Dropdown */}
                     <div className="relative">
@@ -64,12 +64,12 @@ const Navbar = () => {
                             >
                                 {servicesOptions.map((option, index) => (
                                     <li key={index}>
-                                        <a
-                                            href={option.Link}
+                                        <Link
+                                            to={option.Link}
                                             className="block px-4 py-5 hover:bg-light rounded-md hover:scale-100 hover:shadow-sm scroll-smooth"
                                         >
                                             {option.title}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
@@ -95,21 +95,21 @@ const Navbar = () => {
                             >
                                 {businessUnitsOptions.map((option, index) => (
                                     <li key={index}>
-                                        <a
-                                            href={option.Link}
+                                        <Link
+                                            to={option.Link}
                                             className="block px-4 py-5 hover:bg-light rounded-md hover:scale-100 hover:shadow-sm scroll-smooth"
                                         >
                                             {option.title}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>
                         )}
                     </div>
 
-                    <a href="#" className="text-xl hover:text-secondary">
+                    <Link to="/company" className="text-xl hover:text-secondary">
                         Company
-                    </a>
+                    </Link>
 
                     <button className="primary-btn ml-5">Contact Us</button>
                 </div>
@@ -144,38 +144,11 @@ const Navbar = () => {
                     )}
                 </div>
 
-                {/*<div className="relative hidden lg:block">
-                    <button
-                        onClick={() => toggleDropdown('language')}
-                        className="text-xl hover:text-secondary"
-                    >
-                        {language}
-                    </button>
-                    {openDropdown === 'language' && (
-                        <ul
-                            className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-20"
-                            onMouseLeave={() => setOpenDropdown(null)}
-                        >
-                            {languageOptions.map((lang) => (
-                                <li key={lang}>
-                                    <button
-                                        onClick={() => switchLanguage(lang)}
-                                        className="block px-4 py-2 hover:bg-gray-200 w-full text-left rounded-md"
-                                    >
-                                        {lang}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>*/}
-
                 {/* Mobile Hamburger Menu */}
                 <div className="lg:hidden hover:text-secondary">
                     <IoMdMenu className="text-4xl" />
                 </div>
             </div>
-
         </nav>
     );
 };
