@@ -1,0 +1,33 @@
+{
+    "resources": [
+      {
+        "imageUrl": "https://example.com/image1.jpg",
+        "category": "Startups",
+        "title": "Lyft launching cross-platform service this week",
+        "description": "Like so many organizations these days, Autodesk is in transition...",
+        "link": "https://example.com"
+      },
+      {
+        "imageUrl": "https://example.com/image2.jpg",
+        "category": "Tech",
+        "title": "Google launches new AI tool",
+        "description": "The new AI tool will help organizations improve workflows...",
+        "link": "https://example.com"
+      },
+      {
+        "imageUrl": "https://example.com/image2.jpg",
+        "category": "Sience",
+        "title": "Google launches new AI tool",
+        "description": "The new AI tool will help organizations improve workflows...",
+        "link": "https://example.com"
+      },
+      {
+        "imageUrl": "https://example.com/image2.jpg",
+        "category": "Literature",
+        "title": "Google launches new AI tool",
+        "description": "The new AI tool will help organizations improve workflows...",
+        "link": "https://example.com"
+      }
+    ]
+  }
+  

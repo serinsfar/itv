@@ -1,5 +1,3 @@
-import { color } from 'framer-motion'
-import { CgEnter } from 'react-icons/cg'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -33,7 +31,9 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+
+  ],
 }
 
 

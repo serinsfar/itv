@@ -5,9 +5,9 @@ import FooterF from '../footer/FooterF';
 
 const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden bg white text-primary">
+    <div className="flex flex-col min-h-screen overflow-x-hidden bg white text-primary" /*flex flex-col min-h-screen overflow-x-hidden bg-white text-primary*/>
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow"/*flex-grow pt-20*/>
         <Outlet />
       </main>
       <FooterF />
