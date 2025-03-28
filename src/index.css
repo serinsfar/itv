@@ -33,11 +33,11 @@ line-height:  1;
 cursor: pointer;
 
 }
-.container{
+/*.container{//
   padding-left: 10%;
   padding-right: 10%;
  
-}
+}*/
 .btn{
   background: #fff;
   color: rgba(23, 46, 122, 1);
@@ -54,6 +54,11 @@ cursor: pointer;
   width: 20px;
   margin-left: 10px;
 }
+/* Add this to your global CSS file */
+.swiper-pagination-bullet {
+  background-color: #4f46e5; /* Change pagination dot color */
+}
+
 /*.language-options {
 
   gap: px; /* Reduced space between DE and EN */

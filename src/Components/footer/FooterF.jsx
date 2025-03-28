@@ -2,7 +2,7 @@ import React from "react";
 import logo_white from "../../assets/logo_white.png";
 import { Footer } from "flowbite-react";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaTwitch, FaLinkedin, FaEnvelope} from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const sections = [
   {
     title: "Menu",
@@ -28,22 +28,22 @@ const FooterF = () =>{
   return (
 <footer className="pt-16 bg-primary">
   <div>
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center pb-5">
+    <div className="grid grid-cols-1 md:grid-cols-7  pb-5">
       {/* Logo Section */}
-      <div className="max-w-[300px] mx-auto">
+      <div className="max-w-[300px] col-start-1 col-span-2  mx-auto pt-5">
         <img className="w-40 mx-auto" src={logo_white} alt="Logo" />
       </div>
       {/* Lists Section */}
-      <div className=" grid grid-cols-1 md:grid-cols-4 gap-x-12 mr-40">
+     
         {/* Menu Section */}
         <div className=" space-y-4 gap-x-11">
           <h1 className="text-2xl font-bold text-white">Menu</h1>
-          <ul className="text-gray-400 space-y-2 text-lg">
-            <li>Home</li>
-            <li>Services</li>
-            <li>Business units</li>
-            <li>Company</li>
-            <li>Contact Us</li>
+          <ul className="text-gray-400 space-y-2 text-lg ">
+            <li className="cursor-pointer hover:text-white"><Link to="/">Home</Link></li>
+            <li className="cursor-pointer hover:text-white">Services</li>
+            <li className="cursor-pointer hover:text-white">Business units</li>
+            <li className="cursor-pointer hover:text-white"><Link to="/company">Company</Link></li>
+            <li className="cursor-pointer hover:text-white">Contact Us</li>
           </ul>
         </div>
         {/* Address Section */}
@@ -66,29 +66,30 @@ const FooterF = () =>{
             <li >Soziale Netzwerke</li>
             <li>
               <div className="flex items-center gap-2">
-                <Footer.Icon className="cursor-pointer hover:text-white duration-200" href="#" icon={FaLinkedin} />
-                <Footer.Icon className="cursor-pointer hover:text-white duration-200" href="#" icon={FaEnvelope} />
+                <Footer.Icon className="cursor-pointer hover:text-white duration-200" href="https://www.linkedin.com/company/97985639" icon={FaLinkedin} />
+                <Footer.Icon className="cursor-pointer hover:text-white duration-200" href="mailto:obstacles@itv.ch" icon={FaEnvelope} />
               </div>
             </li>
           </ul>
         </div>
-        <div className="space-y-4 gap-x-11">
-          <h1 className="text-2xl font-bold text-white">DCS Service Opening Hours</h1>
-          <ul className="text-gray-400 space-y-2 text-lg">
-            <li className="text-white font-medium">Monday to Friday</li>
+        <div className="space-y-4 gap-x-11 ml-5">
+          <h1 className="text-2xl font-bold text-white">DCS Service Hotline</h1>
+          <ul className="text-gray-400 space-y-3 text-lg">
+            <li>Monday to Friday</li>
             <li>08h30 - 11h30 </li>
             <li>13h30 - 16h30</li>
+            <li>Hotline: +41 44 871 21 99 </li>
+            <li>E-Mail: obstacles@itv.ch</li>
           </ul>
         </div>
       </div>
     </div>
-    <Footer.Divider className="border-gray-400" />
+    <Footer.Divider className=" container border-gray-400" />
       <div className=" flex justify-center items-center text-sm text-center py-4 text-white">
         <Footer.Copyright href="#" by="ITV Consult AG - All Rights Reserved - Schweizerpunkt GmbH Design" year={2024} />
       </div>
 
-  </div>
-
+  
 </footer>
 
   )
