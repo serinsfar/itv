@@ -27,6 +27,7 @@ import SDI from './Components/BusinessUnits/SDI';
 import DCS from './Components/BusinessUnits/DCS';
 import References from './Components/References/References';
 import Contact_Us from './Components/ContactUs/Contact_Us';
+import Pop from './Components/alert/pop';
 
 
 const App = () => {
@@ -60,6 +61,7 @@ const App = () => {
         <Route path="/DCS" element={<DCS/>} />
         <Route path="/References" element={<References/>} />
         <Route path="/Contact_Us" element={<Contact_Us/>} />
+        <Route path="/Pop" element={<Pop/>} />
       </Route>
     </Routes>
   );

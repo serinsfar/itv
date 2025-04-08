@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Data = () => {
   return (
-    <aside className="w-64 h-screen bg-white shadow-xl">
+    <aside className="hidden sm:hidden md:block min-w-64 h-fixed left-0 bg-white shadow-xl md:min-w-48 md:h-auto md:relative md:shadow-none md:bg-transparent md:top-0 md:pt-4 md:pb-2 md:px-2 ">
       <div className="flex items-center gap-2 px-4 py-6">
         <RiCustomerService2Line className="text-xl" />
         <span className="text-lg font-bold">Services</span>
