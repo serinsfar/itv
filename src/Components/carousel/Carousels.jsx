@@ -10,6 +10,7 @@ import logo from '../../assets/logo.png';
 import graph from '../../assets/neue_grafik_automation.png'
 
 import serin from '../../assets/Serin.jpg'
+import { Link } from 'react-router-dom';
 
 const newsData = [
     {
@@ -114,38 +115,65 @@ const VerticalCarousel = () => {
 // Create a separate NewsSlide component to manage state for each slide
 const NewsSlide = ({ news }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const textRef = useRef(null); // ✅ Fix: useRef is now correctly defined
-
-    const toggleExpand = () => {
-        setIsExpanded(!isExpanded);
-    };
+    const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
-        <div className="flex items-center bg-white rounded-lg shadow-lg p-6 h-full flex-col sm:flex-row"> {/* flex-col on small screens, flex-row on larger */}
-            <div className="flex-shrink-0 relative rounded-lg overflow-hidden w-full aspect-w-4 aspect-h-3 sm:w-40 sm:aspect-auto sm:h-auto"> {/* Adjust image width for small and larger screens */}
+        <div className="card card-side bg-base-100 shadow-sm">
+
+        <div className="flex flex-col sm:flex-row items-center bg-white rounded-lg shadow-lg h-full gap-6">
+            {/* Image container with optimized sizing */}
+            <div className="w-full sm:w-72 h-56 sm:h-72 rounded-lg overflow-hidden flex-shrink-0 relative bg-gray-100">
+            <Link to="/AIM">
                 <img
                     src={news.imageUrl}
                     alt={news.title}
-                    className="w-full h-full object-cover"
+                    className={`absolute w-full h-full object-cover transition-opacity duration-300 ${
+                        imageLoaded ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    loading="lazy"
+                    onLoad={() => setImageLoaded(true)}
+                    onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = 'path-to-fallback-image.jpg';
+                    }}
+                    style={{
+                        objectPosition: 'center center'
+                    }}
                 />
+                {!imageLoaded && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="animate-pulse bg-gray-200 w-full h-full"></div>
+                    </div>
+                )}
+                        </Link>
             </div>
-            <div className="ml-0 mt-32 sm:ml-6 sm:mt-0 flex-1 flex flex-col"> {/* Flex column for text and button */}
-                <h3 className="text-xl font-semibold text-gray-900">{news.title}</h3>
-                <p className={`text-md text-gray-700 mt-2 ${!isExpanded && 'line-clamp-4 overflow-hidden pl-4'}`}> {/* line-clamp for collapsed state */}
+
+            
+            {/* Text content with your requested overflow styling */}
+            <div className="flex-1 flex flex-col h-full min-w-0">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{news.title}</h3>
+                <p 
+                    className={`my-5 font-normal text-black dark:text-gray-400 ${
+                        !isExpanded ? 'line-clamp-4' : 'line-clamp-6 overflow-y-scroll'
+                    } overflow-hidden`}
+                    style={{ maxHeight: isExpanded ? '200px' : 'none' }}
+                >
                     {news.content}
                 </p>
-                {news.content.split('\n').length > 2 && ( // Conditionally render button if content is long enough (adjust condition as needed)
+                {news.content.length > 200 && (
                     <button
-                        onClick={toggleExpand}
-                        className="mt-2 text-blue-500 hover:text-blue-700 focus:outline-none"
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        className="mt-3  self-start transition-colors py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                     >
-                        {isExpanded ? "See Less" : "See More"}
+                        {isExpanded ? "Show Less" : "Read More"}
                     </button>
                 )}
+
             </div>
+        </div>
+
         </div>
     );
 };
-
 
 export default VerticalCarousel;

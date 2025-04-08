@@ -1,11 +1,10 @@
-import React from 'react';
-import Business_Unit from './Business_units'
+import React from 'react'; 
 import organisation from '../../assets/organisation.jpg'
 
 const DCS = () => {
     return (
         <div className='grid grid-cols-5'>
-        <Business_Unit />
+       
                                              
     <div className='container pl-45 col-start-2 col-span-5 pb-10'>
     <h1 className='pt-20 text-3xl font-bold text-left'>DCS</h1>

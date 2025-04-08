@@ -1,12 +1,11 @@
 import React from 'react';
-import Business_Unit from './Business_units'
 import organisation from '../../assets/organisation.jpg'
 
 
 const AIM = () => {
     return (
         <div className='grid grid-cols-5'>
-        <Business_Unit />
+        
                                              
     <div className='container pl-45 col-start-2 col-span-5 pb-10'>
     <h1 className='pt-20 text-3xl font-bold text-left'>Aeronautical Information Management</h1>
@@ -14,9 +13,13 @@ const AIM = () => {
     <img src ={organisation} alt=""/>
     </div>
     <h2 className=' pt-5 text-3xl font-bold text-left'>Intoduction:</h2>
-    <p className='p-5'>Organisational development aims to increase the productivity of the organisation and to encourage the evolvement 
-        of the individual in the organisation. In a rapidly changing environment as we face it today, a continuously changing organisation 
-        due to new facts is fundamental. Out of the experience of numerous projects we learned, that a successful restructuring needs the involvement of all participants.</p>
+    <p className='p-5'>Your Partner for your Aeronautical Data Management
+
+The Core Business of ITV Consult AG is consulting and solutions in the field of Spatial Information Management.
+
+We help our customers to evolve from document based aeronautical information service provision (AIS) to data centric aeronautical information management (AIM) and onward to service oriented system wide information management (SWIM).
+
+</p>
          <h2 className=' pt-5 text-3xl font-bold text-left'>Projects:</h2>
          <div className='p-5'>
           <ul>

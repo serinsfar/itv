@@ -33,7 +33,7 @@ const Hero = () => {
     <section className="bg-light overflow-hidden relative z-10">
       <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[650px]">
         {/* Left Section */}
-        <div className="flex flex-col justify-center py-14 md:py-0">
+        <div className="flex flex-col justify-center py-14 md:py-0 sm:z-20">
           <div className="text-center md:text-left space-y-10 lg:max-w-[400px]">
             <motion.h1
               variants={FadeUp(0.6)}
