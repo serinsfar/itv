@@ -13,9 +13,11 @@
       shadow-[0px_10px_8px_-7px_#ffd978] 
       hover:shadow-[0px_10px_8px_-7px_#172E7A] py-2 px-6;
   }
-  .primary-font{
-   @apply font-sans;
-  }
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 }
 
 
