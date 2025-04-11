@@ -1,45 +1,162 @@
 import React from 'react';
 import organisation from '../../assets/organisation.jpg'
+import bazl from '../../assets/bazl.jpg'
+import flughafen from '../../assets/Flughafen.jpg'
+import euro from '../../assets/eurocontrol.png'
+import skye from '../../assets/Skyguide.jpg'
+
+const data = [
+    { imageLink: bazl,  
+      name: "Bundesamt für Zivilluftfahrt (BAZL)",
+    },
+    { imageLink: flughafen,  
+      name: "Flughafen Zürich AG",
+    },
+    { imageLink: euro,  
+      name: "Eurocontrol",
+    
+    },
+    { imageLink: skye,  
+      name: "Skyguide - Swiss Air Navigations Services",
+    },
+
+  ]
 
 const References = () => {
   return (
-    <div className='grid grid-cols-5'>                                    
-<div className='container pl-45 col-start-2 col-span-5 pb-10'>
-<h1 className='pt-20 text-3xl font-bold text-left'>References</h1>
-<div className='py-20'>
-<img src ={organisation} alt=""/>
+    <div className='container col-span-5 pb-10'>
+    <div className='flex flex-col justify-center py-14 md:py-0 sm:z-20'>
+    <h2 className=' pt-20 text-3xl font-bold text-left'>References</h2>
+    <h4 className='pt-8 sm:text-[1.875rem] text-[1.5rem] mb-2 text-secondary font-normal text-left'>Aeronautical Information Management (AIM)</h4>
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center gap-6 py-20">
+  {data.map(({ imageLink, name }, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden cursor-pointer rounded-lg shadow-lg transition duration-300 ease-in-out"
+    >
+      <div className="w-full h-full">
+        <img src={imageLink} alt="" className="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className="text-white text-lg font-semibold pb-2">{name}</h3>
+        </div>
+      </div>
+    </div>
+  ))}
 </div>
-<h2 className=' pt-5 text-3xl font-bold text-left'>Intoduction:</h2>
-<p className='p-5'>Organisational development aims to increase the productivity of the organisation and to encourage the evolvement 
-    of the individual in the organisation. In a rapidly changing environment as we face it today, a continuously changing organisation 
-    due to new facts is fundamental. Out of the experience of numerous projects we learned, that a successful restructuring needs the involvement of all participants.</p>
-     <h2 className=' pt-5 text-3xl font-bold text-left'>Projects:</h2>
-     <div className='p-5'>
-      <ul>
-         
-          <li>- Analysis: We analyse as external observer your organisation and identify strengths, weaknesses and potentials for optimisation.
-             Besides organisational aspects we also take into account economical and technical aspects;</li>
-          <li>- Conception: With the findings of the analysis we establish a concept showing the direction in which the organisation should develop.
-             We consider it important not to establish the concept on our own, but to involve you as our customer and your employees in each phase. 
-             This is needed as only a new organisation with a wide acceptance can be implemented successfully. The concept will be followed by tangible measures.</li>
-          <li>- External point of view through our independent consultants;</li>
-          <li>- Implementation: We accompany you and your employees during the implementation as coaches and/or as leading figures.Prior to the organisational development
-             a strategy development is recommended to make the focus of the change process clear for everyone.</li>
-          </ul></div>
+{/*<p>
+  more references: <br/>
+Oberste Zivile Luftfahrtbehörde (OZB), BMVIT (A) <br/>
+Austro Control<br/>
+HungaroControl<br/>
+SAAB<br/>
+Bahrain Civil Aviation Affairs<br/>
+UAE General Civil Aviation Authority<br/>
+ICAO<br/>
+IATA<br/>
+ANA Luxembourg<br/>
+Civil Aviation Authority of Nepal
+</p>*/}
 
-          <h2 className=' pt-5 text-3xl font-bold text-left'>Solutions:</h2>
-        <p className='p-5'>We proceed along the following phases:</p>
-        <div className='p-5'>
-      <ul>
-         
-          <li>- Your organization is prepared for the challenges of the future.</li>
-          <li>- Your organisation becomes a “learning organisation”, as every participant has internalised the change process;</li>
-          <li>- Your organisation is able to execute their tasks efficiently and effectively. With that you can save money and lessen frictions .</li>
-        </ul>
+<h4 className='pt-8 sm:text-[1.875rem] text-[1.5rem] mb-2 text-secondary font-normal text-left'>Spatial Data Infrastructure (SDI)</h4>
+<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-black font-normal text-left'>Confederation:</h3>
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center gap-6 py-10">
+  {data.map(({ imageLink, name }, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden cursor-pointer rounded-lg shadow-lg transition duration-300 ease-in-out"
+    >
+      <div className="w-full h-full">
+        <img src={imageLink} alt="" className="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className="text-white text-lg font-semibold pb-2">{name}</h3>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-black font-normal text-left'>Cantons:</h3>
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center gap-6 py-10">
+  {data.map(({ imageLink, name }, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden cursor-pointer rounded-lg shadow-lg transition duration-300 ease-in-out"
+    >
+      <div className="w-full h-full">
+        <img src={imageLink} alt="" className="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className="text-white text-lg font-semibold pb-2">{name}</h3>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-black font-normal text-left'>Cities and Municipalities:</h3>
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center gap-6 py-10">
+  {data.map(({ imageLink, name }, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden cursor-pointer rounded-lg shadow-lg transition duration-300 ease-in-out"
+    >
+      <div className="w-full h-full">
+        <img src={imageLink} alt="" className="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className="text-white text-lg font-semibold pb-2">{name}</h3>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-black font-normal text-left'>Various and international projects:</h3>
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center gap-6 py-10">
+  {data.map(({ imageLink, name }, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden cursor-pointer rounded-lg shadow-lg transition duration-300 ease-in-out"
+    >
+      <div className="w-full h-full">
+        <img src={imageLink} alt="" className="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className="text-white text-lg font-semibold pb-2">{name}</h3>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-black font-normal text-left'>Infrastructure Management (Utilities, Public Transportation, ... ):</h3>
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center gap-6 py-10">
+  {data.map(({ imageLink, name }, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden cursor-pointer rounded-lg shadow-lg transition duration-300 ease-in-out"
+    >
+      <div className="w-full h-full">
+        <img src={imageLink} alt="" className="w-full h-full object-cover rounded-lg" />
+      </div>
+      <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className="text-white text-lg font-semibold pb-2">{name}</h3>
+        </div>
+      </div>
+    </div>
+  ))}
 </div>
 
-</div>
-</div>
+
+
+  </div>  
+  </div>
+  
+  
   )
 }
 
