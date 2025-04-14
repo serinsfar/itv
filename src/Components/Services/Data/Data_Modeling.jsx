@@ -35,7 +35,7 @@ const Data_Modeling = () => {
       const { t } = useTranslation();
   
   return (
-    <div className='grid grid-cols-5 mb-10'> 
+    <div className='grid grid-cols-7 mb-10'> 
              <Data/> 
     <div className="pt-10 container pl-45 col-start-2 col-span-5 ">
               <h1 className='pt-10 text-3xl font-bold text-left'>Data Medeling</h1>

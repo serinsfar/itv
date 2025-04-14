@@ -4,6 +4,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import plane from '../../assets/planee.png';
 
 export const FadeUp = (delay = 0) => {
   return {
@@ -67,7 +68,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section with Blob */}
-        <div className="relative flex justify-center items-center">
+        <div className="relative flex justify-center items-center pr-14">
           {/* Blob SVG */}
           <motion.svg
             initial={{ x: -50, opacity: 0 }}
@@ -83,13 +84,13 @@ const Hero = () => {
               d="M414,287.5Q388,335,361,390Q334,445,273,439Q212,433,154,420Q96,407,81,349Q66,291,88,246.5Q110,202,119.5,157Q129,112,175,110Q221,108,261,107Q301,106,344.5,125.5Q388,145,414,192.5Q440,240,414,287.5Z"
             />
           </motion.svg>
-          <motion.img
+          <motion.img 
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
-            src={airplane}
+            src={plane}
             alt="Airplane"
-            className="relative z-10 max-w-[750px] ml-2 md:ml-10"
+            className="relative z-10 max-w-[800px] ml-12 md:ml-24"
           />
         </div>
       </div>

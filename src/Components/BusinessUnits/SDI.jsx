@@ -1,52 +1,92 @@
 import React from 'react';
-
+import { FaSearch, FaLightbulb, FaUsers, FaCogs } from 'react-icons/fa';
+import check from '../../assets/check.png'
 import organisation from '../../assets/organisation.jpg'
+const projectPhases = [
+    {
+      icon: <FaSearch className="text-secondary text-2xl" />,
+      title: 'Analysis',
+      description:
+        'We analyse your organisation with an external, neutral point of view — identifying strengths, weaknesses and optimisation potential, considering organisational, technical and economic aspects.',
+    },
+    {
+      icon: <FaLightbulb className="text-secondary text-2xl" />,
+      title: 'Conception',
+      description:
+        'Based on our findings, we collaboratively develop a concept that provides a clear direction for your organisation’s development. Involvement from you and your team is essential for acceptance and success.',
+    },
+    {
+      icon: <FaUsers className="text-secondary text-2xl" />,
+      title: 'Implementation',
+      description:
+        'We guide and support your team throughout the implementation — acting as coaches or leading figures — to ensure real change is embedded within your organisation.',
+    },
+    {
+      icon: <FaCogs className="text-secondary text-2xl" />,
+      title: 'Strategic Development',
+      description:
+        'Before organisational change, we recommend aligning on a common strategy to clarify the focus and direction of transformation across the entire organisation.',
+    },
+  ];
+  const spatialBenefits = [
+    'Your organization is prepared for the challenges of the future',
+    'Your organisation becomes a learning organisation, embracing change',
+    'Your organisation executes tasks more efficiently and effectively',
+    'You reduce costs and internal frictions',
+  ];
 
 const SDI = () => {
     return (
-        <div className='grid grid-cols-5'>
-
-                                             
-    <div className='container pl-45 col-start-2 col-span-5 pb-10'>
-    <h1 className='pt-20 text-3xl font-bold text-left'>Spatial Data Infrastructure</h1>
-    <div className='py-20'>
-    <img src ={organisation} alt=""/>
-    </div>
-    <h2 className=' pt-5 text-3xl font-bold text-left'>Intoduction:</h2>
-    <p className='p-5'>Your Partner for your Spatial Data Management
-
-The Core Business of ITV Consult AG is consulting and solutions in the field of Spatial Information Management.
-
-We are specialized in the integration of spatially related components in the overall information management of an administration or a company, taking organisational, economical and technical aspects always into consideration. 
-</p>
-         <h2 className=' pt-5 text-3xl font-bold text-left'>Projects:</h2>
-         <div className='p-5'>
-          <ul>
-             
-              <li>- Analysis: We analyse as external observer your organisation and identify strengths, weaknesses and potentials for optimisation.
-                 Besides organisational aspects we also take into account economical and technical aspects;</li>
-              <li>- Conception: With the findings of the analysis we establish a concept showing the direction in which the organisation should develop.
-                 We consider it important not to establish the concept on our own, but to involve you as our customer and your employees in each phase. 
-                 This is needed as only a new organisation with a wide acceptance can be implemented successfully. The concept will be followed by tangible measures.</li>
-              <li>- External point of view through our independent consultants;</li>
-              <li>- Implementation: We accompany you and your employees during the implementation as coaches and/or as leading figures.Prior to the organisational development
-                 a strategy development is recommended to make the focus of the change process clear for everyone.</li>
-              </ul></div>
-    
-              <h2 className=' pt-5 text-3xl font-bold text-left'>Solutions:</h2>
-            <p className='p-5'>We proceed along the following phases:</p>
-            <div className='p-5'>
-          <ul>
-             
-              <li>- Your organization is prepared for the challenges of the future.</li>
-              <li>- Your organisation becomes a “learning organisation”, as every participant has internalised the change process;</li>
-              <li>- Your organisation is able to execute their tasks efficiently and effectively. With that you can save money and lessen frictions .</li>
-            </ul>
-    </div>
-
-    </div>
-    </div>
+        <div className="grid grid-cols-7 mb-10">
+        
+        <div className="pt-10 container pl-45 col-start-2 col-span-5">
+          <h1 className="pt-10 text-3xl font-bold text-left">Spatial Data Management</h1>
+  
+          <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
+            <div className="border-[3px] border-solid border-gray-200 shadow-sm rounded-lg">
+              <img className="p-4" src={organisation} alt="Spatial Management" />
+            </div>
+            <div className="mb:pl-12">
+              <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-2">
+                Your Partner for<br />
+                <span className="text-secondary font-normal">Spatial Information Management</span>
+              </div>
+              <p>
+                The core business of ITV Consult AG is consulting and delivering solutions in the field of Spatial Information Management.
+                We specialize in integrating spatially related components into the broader information management of administrations or companies —
+                always considering organisational, economic, and technical dimensions.
+              </p>
+            </div>
+          </div>
+  
+          <h2 className="text-3xl font-bold mb-10 text-left">Our Project Approach</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {projectPhases.map((phase, i) => (
+              <div
+                key={i}
+                className="p-6 rounded-lg shadow-md bg-white border-l-4 border-secondary flex gap-4 items-start"
+              >
+                <div className="mt-1">{phase.icon}</div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{phase.title}</h3>
+                  <p className="text-gray-600">{phase.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+  
+          <h2 className="text-2xl font-bold mb-6 text-left">Your Benefits</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            {spatialBenefits.map((benefit, i) => (
+              <div key={i} className="bg-light p-6 shadow-sm rounded-lg text-center">
+                <img src={check} alt="check" className="w-6 h-6 mx-auto mb-4" />
+                <p className="text-gray-700">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     );
-};
+  };
 
 export default SDI;

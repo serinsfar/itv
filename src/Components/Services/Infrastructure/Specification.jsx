@@ -35,7 +35,7 @@ const specificationBenefits = [
 const Specification = () => {
       return (
     
-        <div className='grid grid-cols-5'>
+        <div className='grid grid-cols-7 mb-10'>
           <Infrastructure />
                                                
         

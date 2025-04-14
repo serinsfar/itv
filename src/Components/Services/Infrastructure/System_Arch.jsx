@@ -37,7 +37,7 @@ function System_Arch() {
 
   
                                            
-      <div className='grid grid-cols-5 mb-10'> 
+      <div className='grid grid-cols-7 mb-10'> 
       < Infrastructure/> 
       <div className="pt-10 container pl-45 col-start-2 col-span-5">
         <h1 className='pt-10 text-3xl font-bold text-left'>System Architecture</h1>

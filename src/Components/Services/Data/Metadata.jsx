@@ -51,7 +51,7 @@ const services = [
 function Metadata() {
   return (
   
-   <div className='grid grid-cols-5 mb-10'> 
+   <div className='grid grid-cols-7 mb-10'> 
           <Data/> 
      <div className='container pl-45 col-start-2 col-span-5'>
         <h1 className='pt-20 text-3xl font-bold text-left'>Metadata</h1>

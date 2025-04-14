@@ -1,54 +1,94 @@
 import React from 'react'
 import Organisation from './Organisation'
 import organisation from '../../../assets/organisation.jpg'
+import { FaSearch, FaLightbulb, FaPeopleCarry, FaCogs } from 'react-icons/fa';
+import check from '../../../assets/check.png';
+const devPhases = [
+  {
+    icon: <FaSearch className="text-secondary text-2xl" />,
+    title: 'Analysis',
+    description:
+      'We analyze your organization from an external perspective, identifying strengths, weaknesses, and opportunities while also considering technical and economic aspects.',
+  },
+  {
+    icon: <FaLightbulb className="text-secondary text-2xl" />,
+    title: 'Conception',
+    description:
+      'Based on the analysis, we create a concept collaboratively with your team — ensuring ownership, alignment, and broad acceptance across the organization.',
+  },
+  {
+    icon: <FaPeopleCarry className="text-secondary text-2xl" />,
+    title: 'Implementation',
+    description:
+      'We accompany you and your staff as coaches or project leaders, guiding the process step-by-step toward a successful transformation.',
+  },
+];
+
+const devBenefits = [
+  'Your organization is prepared for the challenges of the future',
+  'Your organisation becomes a “learning organisation” embracing continuous change',
+  'Efficient task execution saves time and reduces internal friction',
+];
 
 const Organisational_Development = () => {
   return (
-    <div className='grid grid-cols-5'>
-    <Organisation />
-                                         
-<div className='container pl-45 col-start-2 col-span-5 pb-10'>
-<h1 className='pt-20 text-3xl font-bold text-left'>Organizational Development</h1>
-<div className='py-20'>
-<img src ={organisation} alt=""/>
-</div>
-<p className='p-5'>Organisational development aims to increase the productivity of the organisation and to encourage the evolvement 
-    of the individual in the organisation. In a rapidly changing environment as we face it today, a continuously changing organisation 
-    due to new facts is fundamental. Out of the experience of numerous projects we learned, that a successful restructuring needs the involvement of all participants.</p>
-     <h2 className=' pt-5 text-3xl font-bold text-left'>We proceed in three phases:</h2>
-     <div className='p-5'>
-      <ul>
-         
-          <li>- Analysis: We analyse as external observer your organisation and identify strengths, weaknesses and potentials for optimisation.
-             Besides organisational aspects we also take into account economical and technical aspects;</li>
-          <li>- Conception: With the findings of the analysis we establish a concept showing the direction in which the organisation should develop.
-             We consider it important not to establish the concept on our own, but to involve you as our customer and your employees in each phase. 
-             This is needed as only a new organisation with a wide acceptance can be implemented successfully. The concept will be followed by tangible measures.</li>
-          <li>- External point of view through our independent consultants;</li>
-          <li>- Implementation: We accompany you and your employees during the implementation as coaches and/or as leading figures.Prior to the organisational development
-             a strategy development is recommended to make the focus of the change process clear for everyone.</li>
-          </ul></div>
+    <div className="grid grid-cols-7 mb-10">
+      <Organisation />
+      <div className="pt-10 container pl-45 col-start-2 col-span-5">
+        <h1 className="pt-10 text-3xl font-bold text-left">Organisational Development</h1>
 
-          <h2 className=' pt-5 text-3xl font-bold text-left'>Your benefits</h2>
-        <p className='p-5'>We proceed along the following phases:</p>
-        <div className='p-5'>
-      <ul>
-         
-          <li>- Your organization is prepared for the challenges of the future.</li>
-          <li>- Your organisation becomes a “learning organisation”, as every participant has internalised the change process;</li>
-          <li>- Your organisation is able to execute their tasks efficiently and effectively. With that you can save money and lessen frictions .</li>
-        </ul>
-</div>
-        <h2 className=' pt-5 text-3xl font-bold text-left'>Our Services</h2>
-        <p className='p-5'>We proceed along the following phases:</p>
-        <div className='p-5'>
-            <p>With our longstanding experience we have the ability to activate changes an a controlled way, channel the process smoothly and accordingly plan and lead the implementation to a success.
-                 Be it as coach and enabler of the process or as leader of the organisational development.</p>
+        <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
+          <div className="border-[3px] border-solid border-gray-200 shadow-sm rounded-lg">
+            <img className="p-4" src={organisation} alt="Organisational Development" />
+          </div>
+          <div className="mb:pl-12">
+            <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-2">
+              Controlled Change<br />
+              <span className="text-secondary font-normal">That Empowers People & Performance</span>
+            </div>
+            <p>
+              Organisational development aims to increase productivity while encouraging personal and team growth.
+              In today’s dynamic environment, adapting the organisation to new conditions is essential.
+              Our experience shows that successful restructuring comes from involving everyone in the process — not just leading from the top.
+            </p>
+          </div>
+        </div>
 
-</div>
-</div>
-</div>
-  )
-}
+        <h2 className="text-3xl font-bold mb-10 text-left">Our Approach</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {devPhases.map((phase, i) => (
+            <div
+              key={i}
+              className="p-6 rounded-lg shadow-md bg-white border-l-4 border-secondary flex gap-4 items-start"
+            >
+              <div className="mt-1">{phase.icon}</div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">{phase.title}</h3>
+                <p className="text-gray-600">{phase.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-bold mb-6 text-left">Your Benefits</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          {devBenefits.map((benefit, i) => (
+            <div key={i} className="bg-light p-6 shadow-sm rounded-lg text-center">
+              <img src={check} alt="check" className="w-6 h-6 mx-auto mb-4" />
+              <p className="text-gray-700">{benefit}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-bold mb-4 text-left">Our Services</h2>
+        <p className="text-gray-600 leading-relaxed max-w-4xl">
+          With our extensive project experience, we guide change processes with structure and clarity —
+          from analysis to implementation. We activate transformation in a controlled manner and support your organization as a coach,
+          enabler, or project leader. Our goal is to lead you toward a future-proof, efficient, and agile organisation.
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Organisational_Development
