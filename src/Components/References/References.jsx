@@ -4,6 +4,10 @@ import bazl from '../../assets/bazl.jpg'
 import flughafen from '../../assets/Flughafen.jpg'
 import euro from '../../assets/eurocontrol.png'
 import skye from '../../assets/Skyguide.jpg'
+import bv from '../../assets/obv.png'
+import astro from '../../assets/austro.jpg'
+import hungaro from '../../assets/hungaro.jpg'
+import saab from '../../assets/saab.jpg'
 
 const data = [
     { imageLink: bazl,  
@@ -19,6 +23,25 @@ const data = [
     { imageLink: skye,  
       name: "Skyguide - Swiss Air Navigations Services",
     },
+    { imageLink: bv,  
+      name: "Oberste Zivile Luftfahrtbehörde (OZB), BMVIT (A)",
+    },
+    { imageLink: astro,  
+      name: "Austro Control",
+    },
+    { imageLink: hungaro,  
+      name: "HungaroControl",
+    },
+    { imageLink: hungaro,  
+      name: "HungaroControl",
+    },
+    { imageLink: hungaro,  
+      name: "HungaroControl",
+    },
+    { imageLink: saab,  
+      name: "SAAB",
+    },
+
 
   ]
 
