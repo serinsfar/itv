@@ -51,7 +51,7 @@ const References = () => {
     <div className='flex flex-col justify-center py-14 md:py-0 sm:z-20'>
     <h2 className=' pt-20 text-3xl font-bold text-left'>References</h2>
     <h4 className='pt-8 sm:text-[1.875rem] text-[1.5rem] mb-2 text-secondary font-normal text-left'>Aeronautical Information Management (AIM)</h4>
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-center gap-6 py-20">
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-3 py-20">
   {data.map(({ imageLink, name }, index) => (
     <div
       key={index}

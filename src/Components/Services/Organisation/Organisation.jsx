@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Organisation = () => {
   return (
-    <aside className="w-64 h-screen white shadow-xl">
+    <aside className="w-64 sm:h-full white shadow-xl">
     <div className="flex items-center gap-2 px-4 py-6">
     <RiCustomerService2Line className="text-xl"/>
       <span className="text-lg font-bold">Services</span>

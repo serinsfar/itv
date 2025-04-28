@@ -80,9 +80,9 @@ const steps = [
 
 const Data_Organisation = () => {
   return (
-    <div className='grid grid-cols-7 mb-10'> 
+    <div className='grid grid-cols-7'> 
           <Data/> 
-     <div className='container pl-45 col-start-2 col-span-5'>
+     <div className='container md:pl-32 col-start-2 col-span-5'>
         <h1 className='pt-20 text-3xl font-bold text-left'>Data Organisation</h1>
      <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
      <div className=' border-[3px] border-solid border-gray-200 shadow-sm rounded-lg '>
@@ -99,7 +99,7 @@ const Data_Organisation = () => {
       </div>
               <h2 className='pt-5 text-3xl font-bold text-left'>Your benefits</h2>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 py-10'>
+                <div className='grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-8 py-10'>
                   {benefits.map(({ image, title, description, bullets }, index) => (
                     <div
                       key={index}

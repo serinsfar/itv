@@ -1,8 +1,10 @@
 import React from 'react'
 import people from '../../../assets/people.jpg';
-import Peoplee from './Peoplee';
 import { FaGavel, FaInfoCircle, FaClock } from 'react-icons/fa';
 import check from '../../../assets/check.png';
+import Infrastructure from '../Infrastructure/Infra';
+import Peoplee from './Peoplee';
+
 const legalPhases = [
   {
     icon: <FaInfoCircle className="text-secondary text-2xl" />,
@@ -32,7 +34,7 @@ const legalBenefits = [
 const Awareness = () => {
   return (
     <div className="grid grid-cols-7 mb-10">
-
+        <Peoplee/>
       <div className="pt-10 container pl-45 col-start-2 col-span-5">
         <h1 className="pt-10 text-3xl font-bold text-left">Legal & Regulatory Awareness</h1>
 

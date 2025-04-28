@@ -51,9 +51,9 @@ const services = [
 function Metadata() {
   return (
   
-   <div className='grid grid-cols-7 mb-10'> 
+   <div className='grid grid-cols-7'> 
           <Data/> 
-     <div className='container pl-45 col-start-2 col-span-5'>
+     <div className=' container pl-36 col-start-2 col-span-5'>
         <h1 className='pt-20 text-3xl font-bold text-left'>Metadata</h1>
      <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
      <div className=' border-[3px] border-solid border-gray-200 shadow-sm rounded-lg '>
@@ -100,7 +100,7 @@ function Metadata() {
                   ))}
                 </div>
 
-
+                <div className='pb-20'>
                 <h2 className="pt-5 text-3xl font-bold text-left">Our Services</h2>
                 <p className="pt-5">
                   We have defined a significant part of the Swiss Metadata Model and established the respective Swiss standard.
@@ -130,6 +130,7 @@ function Metadata() {
 </div>
 
                         
+     </div>
      </div>
     </div>
       

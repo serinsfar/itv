@@ -2,6 +2,7 @@ import React from 'react';
 import { FaClipboardList, FaUsers, FaFileContract, FaCheckDouble } from 'react-icons/fa';
 import check from '../../../assets/check.png';
 import Data from '../../Services/Data/Data';
+import infraImg from '../../../assets/infrastruktur2.jpg';
 import Infrastructure from './Infra';
 // make sure you have a relevant image
 
@@ -35,7 +36,7 @@ const specificationBenefits = [
 const Specification = () => {
       return (
     
-        <div className='grid grid-cols-7 mb-10'>
+        <div className='grid grid-cols-7'>
           <Infrastructure />
                                                
         
@@ -43,7 +44,7 @@ const Specification = () => {
         <h1 className="pt-10 text-3xl font-bold text-left">Specification & Requirements</h1>
         <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
           <div className="border-[3px] border-solid border-gray-200 shadow-sm rounded-lg">
-            <img className="p-4" src={'specification'} alt="Specification" />
+            <img className="p-4" src={infraImg} alt="Specification" />
           </div>
           <div className="mb:pl-12">
             <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-2">

@@ -3,6 +3,7 @@ import { FaServer, FaCogs, FaNetworkWired } from 'react-icons/fa';
 import check from '../../../assets/check.png';
 import Data from '../../Services/Data/Data';
 import Infrastructure from './Infra';
+import infraImg from '../../../assets/infrastruktur2.jpg';
 
 const architectureParts = [
   {
@@ -37,13 +38,13 @@ function System_Arch() {
 
   
                                            
-      <div className='grid grid-cols-7 mb-10'> 
+      <div className='grid grid-cols-7'> 
       < Infrastructure/> 
       <div className="pt-10 container pl-45 col-start-2 col-span-5">
         <h1 className='pt-10 text-3xl font-bold text-left'>System Architecture</h1>
         <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
           <div className='border-[3px] border-solid border-gray-200 shadow-sm rounded-lg'>
-            <img className='p-4' src={'architecture'} alt="System Architecture" />
+            <img className='p-4' src={infraImg} alt="System Architecture" />
           </div>
           <div className='mb:pl-12'>
             <div className='font-bold sm:text-[1.875rem] text-[1.5rem] mb-2'>
