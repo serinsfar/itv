@@ -49,9 +49,7 @@ import { useTranslation } from "react-i18next";
 
 const Company = () => {
     return (
-  
-
-                                             
+                                          
      <div className='container col-span-5 pb-10'>
      <h1 className='pt-20 text-3xl font-bold text-left '>Company</h1>
      <div className='grid xl:grid-cols-2 gap-8 place-items-center py-20'>
@@ -72,7 +70,7 @@ const Company = () => {
       
       <div>
       <h2 className=' pt-5 text-3xl font-bold text-left'>Team</h2>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-20'>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-20'>
        
         {data.map(({ imageLink, name, title }, index) => (
         <div key={index} className="group relative items-center justify-center overflow-hidden cursor pointer rounded-lg shadow-lg  transition duration-300 ease-in-out">

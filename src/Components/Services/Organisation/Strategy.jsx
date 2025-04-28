@@ -42,7 +42,7 @@ const strategyBenefits = [
 const Strategy = () => {
   return (
     <div className="grid grid-cols-7 mb-10">
-      <organisation />
+      <Organisation />
       <div className="pt-10 container pl-45 col-start-2 col-span-5">
         <h1 className="pt-10 text-3xl font-bold text-left">Strategy Development</h1>
 

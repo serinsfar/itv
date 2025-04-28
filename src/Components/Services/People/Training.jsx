@@ -1,8 +1,8 @@
 import React from 'react'
 import people from '../../../assets/people.jpg';
-import Peoplee from './Peoplee';
 import { FaChalkboardTeacher, FaUsersCog, FaBookOpen } from 'react-icons/fa';
 import check from '../../../assets/check.png';
+import Peoplee from './Peoplee';
 const trainingPhases = [
   {
     icon: <FaChalkboardTeacher className="text-secondary text-2xl" />,

@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 
 const Data = () => {
   return (
-    <aside className="hidden sm:hidden md:block min-w-64 h-fixed left-0 bg-white shadow-xl md:min-w-48 md:h-auto md:relative md:shadow-none md:bg-transparent md:top-0 md:pt-4 md:pb-2 md:px-2 ">
-      <div className="flex items-center gap-2 px-4 py-6">
+    <aside className="hidden sm:hidden lg:hidden xl:block w-64 white shadow-xl text-neutral-800 rounded-3xl mt-10  p-4 ">
+      <div className="flex items-center gap-2 px- py-6 mb-3">
         <RiCustomerService2Line className="text-xl" />
         <span className="text-lg font-bold">Services</span>
       </div>
+      <div>
       <ul className="space-y-2">
         <li className="group">
           <div className="flex items-center gap-2 px-4">
@@ -44,6 +45,7 @@ const Data = () => {
           </ul>
         </li>
       </ul>
+      </div>
     </aside>
   );
 };

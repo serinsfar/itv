@@ -1,5 +1,5 @@
 import React, { useState,useRef } from 'react'; // Import useState
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide  } from 'swiper/react';
 import { Autoplay, Navigation, Scrollbar, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -70,17 +70,30 @@ const newsData = [
 ];
 
 const VerticalCarousel = () => {
+    const swiperRef = useRef(null);
     return (
         <div className='bg-light pb-12'>
             <div className="container pt-12 bg-light">
                 <h1 className="text-4xl font-bold text-left">News</h1>
                 <div className="mySwiper h-[900px] w-full  mx-auto overflow-hidden relative my-12 bg-light">
-                    <Swiper
-                        modules={[Autoplay, Navigation, Scrollbar, Mousewheel]}
-                        direction="vertical"
-                        slidesPerView={3}
-                        spaceBetween={10}
-                        loop={true}
+                <div
+          className="mySwiper h-[900px] w-full mx-auto overflow-hidden relative my-12 bg-light"
+          onMouseEnter={() => {
+            swiperRef.current?.autoplay?.stop();
+            swiperRef.current?.mousewheel?.disable();
+          }}
+          onMouseLeave={() => {
+            swiperRef.current?.autoplay?.start();
+            swiperRef.current?.mousewheel?.enable();
+          }}
+        >
+
+            <Swiper
+              modules={[Autoplay, Navigation, Scrollbar, Mousewheel]}
+              direction="vertical"
+              slidesPerView={3}
+              spaceBetween={10}
+               loop={true}
                         autoplay={{
                             delay: 9000,
                             disableOnInteraction: false,
@@ -105,9 +118,12 @@ const VerticalCarousel = () => {
                         ))}
                     </Swiper>
 
+
+
                     <div className="swiper-scrollbar absolute bottom-0 left-0 w-full h-2 bg-gray-400 rounded"></div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
@@ -120,14 +136,14 @@ const NewsSlide = ({ news }) => {
     return (
         <div className="card card-side bg-base-100 shadow-sm">
 
-        <div className="flex flex-col sm:flex-row items-center bg-white rounded-lg shadow-lg h-full gap-6">
+        <div className="flex flex-col sm:flex-row items-center bg-white rounded-lg shadow-lg h-full gap-6 p-4">
             {/* Image container with optimized sizing */}
-            <div className="w-full sm:w-72 h-56 sm:h-72 rounded-lg overflow-hidden flex-shrink-0 relative bg-gray-100">
+            <div className="w-52 sm:w-52 h-64 sm:h-64 rounded-lg overflow-hidden flex-shrink-0 relative bg-gray-100">
             <Link to="/AIM">
                 <img
                     src={news.imageUrl}
                     alt={news.title}
-                    className={`absolute w-full h-full object-cover transition-opacity duration-300 ${
+                    className={` w-full h-full object-cover transition-opacity duration-300 ${
                         imageLoaded ? 'opacity-100' : 'opacity-0'
                     }`}
                     loading="lazy"
@@ -137,7 +153,8 @@ const NewsSlide = ({ news }) => {
                         e.target.src = 'path-to-fallback-image.jpg';
                     }}
                     style={{
-                        objectPosition: 'center center'
+                        objectPosition: 'top center',
+
                     }}
                 />
                 {!imageLoaded && (
@@ -150,11 +167,13 @@ const NewsSlide = ({ news }) => {
 
             
             {/* Text content with your requested overflow styling */}
-            <div className="flex-1 flex flex-col h-full min-w-0">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{news.title}</h3>
+            <div className=" flex-1 flex flex-col h-full min-w-0">
+                <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 ">{news.title}</h3>
+                </div>
                 <p 
                     className={`my-5 font-normal text-black dark:text-gray-400 ${
-                        !isExpanded ? 'line-clamp-4' : 'line-clamp-6 overflow-y-scroll'
+                        !isExpanded ? 'line-clamp-5' : 'line-clamp-5 overflow-y-scroll'
                     } overflow-hidden`}
                     style={{ maxHeight: isExpanded ? '200px' : 'none' }}
                 >
@@ -163,7 +182,7 @@ const NewsSlide = ({ news }) => {
                 {news.content.length > 200 && (
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="mt-3  self-start transition-colors py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                        className="mt-3 self-start transition-colors py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                     >
                         {isExpanded ? "Show Less" : "Read More"}
                     </button>

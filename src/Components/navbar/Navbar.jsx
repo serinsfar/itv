@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef  } from 'react';
 import logo from '../../assets/logo.png';
 import { IoMdMenu } from "react-icons/io";
 import { Link } from 'react-router-dom';
@@ -27,6 +27,7 @@ const Navbar = () => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
   };
+  
 
   // Submenus for services
   const servicesOptions = [
@@ -60,6 +61,21 @@ const Navbar = () => {
     {title: t('Spatial Data Infrastructure'), Link: '/SDI'},
     {title: t('Data collection service'), Link:'/DCS'},
   ]
+  const dropdownRef = useRef();
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setOpenDropdown(null);
+      setOpenSubDropdown(null);
+    }
+  };
+
+  document.addEventListener('mousedown', handleClickOutside);
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, []);
 
   return (
     <nav className="relative z-20 bg-light">
@@ -74,7 +90,7 @@ const Navbar = () => {
           <Link to="/" className="text-xl hover:text-secondary">{t('Home')}</Link>
 
           {/* Services Dropdown */}
-          <div className="relative">
+          <div className="relative" >
             <button
               onClick={() => toggleDropdown('services')}
               className="text-xl hover:text-secondary focus:outline-none inline-flex"
@@ -93,7 +109,7 @@ const Navbar = () => {
             </button>
 
             {openDropdown === 'services' && (
-              <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-52">
+              <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-52" ref={dropdownRef}>
                 {servicesOptions.map((option, index) => (
                   <li key={index} className="relative">
                     <button
@@ -104,7 +120,7 @@ const Navbar = () => {
                     </button>
 
                     {openSubDropdown === option.title && (
-                      <ul className="absolute left-full top-0 ml-1 bg-white shadow-lg rounded-md w-52"  onMouseLeave={() => setOpenDropdown(null)}>
+                      <ul className="absolute left-full top-0 ml-1 bg-white shadow-lg rounded-md w-52">
                         {option.subMenu.map((subOption, subIndex) => (
                           <li key={subIndex}>
                             <Link
@@ -145,7 +161,7 @@ const Navbar = () => {
 
           {/* Dropdown List */}
           {openDropdown === 'businessUnits' && (
-            <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-64" onMouseLeave={() => setOpenDropdown(null)} >
+            <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-64" ref={dropdownRef}>
               {businessUnits.map((unit, index) => (
                 <li key={index}>
                   <Link
@@ -176,7 +192,7 @@ const Navbar = () => {
             {language}
           </button>
           {openDropdown === 'language' && (
-            <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-20">
+            <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-20" ref={dropdownRef}>
               {['EN', 'DE'].filter((lang) => lang !== language).map((lang) => (
                 <li key={lang}>
                   <button
@@ -203,7 +219,7 @@ const Navbar = () => {
       </div>
       {mobileMenuOpen && (
   <div className="lg:hidden bg-white shadow-md absolute top-full left-0 w-full z-30 py-4 px-6">
-    <Link to="/" className="block text-xl font-medium hover:bg-light rounded-md p-3 " onClick={() => setMobileMenuOpen(false)}>
+    <Link to="/" className="block text-xl font-medium hover:bg-light rounded-md p-3 " >
       {t('Home')}
     </Link>
 
@@ -233,7 +249,7 @@ const Navbar = () => {
 </button>
 
       {openDropdown === 'services' && (
-        <div className="pl-4 mt-2 space-y-2 ">
+        <div className="pl-4 mt-2 space-y-2 " onMouseLeave={() => setOpenDropdown(null)}>
           {servicesOptions.map((option, index) => (
             <div key={index}>
               <button
