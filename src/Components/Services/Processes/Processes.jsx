@@ -1,34 +1,39 @@
-import React from 'react'
-import { IoIosPeople } from "react-icons/io";
-import { RiCustomerService2Line } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { IoIosArrowForward } from "react-icons/io";
+import { NavLink } from "react-router-dom";
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
-const Processes = () => {
+
+function Processes() {
+  const processes = [
+    { name: "Process Documentation", path: "/Process_Documentation" },
+    { name: "Process Design", path: "/Process_Design" },
+    { name: "Process Optimization", path: "/Process_Optimisation" },
+  ];
+
   return (
-    <aside className="w-64 h-screen white shadow-xl">
-    <div className="flex items-center gap-2 px-4 py-6">
-    <RiCustomerService2Line className="text-xl"/>
-      <span className="text-lg font-bold">Services</span>
+    <div className="flex flex-col items-start pt-10">
+      <div className="flex items-center gap-4">
+        <AccountTreeIcon/>
+        <span className="text-lg font-bold">Processes</span>
+        {processes.map((process, index) => (
+          <React.Fragment key={index}>
+            <IoIosArrowForward />
+            <NavLink
+              to={process.path}
+              className={({ isActive }) =>
+                `inline-flex items-center px-4 py-2 rounded-md ${
+                  isActive ? 'text-white bg-secondary font-medium' : ''
+                }`
+              }
+            >
+              {process.name}
+            </NavLink>
+          </React.Fragment>
+        ))}
+      </div>
     </div>
-    <ul className="space-y-2">
-      <li className="group">
-      <div className="flex items-center gap-2 px-4 ">
-    <IoIosPeople className="text-xl"/>
-      <span className="text-lg font-bold">Processes</span>
-    </div>
-        <ul className="ml-8 mt-2 space-y-1 rounded-sm  group-hover:block">
-            <Link to="/Process_Documentation"><li className="hover:bg-light  px-4 py-4">
-            Process Documentation</li></Link>
-           <Link to ="/Process_Design">
-          <li className="hover:bg-light  px-4 py-4">Process Design</li></Link>
-          <Link to ="/Process_Optimisation">
-          <li className="hover:bg-light  px-4 py-4">Process Optimization</li></Link>
-        </ul>
-      </li>
-
-    </ul>
-  </aside>
-  )
+  );
 }
 
-export default Processes
+export default Processes;

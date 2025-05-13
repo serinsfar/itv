@@ -80,10 +80,10 @@ const steps = [
 
 const Data_Organisation = () => {
   return (
-    <div className='grid grid-cols-7'> 
-          <Data/> 
-     <div className='container md:pl-32 col-start-2 col-span-5'>
-        <h1 className='pt-20 text-3xl font-bold text-left'>Data Organisation</h1>
+
+     <div className='container row-start-2 row-span-5'>
+                <Data/> 
+        <h1 className='pt-5 text-3xl font-bold text-left'>Data Organisation</h1>
      <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
      <div className=' border-[3px] border-solid border-gray-200 shadow-sm rounded-lg '>
      <img className='p-4' src ={dataorg} alt=""/>
@@ -131,7 +131,7 @@ const Data_Organisation = () => {
 
           <h2 className="pt-10 text-3xl font-bold mb-8 text-left">Our Services</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-20">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -147,7 +147,6 @@ const Data_Organisation = () => {
           </div>
                         
      </div>
-    </div>
   )
 }
     /*<div className='grid grid-cols-5'>

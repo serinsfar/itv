@@ -1,36 +1,37 @@
-import React from 'react'
-import { IoIosPeople } from "react-icons/io";
-import { RiCustomerService2Line } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { IoIosArrowForward } from "react-icons/io";
+import { NavLink } from "react-router-dom";
+import GroupsIcon from '@mui/icons-material/Groups';
 
-const Peoplee = () => {
+function Peoplee() {
+  const services = [
+    { name: "Awareness", path: "/Awareness" },
+    { name: "Training", path: "/Training" },
+  ];
+
   return (
-    <aside className="w-64 h-screen white shadow-xl">
-    <div className="flex items-center gap-2 px-4 py-6">
-    <RiCustomerService2Line className="text-xl"/>
-      <span className="text-lg font-bold">Services</span>
+    <div className="flex flex-col items-start pt-10">
+      <div className="flex items-center gap-4">
+        <GroupsIcon/>
+        <span className="text-lg font-bold">People</span>
+        {services.map((service, index) => (
+          <React.Fragment key={index}>
+            <IoIosArrowForward />
+            <NavLink
+              to={service.path}
+              className={({ isActive }) =>
+                `inline-flex items-center px-4 py-2 rounded-md ${
+                  isActive ? 'text-white bg-secondary font-medium' : ''
+                }`
+              }
+            >
+              {service.name}
+            </NavLink>
+          </React.Fragment>
+        ))}
+      </div>
     </div>
-    <ul className="space-y-2">
-      <li className="group">
-      <div className="flex items-center gap-2 px-4 ">
-    <IoIosPeople className="text-xl"/>
-      <span className="text-lg font-bold">People</span>
-    </div>
-        <ul className="ml-8 mt-2 space-y-1 rounded-sm  group-hover:block">
-        <Link to="/Awareness"><li className="hover:bg-light  px-4 py-4">
-            Awareness
-            </li>
-            </Link>
-           
-           <Link to ="/Training">
-          <li className="hover:bg-light  px-4 py-4">Training</li></Link>
-
-        </ul>
-      </li>
-
-    </ul>
-  </aside>
-  )
+  );
 }
 
-export default Peoplee
+export default Peoplee;

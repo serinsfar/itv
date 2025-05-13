@@ -36,9 +36,10 @@ const procurementBenefits = [
 ];
 const Procurment_System = () => {
   return (
-    <div className="grid grid-cols-7 ">
-    <Infrastructure/>
-    <div className="pt-10 container pl-45 col-start-2 col-span-5">
+
+
+    <div className="container row-start-2 row-span-5">
+          <Infrastructure/>
       <h1 className="pt-10 text-3xl font-bold text-left">Procurement of a System</h1>
 
       <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
@@ -92,7 +93,6 @@ const Procurment_System = () => {
         team or take full responsibility as project manager.
       </p>
     </div>
-  </div>
   )
 }
 
