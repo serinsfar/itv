@@ -35,10 +35,10 @@ const Data_Modeling = () => {
       const { t } = useTranslation();
   
   return (
-    <div className='grid grid-cols-7'> 
-             <Data/> 
-    <div className="pt-10 container pl-45 col-start-2 col-span-5 ">
-              <h1 className='pt-10 text-3xl font-bold text-left'>Data Medeling</h1>
+
+    <div className="container row-start-2 row-span-5 ">
+    <Data/> 
+              <h1 className='pt-5 text-3xl font-bold text-left'>Data Medeling</h1>
            <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
            <div className=' border-[3px] border-solid border-gray-200 shadow-sm rounded-lg '>
            <img className='p-4' src ={datamodel} alt=""/>
@@ -60,7 +60,7 @@ const Data_Modeling = () => {
     <h2 className="text-3xl font-bold mb-10 text-left "> Data Model</h2>
 
     {/* Parts of the Data Model */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 grid-flow-row auto-rows-max">
       {dataModelParts.map((part, i) => (
         <div key={i} className="p-6 rounded-lg shadow-md bg-white border-l-4 border-secondary flex gap-4 items-start">
           <div className="mt-1">{part.icon}</div>
@@ -73,7 +73,7 @@ const Data_Modeling = () => {
     </div>
 
     {/* Benefits */}
-    <h2 className="text-2xl font-bold mb-6 text-left">Your Benefits</h2>
+    <h2 className="text-2xl font-bold mb-4 text-left">Your Benefits</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
       {modelBenefits.map((benefit, i) => (
         <div key={i} className="bg-light p-6 shadow-sm rounded-lg text-center">
@@ -84,6 +84,7 @@ const Data_Modeling = () => {
     </div>
 
     {/* Service Description */}
+    <div className='pb-20'>
     <h2 className="text-2xl font-bold mb-4 text-left">Our Service</h2>
     <p className="text-gray-600 leading-relaxed max-w-4xl">
       We support and guide you and your team in every phase of the data modelling,
@@ -91,6 +92,7 @@ const Data_Modeling = () => {
     </p>
   </div>
   </div>
+
   )
 }
 

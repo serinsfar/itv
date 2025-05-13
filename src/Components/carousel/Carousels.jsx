@@ -1,9 +1,10 @@
-import React, { useState,useRef } from 'react'; // Import useState
+import React, {useEffect,useState,useRef } from 'react'; // Import useState
 import { Swiper, SwiperSlide  } from 'swiper/react';
 import { Autoplay, Navigation, Scrollbar, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
+import axios from 'axios'; // 
 
 import infrastructure from '../../assets/infrastructure.png';
 import logo from '../../assets/logo.png';
@@ -71,6 +72,32 @@ const newsData = [
 
 const VerticalCarousel = () => {
     const swiperRef = useRef(null);
+    /*const [newsData, setNewsData] = useState([]);*/
+    const [loading, setLoading] = useState(true);
+
+    /*useEffect(() => {
+        const fetchNews = async () => {
+            try {
+                const res = await axios.get('http://localhost:3000/api/news');
+                setNewsData(res.data);
+            } catch (error) {
+                console.error('Error fetching news:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchNews();
+    }, []);
+    if (loading) {
+        return <div className="text-center py-20">Loading news...</div>;
+    }
+    if (newsData.length === 0) {
+        return <div className="text-center py-20">No news available.</div>;
+    }
+    if (!Array.isArray(newsData)) {
+        return <div className="text-center py-20">Invalid data format.</div>;
+    }   */
     return (
         <div className='bg-light pb-12'>
             <div className="container pt-12 bg-light">
@@ -141,7 +168,7 @@ const NewsSlide = ({ news }) => {
             <div className="w-52 sm:w-52 h-64 sm:h-64 rounded-lg overflow-hidden flex-shrink-0 relative bg-gray-100">
             <Link to="/AIM">
                 <img
-                    src={news.imageUrl}
+                    src={news.imageUrl} // this also needs to be image_url
                     alt={news.title}
                     className={` w-full h-full object-cover transition-opacity duration-300 ${
                         imageLoaded ? 'opacity-100' : 'opacity-0'
@@ -177,9 +204,9 @@ const NewsSlide = ({ news }) => {
                     } overflow-hidden`}
                     style={{ maxHeight: isExpanded ? '200px' : 'none' }}
                 >
-                    {news.content}
+                    {news.content} {/*this needs to be body but just for static now*/}
                 </p>
-                {news.content.length > 200 && (
+                {typeof news.body === 'string' && news.body.length > 200 &&  (
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
                         className="mt-3 self-start transition-colors py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"

@@ -1,52 +1,38 @@
-import React from 'react'
-import { HiChartPie } from "react-icons/hi";
-import { RiCustomerService2Line } from "react-icons/ri";
+import React from 'react';
 import { Link } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
+import { NavLink } from "react-router-dom";
+import StorageIcon from '@mui/icons-material/Storage';
 
 const Data = () => {
+  const services = [
+    { name: "Metadata", path: "/Metadata" },
+    { name: "Data Organisation", path: "/Data_Organisation" },
+    { name: "Data Modeling", path: "/Data_Modeling" },
+  ];
+
   return (
-    <aside className="hidden sm:hidden lg:hidden xl:block w-64 white shadow-xl text-neutral-800 rounded-3xl mt-10  p-4 ">
-      <div className="flex items-center gap-2 px- py-6 mb-3">
-        <RiCustomerService2Line className="text-xl" />
-        <span className="text-lg font-bold">Services</span>
+    <div className="flex flex-col items-start pt-10 pb-5">
+      <div className="flex items-center gap-4">
+        <StorageIcon className="text-xl" />
+        <span className="text-lg font-bold">Data</span>
+        {services.map((service, index) => (
+          <React.Fragment key={index}>
+            <IoIosArrowForward />
+            <NavLink
+              to={service.path}
+              className={({ isActive }) =>
+                `inline-flex items-center px-4 py-2 rounded-md ${
+                  isActive ? 'text-white bg-secondary font-medium' : ''
+                }`
+              }
+            >
+              {service.name}
+            </NavLink>
+          </React.Fragment>
+        ))}
       </div>
-      <div>
-      <ul className="space-y-2">
-        <li className="group">
-          <div className="flex items-center gap-2 px-4">
-            <HiChartPie className="text-xl" />
-            <span className="text-lg font-bold">Data</span>
-          </div>
-          <ul className="ml-8 mt-2 space-y-1">
-            <li>
-              <Link
-                to="/Metadata"
-                className="block hover:bg-gray-200 px-4 py-2 rounded-md"
-              >
-                Metadata
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Data_Organisation"
-                className="block hover:bg-gray-200 px-4 py-2 rounded-md"
-              >
-                Data Organisation
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Data_Modeling"
-                className="block hover:bg-gray-200 px-4 py-2 rounded-md"
-              >
-                Data Modeling
-              </Link>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      </div>
-    </aside>
+    </div>
   );
 };
 

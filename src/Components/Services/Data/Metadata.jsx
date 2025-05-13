@@ -50,11 +50,9 @@ const services = [
 
 function Metadata() {
   return (
-  
-   <div className='grid grid-cols-7'> 
-          <Data/> 
-     <div className=' container pl-36 col-start-2 col-span-5'>
-        <h1 className='pt-20 text-3xl font-bold text-left'>Metadata</h1>
+    <div className=' container row-start-2 row-span-5'>
+                <Data/> 
+        <h1 className='pt-5 text-3xl font-bold text-left'>Metadata</h1>
      <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
      <div className=' border-[3px] border-solid border-gray-200 shadow-sm rounded-lg '>
      <img className='p-4' src ={geo} alt=""/>
@@ -109,28 +107,25 @@ function Metadata() {
 
                 <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                'Analysis of your requirements with regard to metadata',
-                'Mapping your requirements to ISO 19115:2003',
-                'Establishment of a concept for your metadata system',
-                'Specification, tender documentation and evaluation of the best fitting metadata system',
-              ].map((service, i) => (
-                <div
-                  key={i}
-                  className="bg-light p-6 rounded-lg shadow-md flex gap-4 items-start"
-                >
-                  <div className="w-6 h-6 mt-1">
-                    <img src={check} alt="check" className="w-full h-full object-contain" />
+                  'Analysis of your requirements with regard to metadata',
+                  'Mapping your requirements to ISO 19115:2003',
+                  'Establishment of a concept for your metadata system',
+                  'Specification, tender documentation and evaluation of the best fitting metadata system',
+                ].map((service, i) => (
+                  <div
+                    key={i}
+                    className="bg-light p-6 rounded-lg shadow-md flex gap-4 items-center" // <-- change items-start to items-center
+                  >
+                    <div className="flex-shrink-0 w-6 h-6">
+                      <img src={check} alt="check" className="w-full h-full object-contain" />
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">{service}</p>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">{service}</p>
-                </div>
-              ))}
+                ))}
+              </div>
 
-
-
-</div>
 
                         
-     </div>
      </div>
     </div>
       

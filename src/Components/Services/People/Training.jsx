@@ -32,9 +32,8 @@ const trainingBenefits = [
 
 const Training = () => {
   return (
-    <div className="grid grid-cols-7 mb-10">
+      <div className="container row-start-2 row-span-5">
       <Peoplee/>
-      <div className="pt-10 container pl-45 col-start-2 col-span-5">
         <h1 className="pt-10 text-3xl font-bold text-left">Training & Knowledge Transfer</h1>
 
         <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
@@ -87,7 +86,6 @@ const Training = () => {
           We’re agile and responsive — able to adapt quickly to your training needs and timelines.
         </p>
       </div>
-    </div>
   );
 };
 

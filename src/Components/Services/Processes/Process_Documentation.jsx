@@ -39,9 +39,8 @@ const processBenefits = [
 
 const Process_Documentation = () => {
   return (
-    <div className="grid grid-cols-7 mb-10">
+<div className="container row-start-2 row-span-5">
       <Processes/>
-      <div className="pt-10 container pl-45 col-start-2 col-span-5">
         <h1 className="pt-10 text-3xl font-bold text-left">Process Documentation</h1>
 
         <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
@@ -94,7 +93,6 @@ const Process_Documentation = () => {
           This not only sets the foundation for improvement but also empowers your team to fully understand, own, and refine their workflows.
         </p>
       </div>
-    </div>
   );
 };
 
