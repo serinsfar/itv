@@ -19,22 +19,22 @@ const ChooseUs = () => {
     {
       icon: <GrUserExpert className="text-2xl" />,
       title: t("Over 30 years of experience"),
-      details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      details: "With over three decades in the industry, we bring unmatched expertise and deep-rooted knowledge to every project. Our longevity is a testament to our reliability, quality, and continuous innovation.",
     },
     {
       icon: <AiOutlineSolution className="text-2xl" />,
       title: t("Tailored Solutions"),
-      details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      details: "We understand that every business is unique. Our team works closely with each client to develop customized solutions that address specific needs, ensuring optimal results and long-term success.",
     },
     {
       icon: <GrTechnology className="text-2xl" />,
       title: t("Cutting-Edge Technology"),
-      details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      details: "We leverage the latest technologies and tools to keep you ahead of the curve. From automation to AI integration, our tech-driven approach enhances efficiency, accuracy, and scalability.",
     },
     {
       icon: <FaBuildingUser className="text-2xl" />,
       title: t("Trusted by Industry Leaders"),
-      details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+      details: "Leading organizations across various sectors rely on our expertise. Our proven track record of delivering quality and consistency has earned us the trust of top-tier clients worldwide.",
     },
   ];
 
@@ -61,11 +61,11 @@ const ChooseUs = () => {
                       {item.icon}
                       <p className="text-2xl">{item.title}</p>
                     </div>
-                    <span className={`transition-transform duration-300 ease-in-out transform  ${activeIndex === index ? "rotate-180" : "rotate-0"}`}>
+                    <span className={`transition-transform duration-300 ease-in-out transform text-primary font-bold ${activeIndex === index ? "rotate-180" : "rotate-0"}`}>
                       {activeIndex === index ? "-" : "+"}
                     </span>
                   </div>
-                  <div className={`overflow-hidden transition-max-height duration-300 ease-in-out overflow-y-scroll ${activeIndex === index ? "max-h-40 opacity-100 py-3" : "max-h-0 opacity-0 py-0"}`}>
+                  <div className={`overflow-hidden transition-max-height duration-300 ease-in-out  ${activeIndex === index ? "max-h-40 opacity-100 py-3" : "max-h-0 opacity-0 py-0"}`}>
                     <p className="text-xl text-gray-700" >{item.details}</p>
                   </div>
                   
