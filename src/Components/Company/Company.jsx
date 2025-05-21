@@ -16,29 +16,26 @@ const data = [
     { imageLink: ang,
       name: "Dominik Angst",
       title: "Managing Director - Senior Consultant"
-     },
+    },
+    { imageLink: rs,
+      name: "Rudolf Schneeberger",
+      title: "Senior Consultant" },
+    { imageLink: kle,
+      name: "Christoph Kleiner",
+      title: "Head of DCS" },
     { imageLink: bau,
       name: "Roland Baumann",
       title: "Senior Consultant"}, 
-    { imageLink: bol,
-      name: "Roland Bolliger",
+    { imageLink: son,
+      name: "Peter Sonnenfeld",
       title: "Senior Consultant" },
     { imageLink: ger,
       name: "Raphaël Gerth",
       title: "DCS / Consultant " },
-    { imageLink: kle,
-      name: "Christoph Kleiner",
-      title: "Head of DCS" },
     { imageLink: pet,
       name: "Nicole Peter",
       title: "Assistant" },
-    { imageLink: rs,
-      name: "Rudolf Schneeberger",
-      title: "Senior Consultant" },
-    { imageLink: son,
-      name: "Peter Sonnenfeld",
-      title: "Senior Consultant" },
-      { imageLink: ser,
+    { imageLink: ser,
         name: "Serin Sfar Chaabane",
         title: "DCS / Praktikantin " },
   ];
@@ -68,7 +65,7 @@ const Company = () => {
       
       <div>
       <h2 className=' pt-5 text-3xl font-bold text-left'>Team</h2>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 py-20'>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-20'>
        
         {data.map(({ imageLink, name, title }, index) => (
         <div key={index} className="group relative items-center justify-center overflow-hidden cursor pointer rounded-lg shadow-lg  transition duration-300 ease-in-out">

@@ -67,7 +67,7 @@ const FooterF = () =>{
             <li>
               <div className="flex items-center gap-2">
                 <Footer.Icon className="cursor-pointer hover:text-white duration-200" href="https://www.linkedin.com/company/97985639" icon={FaLinkedin} />
-                <Footer.Icon className="cursor-pointer hover:text-white duration-200" href="mailto:obstacles@itv.ch" icon={FaEnvelope} />
+                <Footer.Icon className="cursor-pointer hover:text-white duration-200" href="mailto:info@itv.ch" icon={FaEnvelope} />
               </div>
             </li>
           </ul>
@@ -79,14 +79,15 @@ const FooterF = () =>{
             <li>08h30 - 11h30 </li>
             <li>13h30 - 16h30</li>
             <li>Hotline: +41 44 871 21 99 </li>
-            <li>E-Mail: obstacles@itv.ch</li>
+            <li>E-Mail: info@itv.ch</li>
           </ul>
         </div>
       </div>
     </div>
     <Footer.Divider className=" container border-gray-400" />
       <div className=" flex justify-center items-center text-sm text-center py-4 text-white">
-        <Footer.Copyright href="#" by="ITV Consult AG - All Rights Reserved - Schweizerpunkt GmbH Design" year={2024} />
+        <Footer.Copyright href="#" by="ITV Consult AG - All Rights Reserved" year={new Date().getFullYear()}
+/>
       </div>
 
   
