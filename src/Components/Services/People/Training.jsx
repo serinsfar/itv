@@ -32,7 +32,7 @@ const trainingBenefits = [
 
 const Training = () => {
   return (
-      <div className="container row-start-2 row-span-5">
+      <div className="container row-start-2 row-span-5 pb-20">
       <Peoplee/>
         <h1 className="pt-10 text-3xl font-bold text-left">Training & Knowledge Transfer</h1>
 

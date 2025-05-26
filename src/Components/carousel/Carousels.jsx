@@ -125,7 +125,7 @@ const VerticalCarousel = () => {
           {newsData.map(({ id, title, content, imageUrl }) => (
             <SwiperSlide key={id}>
               <div className="group relative overflow-hidden h-[500px] rounded-lg shadow-lg cursor-pointer transition duration-300 ease-in-out">
-                <img src={imageUrl} alt={title} className="w-full h-full object-cover rounded-lg" />
+                <img src={imageUrl} alt={title} className="w-full h-full object-contain rounded-lg" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-100 transition duration-300 ease-in-out flex items-end p-4">
                   <div>
                     <h3 className="text-white text-lg font-semibold">{title}</h3>

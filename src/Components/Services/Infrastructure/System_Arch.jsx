@@ -35,7 +35,7 @@ const architectureBenefits = [
 
 function System_Arch() {
   return (
-      <div className="container row-start-2 row-span-5">
+      <div className="container row-start-2 row-span-5 pb-20">
               < Infrastructure/> 
         <h1 className='pt-10 text-3xl font-bold text-left'>System Architecture</h1>
         <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>

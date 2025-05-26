@@ -38,7 +38,7 @@ const Procurment_System = () => {
   return (
 
 
-    <div className="container row-start-2 row-span-5">
+    <div className="container row-start-2 row-span-5 pb-20">
           <Infrastructure/>
       <h1 className="pt-10 text-3xl font-bold text-left">Procurement of a System</h1>
 

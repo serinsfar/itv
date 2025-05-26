@@ -35,7 +35,7 @@ const specificationBenefits = [
 ];
 const Specification = () => {
       return (
-      <div className="container row-start-2 row-span-5">
+      <div className="container row-start-2 row-span-5 pb-20">
       <Infrastructure />
         <h1 className="pt-10 text-3xl font-bold text-left">Specification & Requirements</h1>
         <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
