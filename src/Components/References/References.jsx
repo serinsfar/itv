@@ -247,7 +247,7 @@ const References = () => {
   >
     {/* Image Container */}
     <div className="w-full h-48 relative">
-      <img src={imageLink} alt={name} className="w-full h-full object-contain" />
+      <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
     </div>
 
     {/* Always-visible name under image */}
@@ -282,7 +282,7 @@ Civil Aviation Authority of Nepal
   >
     {/* Image Container */}
     <div className="w-full h-48 relative">
-      <img src={imageLink} alt={name} className="w-full h-full object-contain" />
+      <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
     </div>
 
     {/* Always-visible name under image */}
@@ -301,7 +301,7 @@ Civil Aviation Authority of Nepal
   >
     {/* Image Container */}
     <div className="w-full h-48 relative">
-      <img src={imageLink} alt={name} className="w-full h-full object-contain" />
+      <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
     </div>
 
     {/* Always-visible name under image */}
@@ -320,7 +320,7 @@ Civil Aviation Authority of Nepal
   >
     {/* Image Container */}
     <div className="w-full h-48 relative">
-      <img src={imageLink} alt={name} className="w-full h-full object-contain" />
+      <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
     </div>
 
     {/* Always-visible name under image */}
@@ -339,7 +339,7 @@ Civil Aviation Authority of Nepal
   >
     {/* Image Container */}
     <div className="w-full h-48 relative">
-      <img src={imageLink} alt={name} className="w-full h-full object-contain" />
+      <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
     </div>
 
     {/* Always-visible name under image */}
@@ -358,7 +358,7 @@ Civil Aviation Authority of Nepal
   >
     {/* Image Container */}
     <div className="w-full h-48 relative">
-      <img src={imageLink} alt={name} className="w-full h-full object-contain" />
+      <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
     </div>
 
     {/* Always-visible name under image */}

@@ -16,7 +16,13 @@ export default defineConfig({
       cachedChecks: false,
     },
   },
-  build: {
-    outDir: 'dist',
+build: {
+  rollupOptions: {
+    output: {
+      manualChunks: {
+        vendor: ['react', 'react-dom'], // adjust based on what you're using
+      },
+    },
   },
+}
 });
