@@ -213,22 +213,22 @@ const SDIRefCan = [
     { imageLink: obb,
       name: "Österreichische Bundesbahnen (ÖBB)"          
     },
-        { imageLink: vbg,
+    { imageLink: vbg,
       name: "Verkehrsbetriebe Glattal - Glattalbahn (VBG)"          
     },
-        { imageLink: Cablecom,
-      name: "Cablecom "         
+    { imageLink: Cablecom,
+      name: "Cablecom"         
     },
-        { imageLink: saw,
+    { imageLink: saw,
       name: "Schweizer Wanderwege SAW"          
     },
-        { imageLink: Entsorgungsamt,
+    { imageLink: Entsorgungsamt,
       name: "Stadt St.Gallen - Entsorgungsamt"          
     },
     { imageLink: sgsw,
       name: "Stadt St.Gallen - Stadtwerke (Abt. Wasser, Erdgas und Elektro)"
     },
-        { imageLink: erz,
+    { imageLink: erz,
       name: "Stadt Zürich - Entsorgung + Recycling Zürich (ERZ)"          
     },
   ]
@@ -239,7 +239,7 @@ const References = () => {
     <div className='flex flex-col justify-center py-14 md:py-0 sm:z-20'>
     <h2 className=' pt-20 text-3xl font-bold text-left'>References</h2>
     <h4 className='pt-8 sm:text-[1.875rem] text-[1.5rem] mb-2 text-secondary font-normal text-left'>Aeronautical Information Management (AIM)</h4>
-    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 py-20">
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-20">
 {AIMRef.map(({ imageLink, name }, index) => (
   <div
     key={index}
@@ -258,23 +258,10 @@ const References = () => {
 ))}
 
 </div>
-{/*<p>
-  more references: <br/>
-Oberste Zivile Luftfahrtbehörde (OZB), BMVIT (A) <br/>
-Austro Control<br/>
-HungaroControl<br/>
-SAAB<br/>
-Bahrain Civil Aviation Affairs<br/>
-UAE General Civil Aviation Authority<br/>
-ICAO<br/>
-IATA<br/>
-ANA Luxembourg<br/>
-Civil Aviation Authority of Nepal
-</p>*/}
 
-<h4 className='pt-8 sm:text-[1.875rem] text-[1.5rem] mb-2 text-secondary font-normal text-left'>Spatial Data Infrastructure (SDI)</h4>
-<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-primary font-normal text-left'><li>Confederation:</li></h3>
-    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 py-20">
+<h4 className='pt-8 sm:text-[1.875rem] text-[1.5rem] mb-5 text-secondary font-normal text-left'>Spatial Data Infrastructure (SDI)</h4>
+<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] text-primary font-normal text-left'><li>Confederation:</li></h3>
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
 {SDIRefConf.map(({ imageLink, name }, index) => (
   <div
     key={index}
@@ -292,8 +279,8 @@ Civil Aviation Authority of Nepal
   </div>
 ))}
 </div>
-<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-primary font-normal text-left'><li>Cantons:</li></h3>
-    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 py-20">
+<h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] text-primary font-normal text-left'><li>Cantons:</li></h3>
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
 {SDIRefCan.map(({ imageLink, name }, index) => (
   <div
     key={index}
@@ -312,7 +299,7 @@ Civil Aviation Authority of Nepal
 ))}
 </div>
 <h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-primary font-normal text-left'><li>Cities and Municipalities:</li></h3>
-    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 py-20">
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
   {SDIRefMun.map(({ imageLink, name }, index) => (
   <div
     key={index}
@@ -331,7 +318,7 @@ Civil Aviation Authority of Nepal
 ))}
 </div>
 <h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-primary font-normal text-left'><li>Various and international projects:</li></h3>
-    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 py-20">
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
   {SDIRefProjects.map(({ imageLink, name }, index) => (
   <div
     key={index}
@@ -350,7 +337,7 @@ Civil Aviation Authority of Nepal
 ))}
 </div>
 <h3 className='pt-7 sm:text-[1.875rem] text-[1.5rem] mb-2 text-decoration-line text-primary font-normal text-left'><li>Infrastructure Management (Utilities, Public Transportation, ... ):</li></h3>
-    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 py-20">
+    <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
   {SDIRefInfra.map(({ imageLink, name }, index) => (
   <div
     key={index}

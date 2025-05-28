@@ -124,6 +124,7 @@ const VerticalCarousel = () => {
         >
           {newsData.map(({ id, title, content, imageUrl }) => (
             <SwiperSlide key={id}>
+              <Link to={`/news/${id}`}>
               <div className="group relative overflow-hidden h-[500px] rounded-lg shadow-lg cursor-pointer transition duration-300 ease-in-out">
                 <img src={imageUrl} alt={title} className="w-full h-full object-contain rounded-lg" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-100 transition duration-300 ease-in-out flex items-end p-4">
@@ -132,17 +133,15 @@ const VerticalCarousel = () => {
                     <p className={`text-white text-sm my-2 ${!expandedItems[id] ? 'line-clamp-2' : ''}`}>
                       {content}
                     </p>
-            
-              <Link
-              to={`/news/${id}`}
+            <button
               className=" mt-auto self-start transition-colors py-1 px-5 me-2 mb-2 text-sm primary-btn"
             >
               Read More
-            </Link>
-
-                  </div>
+            </button>
+                </div>
                 </div>
               </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -4,16 +4,28 @@ import { GrUserExpert } from "react-icons/gr";
 import { AiOutlineSolution } from "react-icons/ai";
 import { GrTechnology } from "react-icons/gr";
 import { FaBuildingUser } from "react-icons/fa6";
-import position_icon from "../../assets/location-mark.png";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
+import { geoCentroid } from "d3-geo";
+
+
 
 const ChooseUs = () => {
+const [selectedMarker, setSelectedMarker] = useState(null);
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(null);
+  const [hoveredMarker, setHoveredMarker] = useState(null);
+  const [hoveredCountry, setHoveredCountry] = useState(null);
+
+
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+  const geoUrl ="https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+
 
   const accordionData = [
     {
@@ -37,17 +49,137 @@ const ChooseUs = () => {
       details: "Leading organizations across various sectors rely on our expertise. Our proven track record of delivering quality and consistency has earned us the trust of top-tier clients worldwide.",
     },
   ];
+  const markers = [
+  {
+    name: "Zürich",
+    coordinates: [1.0000, 56.0000],
+    countryName: "Switzerland",
+  },
+  {
+    name: "Budapest",
+    coordinates: [12.7000, 55.9979],
+    countryName: "Hungary",
+  },
+  {
+    name: "Baku",
+    coordinates: [42.3000, 50.4093],
+    countryName: "Azerbaijan",
+  },
+  {
+    name: "Nakhchivan",
+    coordinates: [38.0090, 50.2089],
+    countryName: "Azerbaijan",
+  },
+  {
+    name: "Guatemala",
+    coordinates: [-97.5133, 29.9349],
+    countryName: "Guatemala",
+  },
+  {
+    name: "Bishkek",
+    coordinates: [66.5698, 51.8746],
+    countryName: "Kyrgyzstan",
+  },
+  {
+    name: "Chisinau",
+    coordinates: [21.3180, 56.5000],
+    countryName: "Moldova",
+  },
+  {
+    name: "Chongqing",
+    coordinates: [95.5516, 40.5630],
+    countryName: "China",
+  },
+
+];
+  const [tooltipContent, setTooltipContent] = useState("");
 
   return (
     <section className="bg-white">
-      <div className="container py-5 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-8 space-y-6 md:space-y-0 ">
+      <div className="container py-5 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-10 space-y-6 md:space-y-0 ">
         {/* Banner Image */}
-        <div className="relative flex justify-center md:justify-start ">
-          <img src={map} alt="Map" className="w-[450px] md:max-w-[550px] object-cover drop-shadow pt-32" />
-          <img src={position_icon} alt="Position Icon" className="absolute top-[53%] left-[50%] w-5 h-5 transform -translate-x-1/2 -translate-y-1/2" />
-          <img src={position_icon} alt="Position Icon" className="absolute top-[48%] left-[46%] w-5 h-5 transform -translate-x-1/2 -translate-y-1/2" />
-          <img src={position_icon} alt="Position Icon" className="absolute top-[56%] left-[40%] w-5 h-5 transform -translate-x-1/2 -translate-y-1/2" />
-          <img src={position_icon} alt="Position Icon" className="absolute top-[50%] left-[42%] w-5 h-5 transform -translate-x-1/2 -translate-y-1/2" />
+        <div className="relative md:justify-start max-h-[600px] max-w-[800px] object-fill overflow-hidden shadow-lg my-16">
+      <ComposableMap
+  projection="geoMercator"
+  projectionConfig={{
+    scale: 200, 
+    center: [5, 30], // Adjust center to focus on Europe and surrounding regions  
+  }}>
+        <Geographies geography={geoUrl}>
+          {({ geographies }) =>
+            geographies.map((geo) => {
+              const name = geo.properties.name;
+              console.log("Geo country name:", name);
+              return (
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  onMouseEnter={() => setTooltipContent(geo.properties.name)}
+                  onMouseLeave={() => setTooltipContent("")}
+                  style={{
+                    default: {
+                      fill:
+                        hoveredCountry === geo.properties.name
+                          ? "#FF9400"
+                          : "#D6D6DA",
+                      outline: "D6D6DA",
+                    },
+                    hover: {
+                      fill: "gdgfd",
+                      outline: "none",
+                    },
+                    pressed: {
+                      fill: "##FF9400",
+                      outline: "none",
+                    }
+                  }}
+                />
+              );
+            })
+          }
+        </Geographies>
+
+{markers.map(({name, coordinates, countryName}) => (
+    <Marker 
+      key={name}
+      coordinates={coordinates}
+      onMouseEnter={() => {
+        setSelectedMarker(name);
+        setHoveredMarker(name);
+        setHoveredCountry(countryName); // highlight the geography
+      }}
+      onMouseLeave={() => {
+        setSelectedMarker(null);
+        setHoveredMarker(null);
+        setHoveredCountry(null); // remove geography highlight
+      }}
+    >
+  <g
+    className="cursor-pointer transition-transform duration-300 ease-in-out"
+    style={{
+      transform: hoveredMarker === name ? "scale(1.1)" : "scale(1)",
+      filter: hoveredMarker === name ? "drop-shadow(0 0 5px rgba(0,0,0,0.3))" : "none",
+    }}
+  >
+      {/* Label box if this marker is selected */}
+      {selectedMarker === name && (
+        <foreignObject x={-40} y={47} width={120} height={45}>
+          <div className="bg-secondary text-lg text-white px-2 my-3 rounded-md shadow text-center" >
+            {name}
+          </div>
+        </foreignObject>
+      )}
+
+      {/* Marker Icon */}
+      <FaMapMarkerAlt className="text-primary text-5xl shadow-lg" />
+    </g>
+  </Marker>
+))}
+</ComposableMap>
+
+    
+
+
         </div>
         {/* Banner Text */}
         <div className="flex flex-col justify-center "onMouseLeave={() => toggleAccordion(null)}>
@@ -76,6 +208,7 @@ const ChooseUs = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 
