@@ -3,6 +3,7 @@ import logo_white from "../../assets/logo_white.png";
 import { Footer } from "flowbite-react";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter, FaTwitch, FaLinkedin, FaEnvelope} from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Metadata from "../../Components/Services/Data/Metadata";
 const sections = [
   {
     title: "Menu",
@@ -39,11 +40,14 @@ const FooterF = () =>{
         <div className=" space-y-4 gap-x-11">
           <h1 className="text-2xl font-bold text-white">Menu</h1>
           <ul className="text-gray-400 space-y-2 text-lg ">
-            <li className="cursor-pointer hover:text-white"><Link to="/">Home</Link></li>
-            <li className="cursor-pointer hover:text-white">Services</li>
-            <li className="cursor-pointer hover:text-white">Business units</li>
+            <li className="cursor-pointer hover:text-white"><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+  Home
+</Link></li>
+
+            <li className="cursor-pointer hover:text-white"><Link to="/Metadata" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Services</Link></li>
+            <li className="cursor-pointer hover:text-white"><Link to="/AIM" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Business units</Link></li>
             <li className="cursor-pointer hover:text-white"><Link to="/company">Company</Link></li>
-            <li className="cursor-pointer hover:text-white">Contact Us</li>
+            <li className="cursor-pointer hover:text-white"><Link to="/Contact_Us">Contact Us</Link></li>
           </ul>
         </div>
         {/* Address Section */}
@@ -53,7 +57,11 @@ const FooterF = () =>{
             <li>Dorfstrasse 53</li>
             <li>8105 Regensdorf-Watt</li>
             <li>Tel.: +41 44 871 21 90</li>
-            <li>Mail: info@itv.ch</li>
+            <li className="cursor-pointer hover:text-white duration-200">
+              <a href="mailto:Info@itv.ch" className="hover:text-white">
+              E-Mail: Info@itv.ch
+              </a>
+            </li>
           </ul>
         </div>
         {/* Company Section */}
@@ -79,7 +87,11 @@ const FooterF = () =>{
             <li>08h30 - 11h30 </li>
             <li>13h30 - 16h30</li>
             <li>Hotline: +41 44 871 21 99 </li>
-            <li>E-Mail: info@itv.ch</li>
+            <li className="cursor-pointer hover:text-white duration-200">
+              <a href="mailto:obstacles@itv.ch" className="hover:text-white">
+              E-Mail: obstacles@itv.ch
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -97,65 +109,5 @@ const FooterF = () =>{
 
 
 }
-
-
-
-
-
-
-
-
-
-/*
-const CustomFooter = () => {
-  return (
-    <footer>
-      <div className="container bg-primary text-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
-          <div>
-            <img className="w-40 py-28" src={logo_white} alt="Logo" />
-          </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 w-96 bg-slate-100 ">
-            <div className="bg-black w-36">
-              <FlowbiteFooter.Title title="Menu" />
-              <FlowbiteFooter.LinkGroup col>
-                <FlowbiteFooter.Link href="#">Home</FlowbiteFooter.Link>
-                <FlowbiteFooter.Link href="#">Services</FlowbiteFooter.Link>
-                <FlowbiteFooter.Link href="#">Business units</FlowbiteFooter.Link>
-                <FlowbiteFooter.Link href="#">Company</FlowbiteFooter.Link>
-                <FlowbiteFooter.Link href="#">Contact Us</FlowbiteFooter.Link>
-              </FlowbiteFooter.LinkGroup>
-            </div>
-            <div className="px-20">
-              <FlowbiteFooter.Title title="Address" />
-              <FlowbiteFooter.LinkGroup col>
-                <FlowbiteFooter.Link href="#">Github</FlowbiteFooter.Link>
-                <FlowbiteFooter.Link href="#">Discord</FlowbiteFooter.Link>
-              </FlowbiteFooter.LinkGroup>
-            </div>
-            <div className="px-20">
-              <FlowbiteFooter.Title title="Legal" />
-              <FlowbiteFooter.LinkGroup col>
-                <FlowbiteFooter.Link href="#">Privacy Policy</FlowbiteFooter.Link>
-                <FlowbiteFooter.Link href="#">Terms &amp; Conditions</FlowbiteFooter.Link>
-              </FlowbiteFooter.LinkGroup>
-            </div>
-          </div>
-        </div>
-        <FlowbiteFooter.Divider />
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <FlowbiteFooter.Copyright href="#" by="Flowbite™" year={2022} />
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <FlowbiteFooter.Icon href="#" icon={FaFacebook} />
-            <FlowbiteFooter.Icon href="#" icon={FaInstagram} />
-            <FlowbiteFooter.Icon href="#" icon={FaTwitter} />
-            <FlowbiteFooter.Icon href="#" icon={FaGithub} />
-            <FlowbiteFooter.Icon href="#" icon={FaTwitch} />
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};*/
 
 export default FooterF;

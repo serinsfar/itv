@@ -109,7 +109,7 @@ useEffect(() => {
             </button>
 
             {openDropdown === 'services' && (
-              <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-52" ref={dropdownRef}>
+              <ul className="absolute top-full left-0 mt-2 w-max min-w-[14rem] bg-white border rounded shadow-md" ref={dropdownRef}>
                 {servicesOptions.map((option, index) => (
                   <li key={index} className="relative">
                     <button
@@ -120,7 +120,7 @@ useEffect(() => {
                     </button>
 
                     {openSubDropdown === option.title && (
-                      <ul className="absolute left-full top-0 ml-1 bg-white shadow-lg rounded-md w-52">
+                      <ul className="absolute left-full top-0 ml-1 bg-white shadow-lg rounded-md w-max min-w-[14rem]">
                         {option.subMenu.map((subOption, subIndex) => (
                           <li key={subIndex}>
                             <Link
@@ -161,7 +161,7 @@ useEffect(() => {
 
           {/* Dropdown List */}
           {openDropdown === 'businessUnits' && (
-            <ul className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-64" ref={dropdownRef}>
+            <ul className="absolute top-full left-0 mt-2 w-max min-w-[14rem] bg-white border rounded shadow-md" ref={dropdownRef}>
               {businessUnits.map((unit, index) => (
                 <li key={index}>
                   <Link
@@ -187,7 +187,7 @@ useEffect(() => {
         </div>
 
         {/* Language Dropdown */}
-        <div className="relative hidden lg:block">
+        <div className="relative hidden lg:block mt-2">
           <button onClick={() => toggleDropdown('language')} className="text-xl hover:text-secondary">
             {language}
           </button>

@@ -17,6 +17,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
   const [hoveredMarker, setHoveredMarker] = useState(null);
   const [hoveredCountry, setHoveredCountry] = useState(null);
+  const mapTitle = "Our Projects Around the World";
 
 
 
@@ -96,14 +97,18 @@ const [selectedMarker, setSelectedMarker] = useState(null);
 
   return (
     <section className="bg-white">
-      <div className="container py-5 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-10 space-y-6 md:space-y-0 ">
+<div className="container py-5 md:py-10 grid grid-cols-1 xl:grid-cols-2 items-center text-start gap-10 space-y-6 md:space-y-0 ">
+        <div className="flex flex-col justify-center "><div className="text-3xl md:text-4xl font-bold !leading-snug">{mapTitle}</div>
         {/* Banner Image */}
-        <div className="relative md:justify-start max-h-[600px] max-w-[800px] object-fill overflow-hidden shadow-lg my-16">
+        <div className="relative md:justify-center max-h-[400px] max-w-[800px] object-fill overflow-hidden shadow-lg mt-8">
+      {/* Your map component goes here */}
       <ComposableMap
   projection="geoMercator"
   projectionConfig={{
     scale: 200, 
     center: [5, 30], // Adjust center to focus on Europe and surrounding regions  
+
+  
   }}>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -154,6 +159,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
         setHoveredCountry(null); // remove geography highlight
       }}
     >
+  
   <g
     className="cursor-pointer transition-transform duration-300 ease-in-out"
     style={{
@@ -161,6 +167,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
       filter: hoveredMarker === name ? "drop-shadow(0 0 5px rgba(0,0,0,0.3))" : "none",
     }}
   >
+    
       {/* Label box if this marker is selected */}
       {selectedMarker === name && (
         <foreignObject x={-40} y={47} width={120} height={45}>
@@ -173,6 +180,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
       {/* Marker Icon */}
       <FaMapMarkerAlt className="text-primary text-5xl shadow-lg" />
     </g>
+   
   </Marker>
 ))}
 </ComposableMap>
@@ -181,9 +189,10 @@ const [selectedMarker, setSelectedMarker] = useState(null);
 
 
         </div>
+        </div>
         {/* Banner Text */}
         <div className="flex flex-col justify-center "onMouseLeave={() => toggleAccordion(null)}>
-          <div className="text-center md:text-left space-y-12">
+          <div className="text-center md:text-left space-y-16">
             <h1 className="text-3xl md:text-4xl font-bold !leading-snug">Why Choose Us</h1>
             <div className="flex flex-col gap-4 ">
               {accordionData.map((item, index) => (

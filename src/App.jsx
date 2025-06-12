@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
+import 'leaflet/dist/leaflet.css';
 import Layout from './Components/Layout/Layout';
 import Home from './Components/Home/Home';
 import Data from './Components/Services/Data/Data';
