@@ -3,96 +3,86 @@ import { FaBug, FaClipboardCheck, FaTasks, FaVial } from 'react-icons/fa';
 import check from '../../../assets/check.png';
 import infraImg from '../../../assets/infrastruktur2.jpg';
 import Infrastructure from './Infra';
-const testingParts = [
-  {
-    icon: <FaTasks className="text-secondary text-2xl" />,
-    title: 'Test Management',
-    description: 'Plan, control and monitor the entire testing process tailored to your organization’s resources and goals.',
-  },
-  {
-    icon: <FaClipboardCheck className="text-secondary text-2xl" />,
-    title: 'Test Planning',
-    description: 'Define the strategy, scope, objectives, and schedule of testing activities, including required resources.',
-  },
-  {
-    icon: <FaVial className="text-secondary text-2xl" />,
-    title: 'Test Execution',
-    description: 'Systematic application of test cases and documentation of results to verify software against your requirements.',
-  },
-  {
-    icon: <FaBug className="text-secondary text-2xl" />,
-    title: 'Proven Standards',
-    description: 'Use of established testing models such as the “V-model” and ISTQB-certified professionals for reliability.',
-  },
-];
+import FourPartPageTemplate from '../../Template/Services_Template';
+import { useTranslation } from 'react-i18next';
 
-const testingBenefits = [
-  'Independent test management increases software quality',
-  'We support you exactly where you need it – based on your internal resources',
-  'Consistent documentation of all testing activities',
-  'Proven methods using well-known standards like the V-model',
-];
+function Test_Management() {
+  const { t } = useTranslation();
+  // Part 2: Features
+  const testingParts = [
+    {
+      icon: <FaTasks className="text-secondary text-2xl" />,
+      title: t('Test Management'),
+      description:
+        t('Plan, control and monitor the entire testing process tailored to your organization’s resources and goals.'),
+    },
+    {
+      icon: <FaClipboardCheck className="text-secondary text-2xl" />,
+      title: t('Test Planning'),
+      description:
+        t('Define the strategy, scope, objectives and schedule of testing activities, including required resources.'),
+    },
+    {
+      icon: <FaVial className="text-secondary text-2xl" />,
+      title: t('Test Execution'),
+      description:
+        t('Run test cases and document results systematically to verify software against your requirements.'),
+    },
+    {
+      icon: <FaBug className="text-secondary text-2xl" />,
+      title: t('Proven Standards'),
+      description:
+        t('Apply established testing models such as the V-model with ISTQB-certified professionals for reliability.'),
+    },
+  ];
 
-const Test_Management = () => {
+  // Part 3: Benefits (title + description)
+  const testingBenefits = [
+    {
+      title: t('Higher software quality'),
+      description: t('Independent test management increases reliability and user confidence.'),
+    },
+    {
+      title: t('Right-sized support'),
+      description: t('We help exactly where you need it, based on your internal resources.'),
+    },
+    {
+      title: t('Traceable outcomes'),
+      description: t('Consistent documentation of all testing activities and results.'),
+    },
+    {
+      title: t('Proven methodology'),
+      description: t('Well-known standards like the V-model reduce risk and rework.'),
+    },
+  ];
+
   return (
-    <div className="container row-start-2 row-span-5 pb-20">
-          <Infrastructure/>
-      <h1 className="pt-10 text-3xl font-bold text-left">Software Testing & Quality Assurance</h1>
-
-      <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
-        <div className="border-[3px] border-solid border-gray-200 shadow-sm rounded-lg">
-          <img className="p-4" src={infraImg} alt="Software Testing" />
-        </div>
-        <div className="mb:pl-12">
-          <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-2">
-            Systematic Testing<br />
-            <span className="text-secondary font-normal">for Reliable Software</span>
-          </div>
+    <FourPartPageTemplate
+      prelude={<Infrastructure />}
+      pageTitle={t("Software Testing & Quality Assurance")}
+      hero={{
+        imageSrc: infraImg,
+        imageAlt: t('Software Testing'),
+        // (no custom imageClassName here; template default sizing applies)
+        title: t('Systematic Testing'),
+        subtitle: t('for Reliable Software'),
+        body: (
           <p>
-            Many companies understand the critical dependency on software systems and actively work toward improved software quality.
-            Frictionless processes in modern organizations rely on the reliability and performance of their software.
-            High software quality is not just a goal — it’s a key performance indicator for successful enterprises.
-            One of the most effective ways to achieve this is through systematic testing and auditing, ensuring that the software
-            aligns with your requirements and expectations.
+            {t("Many companies understand the critical dependency on software systems and actively work toward improved software quality. Frictionless processes rely on reliable, high-performance software. One of the most effective ways to achieve this is through systematic testing and auditing, ensuring the software aligns with your requirements and expectations.")}
           </p>
-        </div>
-      </div>
-
-      <h2 className="text-3xl font-bold mb-10 text-left">Testing Process & Focus Areas</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-        {testingParts.map((part, i) => (
-          <div
-            key={i}
-            className="p-6 rounded-lg shadow-md bg-white border-l-4 border-secondary flex gap-4 items-start"
-          >
-            <div className="mt-1">{part.icon}</div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">{part.title}</h3>
-              <p className="text-gray-600">{part.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="text-2xl font-bold mb-6 text-left">Your Benefits</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-        {testingBenefits.map((benefit, i) => (
-          <div key={i} className="bg-light p-6 shadow-sm rounded-lg text-center">
-            <img src={check} alt="check" className="w-6 h-6 mx-auto mb-4" />
-            <p className="text-gray-700">{benefit}</p>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="text-2xl font-bold mb-4 text-left">Our Services</h2>
-      <p className="text-gray-600 leading-relaxed max-w-4xl">
-        We provide trustworthy and active support across the complete software testing process. Whether you're a producer, supplier, or
-        purchaser of individual software modules, we assist with test management, test planning, and execution — all aligned with industry
-        standards such as the V-model. Our team includes Certified Testers (Advanced Level) accredited by the
-        International Software Testing Qualifications Board (ISTQB).
-      </p>
-    </div>
-  )
+        ),
+      }}
+      featuresTitle={t("Testing Process & Focus Areas")}
+      features={testingParts}
+      featuresCols="md:grid-cols-2 lg:grid-cols-2"
+      benefitsTitle={t("Your Benefits")}
+      benefits={testingBenefits}
+      benefitsCols="md:grid-cols-2"
+      checkIconSrc={check}
+      servicesTitle={t("Our Services")}
+      servicesIntro={t("We provide trustworthy and active support across the complete software testing process. Whether you're a producer, supplier, or purchaser of software modules, we assist with test management, planning and execution — aligned with standards such as the V-model. Our team includes Certified Testers (Advanced Level) accredited by ISTQB.")}
+    />
+  );
 }
 
-export default Test_Management
+export default Test_Management;

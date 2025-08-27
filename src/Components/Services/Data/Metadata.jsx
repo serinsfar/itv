@@ -1,136 +1,114 @@
-import React from 'react'
-import Data from '../../Services/Data/Data';
-import dataImg from '../../../assets/daten2.jpg';
-import company from '../../../assets/company.png'
-import goal from '../../../assets/goal.png'
-import prespective from '../../../assets/perception.png'
-import reward from '../../../assets/reward.png'
-import theory from '../../../assets/theory.png'
-import geo from '../../../assets/geo.jpg'
-import check from '../../../assets/check.png'
-//image id geo:2520854403//
-const benefits = [
-  {
-    image: goal,
-    title: 'Result-oriented support',
-    description: 'Tailored to your specific needs',
-  },
-  {
-    image: prespective,
-    title: 'External perspective',
-    description: 'Objective and unbiased insights',
-  },
-  {
-    image: reward,
-    title: 'Independent expertise',
-    description: 'Backed by an experienced team of consultants',
-  },
-  {
-    image: theory,
-    title: 'Comprehensive solutions',
-    description: 'From recommendations to full system implementation',
-    bullets: [
-      'Concrete recommendations',
-      'Detailed action plans',
-      'Full implementation of systems',
-    ],
-  },
-];
-const services = [
-  {
-    title: 'Requirements Analysis',
-    description: 'We analyze your metadata needs and ensure alignment with your goals.',
-  },
-  {
-    title: 'ISO 19115 Mapping',
-    description: 'We match your needs with the ISO standard to ensure compliance.',
-  },
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-]
+import Data from '../../Services/Data/Data';
+import geodata from '../../../assets/geodata.jpg';
+import check from '../../../assets/check.png';
+
+import {
+  FaSearch,
+  FaSitemap,
+  FaProjectDiagram,
+  FaFileSignature,
+  FaBullseye,
+  FaUserTie,
+  FaPuzzlePiece,
+  FaTasks,
+} from 'react-icons/fa';
+
+import FourPartPageTemplate from '../../Template/Services_Template';
 
 function Metadata() {
+  const { t } = useTranslation(); 
+
+  // Build arrays on each render (cheap + always correct on language change)
+  const metadataFeatures = [
+    {
+      icon: <FaSearch className="text-secondary text-2xl" />,
+      title: t('features.requirements.title', 'Requirements & Governance'),
+      description: t('features.requirements.desc', 'Define ownership, roles, and lifecycle rules aligned with business goals.'),
+    },
+    {
+      icon: <FaSitemap className="text-secondary text-2xl" />,
+      title: t('features.iso.title', 'ISO 19115 Profile & Mapping'),
+      description: t('features.iso.desc', 'Map existing fields to ISO 19115 and controlled vocabularies for interoperability.'),
+    },
+    {
+      icon: <FaProjectDiagram className="text-secondary text-2xl" />,
+      title: t('features.catalog.title', 'Catalog & Workflows'),
+      description: t('features.catalog.desc', 'Select/configure catalog, editors, and harvesters; automate creation and validation.'),
+    },
+    {
+      icon: <FaFileSignature className="text-secondary text-2xl" />,
+      title: t('features.quality.title', 'Quality & Publishing'),
+      description: t('features.quality.desc', 'Apply validation/completeness checks and publish searchable records to portals/APIs.'),
+    },
+  ];
+
+  const benefits = [
+    {
+      icon: <FaBullseye className="text-secondary text-3xl" />,
+      title: t('benefits.result.title', 'Result-Focused Support'),
+      description: t('benefits.result.desc', 'We work toward measurable outcomes that matter for your organisation.'),
+    },
+    {
+      icon: <FaPuzzlePiece className="text-secondary text-3xl" />,
+      title: t('benefits.tailored.title', 'Tailored to Your Needs'),
+      description: t('benefits.tailored.desc', 'Our approach is adapted to your specific context, constraints, and goals.'),
+    },
+    {
+      icon: <FaUserTie className="text-secondary text-3xl" />,
+      title: t('benefits.independent.title', 'Independent Expertise'),
+      description: t('benefits.independent.desc', 'An experienced, neutral team brings an external point of view.'),
+    },
+    {
+      icon: <FaTasks className="text-secondary text-3xl" />,
+      title: t('benefits.endtoend.title', 'End-to-End Delivery'),
+      description: t('benefits.endtoend.desc', 'From recommendations and action plans to an implemented system — one partner.'),
+    },
+  ];
+
+  const servicesList = [
+    t('services.list.0', 'Analysis of your requirements with regard to metadata.'),
+    t('services.list.1', 'Mapping your requirements to ISO 19115:2003.'),
+    t('services.list.2', 'Establishment of a concept for your metadata system.'),
+    t('services.list.3', 'Specification, tender documentation, and evaluation of the best-fitting metadata system.'),
+  ];
+
   return (
-    <div className=' container row-start-2 row-span-5'>
-                <Data/> 
-        <h1 className='pt-5 text-3xl font-bold text-left'>Metadata</h1>
-     <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
-     <div className=' border-[3px] border-solid border-gray-200 shadow-sm rounded-lg '>
-     <img className='p-4' src ={geo} alt=""/>
-     </div>
-     <div className='mb:pl-12'>
-          <div className='font-bold sm:text-[1.875rem] text-[1.5rem] mb-2'>Smart Geodata Needs<br /> <span className='text-secondary font-normal'>Smart Metadata</span></div>
-            <p>
-             Metadata describing your (geo-) data are needed to better administrate, actualise, and document your data and much more.
-             The necessity of metadata is well acknowledged by a wide circle of persons. With the norm 19115:2003 published by the ISO, 
-             the guidelines how to deal with metadata for geoinformation is given
-            </p>
-     </div>
-      </div>
-              <h2 className='pt-5 text-3xl font-bold text-left'>Your benefits</h2>
-
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10'>
-                  {benefits.map(({ image, title, description, bullets }, index) => (
-                    <div
-                      key={index}
-                      className='bg-light p-6 shadow-sm text-center flex flex-col items-center'
-                    >
-                    <div className='text-4xl mb-5'>
-                      {image.toString().endsWith('.png') || image.toString().startsWith('/') ? (
-                        <img src={image} alt={title} className="w-12 h-12" />
-                      ) : (
-                        image
-                      )}
-                    </div>
-
-                      <h3 className='text-2xl font-bold mb-3'>{title}</h3>
-                      <p className='text-gray-600 font-light text-base mb-4'>
-                        {description}
-                      </p>
-
-                      {bullets && (
-                        <ul className='list-disc list-inside text-left text-sm text-gray-600 font-light space-y-1'>
-                          {bullets.map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
-                </div>
-
-                <div className='pb-20'>
-                <h2 className="pt-5 text-3xl font-bold text-left">Our Services</h2>
-                <p className="pt-5">
-                  We have defined a significant part of the Swiss Metadata Model and established the respective Swiss standard.
-                  Moreover, we accompanied many implementations. This know-how can be beneficial for you.
-                </p>
-
-                <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  'Analysis of your requirements with regard to metadata',
-                  'Mapping your requirements to ISO 19115:2003',
-                  'Establishment of a concept for your metadata system',
-                  'Specification, tender documentation and evaluation of the best fitting metadata system',
-                ].map((service, i) => (
-                  <div
-                    key={i}
-                    className="bg-light p-6 rounded-lg shadow-md flex gap-4 items-center" // <-- change items-start to items-center
-                  >
-                    <div className="flex-shrink-0 w-6 h-6">
-                      <img src={check} alt="check" className="w-full h-full object-contain" />
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">{service}</p>
-                  </div>
-                ))}
-              </div>
-
-
-                        
-     </div>
-    </div>
-      
-  )
-  
+    <FourPartPageTemplate
+      prelude={<Data />}
+      pageTitle={t('pageTitle', 'Metadata ')}
+      hero={{
+        imageSrc: geodata,
+        imageAlt: t('hero.alt', 'Metadata'),
+        title: t('hero.title', 'Smart Geodata Needs'),
+        subtitle: t('hero.subtitle1', 'Smart Metadata'),
+        body: (
+          <p>
+            {t(
+              'hero.body',
+              'Metadata describing your (geo-) data are needed to better administrate, actualise, and document your data and much more. The necessity of metadata is well acknowledged by a wide circle of persons. With the norm 19115:2003 published by the ISO, the guidelines how to deal with metadata for geoinformation is given.'
+            )}
+          </p>
+        ),
+      }}
+      featuresTitle={t('features.title', 'Metadata & Process Areas')}
+      features={metadataFeatures}
+      benefitsTitle={t('benefits.title', 'Your Benefits')}
+      benefits={benefits}
+      checkIconSrc={check}
+      servicesTitle={t('services.title', 'Our Services')}
+      servicesIntro={t(
+        'services.intro',
+        'We have defined a significant part of the Swiss Metadata Model and helped establish the corresponding Swiss standard. We have supported many implementations, and this know-how can benefit you.'
+      )}
+      servicesLeadText={t('services.lead', 'We offer the following services:')}
+      servicesList={servicesList}
+      featuresCols="md:grid-cols-2 lg:grid-cols-2"
+      benefitsCols="md:grid-cols-2"
+    />
+  );
 }
 
-export default Metadata
+export default Metadata;

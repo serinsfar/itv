@@ -35,11 +35,11 @@ const BusinessUnit = () => {
     const { t } = useTranslation();
   return (
     <section className="bg-white">
-      <div className="container pt-12">
+      <div className="container pt-10">
         <h1 className="text-3xl font-bold text-left">{t(
           "Business Units")}</h1>
         <p className="text-xl font-normal pt-14 pb-10">
-          {t("Our business units deliver innovative solutions in aeronautical and geospatial information management")}{t("combining expertise in data, infrastructure, and processes to meet industry needs.")}
+          {t("Our business units provide forward-looking consulting and innovative solutions in the fields of aeronautical and geospatial information management, combining expertise in data, infrastructure and processes to meet the needs of the industry.")}
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10 flex-1">
           {BusinessData.map((business) => (

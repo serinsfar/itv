@@ -2,33 +2,46 @@ import React from 'react';
 import { IoIosArrowForward } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import GroupsIcon from '@mui/icons-material/Groups';
+import { useTranslation } from 'react-i18next';
+
 
 function Peoplee() {
+  const { t } = useTranslation();
   const services = [
-    { name: "Awareness", path: "/Awareness" },
-    { name: "Training", path: "/Training" },
+    { name: t("Awareness"), path: "/Awareness" },
+    { name: t("Training"), path: "/Training" },
   ];
 
   return (
-    <div className="flex flex-col items-start pt-10">
-      <div className="flex items-center gap-4">
-        <GroupsIcon/>
-        <span className="text-lg font-bold">People</span>
-        {services.map((service, index) => (
-          <React.Fragment key={index}>
-            <IoIosArrowForward />
-            <NavLink
-              to={service.path}
-              className={({ isActive }) =>
-                `inline-flex items-center px-4 py-2 rounded-md ${
-                  isActive ? 'text-white bg-secondary font-medium' : ''
-                }`
-              }
-            >
-              {service.name}
-            </NavLink>
-          </React.Fragment>
+    
+     <div className="w-full pt-10">
+      <div className='flex flex-col items-center md:flex-row md:justify-start'>
+      <div className="flex md:flex-row items-center gap-4 md:pr-6 mb-6 md:mb-0">
+        <GroupsIcon className="text-xl" />
+        <span className="text-lg font-bold">{t("People")}</span>
+      </div>
+      <div className="flex flex-col md:flex-row md:flex-wrap gap-2 md:gap-4">
+        {services.map((unit, index) => (
+          <NavLink
+            key={index}
+            to={unit.path}
+            className={({ isActive }) =>
+              [
+                "flex items-center gap-1 ",
+                "px-5 py-3 rounded-3xl",
+                "transition-colors duration-200",
+                isActive
+                  ? "bg-secondary text-white font-medium"
+                  : "bg-light text-gray-800 hover:bg-gray-200",
+              ].join(" ")
+            }
+          >
+            <IoIosArrowForward className="text-gray-500" />
+            {unit.name}
+          </NavLink>
         ))}
+      </div>
+
       </div>
     </div>
   );

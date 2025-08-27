@@ -1,28 +1,35 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { nodePolyfills } from 'vite-plugin-node-polyfills';
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react({ jsxRuntime: 'classic' }), nodePolyfills()],
-  resolve: {
-    alias: {
-      'source-map-js': 'source-map',
-    },
-  },
-  server: {
-    host: true, // ← this allows access from other devices
-    fs: {
-      cachedChecks: false,
-    },
-  },
-build: {
-  rollupOptions: {
-    output: {
-      manualChunks: {
-        vendor: ['react', 'react-dom'], // adjust based on what you're using
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        popping: ["Popping", "sans-serif"],
+      },
+      colors: {
+        primary: "#172E7A",
+        secondary: "#FF9400",
+        third: "#69a79c",
+        light: "#f7f7f7",
+        dark: "#333333",
+        dark2: "#999999",
+        black: "#000000",
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
       },
     },
   },
-}
-});
+  plugins: [],
+};

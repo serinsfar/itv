@@ -55,7 +55,7 @@ const Hero = () => {
               animate="animate"
               className="flex justify-center md:justify-start"
             >
-              <Link to="contact_Us">
+              <Link to="/" onClick={() => window.scrollTo({ top: 2500, behavior: 'smooth' })}>
                 <button className="primary-btn flex items-center gap-2 mt-2">
                   {t("Contact Us")}
                   <IoIosArrowRoundForward

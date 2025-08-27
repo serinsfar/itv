@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import map from "../../assets/map.png";
+import React from "react";
+import { useState } from "react";
 import { GrUserExpert } from "react-icons/gr";
 import { AiOutlineSolution } from "react-icons/ai";
 import { GrTechnology } from "react-icons/gr";
@@ -7,7 +7,7 @@ import { FaBuildingUser } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
-import { geoCentroid } from "d3-geo";
+
 
 
 
@@ -17,7 +17,10 @@ const [selectedMarker, setSelectedMarker] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
   const [hoveredMarker, setHoveredMarker] = useState(null);
   const [hoveredCountry, setHoveredCountry] = useState(null);
-  const mapTitle = "Our Projects Around the World";
+   const [setselSelectedCountry] = useState(null);
+   
+
+  const mapTitle = t("Our Projects Around the World");
 
 
 
@@ -32,75 +35,126 @@ const [selectedMarker, setSelectedMarker] = useState(null);
     {
       icon: <GrUserExpert className="text-2xl" />,
       title: t("Over 30 years of experience"),
-      details: "With over three decades in the industry, we bring unmatched expertise and deep-rooted knowledge to every project. Our longevity is a testament to our reliability, quality, and continuous innovation.",
+      details: t("With over three decades in the industry, we bring unmatched expertise and deep-rooted knowledge to every project. Our longevity is a testament to our reliability, quality, and continuous innovation."),
     },
     {
       icon: <AiOutlineSolution className="text-2xl" />,
       title: t("Tailored Solutions"),
-      details: "We understand that every business is unique. Our team works closely with each client to develop customized solutions that address specific needs, ensuring optimal results and long-term success.",
+      details: t("We understand that every business is unique. Our team works closely with each client to develop customized solutions that address specific needs, ensuring optimal results and long-term success."),
     },
     {
       icon: <GrTechnology className="text-2xl" />,
       title: t("Cutting-Edge Technology"),
-      details: "We leverage the latest technologies and tools to keep you ahead of the curve. From automation to AI integration, our tech-driven approach enhances efficiency, accuracy, and scalability.",
+      details: t("We leverage the latest technologies and tools to keep you ahead of the curve. From automation to AI integration, our tech-driven approach enhances efficiency, accuracy, and scalability."),
     },
     {
       icon: <FaBuildingUser className="text-2xl" />,
       title: t("Trusted by Industry Leaders"),
-      details: "Leading organizations across various sectors rely on our expertise. Our proven track record of delivering quality and consistency has earned us the trust of top-tier clients worldwide.",
+      details: t("Leading organizations across various sectors rely on our expertise. Our proven track record of delivering quality and consistency has earned us the trust of top-tier clients worldwide."),
     },
   ];
   const markers = [
   {
     name: "Zürich",
-    coordinates: [1.0000, 56.0000],
-    countryName: "Switzerland",
+    coordinates: [4.7000, 51.5000],
+    countryName: t("Switzerland"),
   },
   {
     name: "Budapest",
-    coordinates: [12.7000, 55.9979],
-    countryName: "Hungary",
-  },
-  {
-    name: "Baku",
-    coordinates: [42.3000, 50.4093],
-    countryName: "Azerbaijan",
-  },
-  {
-    name: "Nakhchivan",
-    coordinates: [38.0090, 50.2089],
-    countryName: "Azerbaijan",
+    coordinates: [16.7000, 51.3979],
+    countryName: t("Hungary"),
   },
   {
     name: "Guatemala",
-    coordinates: [-97.5133, 29.9349],
-    countryName: "Guatemala",
-  },
-  {
-    name: "Bishkek",
-    coordinates: [66.5698, 51.8746],
-    countryName: "Kyrgyzstan",
+    coordinates: [-93.4133, 22.9349],
+    countryName: t("Guatemala"),
   },
   {
     name: "Chisinau",
-    coordinates: [21.3180, 56.5000],
-    countryName: "Moldova",
+    coordinates: [24.4180, 52.0000],
+    countryName: t("Moldova"),
   },
   {
     name: "Chongqing",
-    coordinates: [95.5516, 40.5630],
-    countryName: "China",
+    coordinates: [98.5516, 37.5630],
+    countryName: t("China"),
   },
-
+  {
+    name: "Sudan",
+    coordinates: [25.1111, 22.5000],
+    countryName: t("Sudan"),
+  },
+  {
+    name: "Bahrain",
+    coordinates: [47.5111, 31.5000],
+    countryName: t("Qatar"),
+  },
+  {
+    name: "Tschechien",
+    coordinates: [10.1111, 53.9000],
+    countryName: t("Czechia"),
+  },
+  {
+    name: "Lithuania",
+    coordinates: [20.1111, 59.0000],
+    countryName: t("Lithuania"),
+  },
+  {
+    name: "Nepal",
+    coordinates: [78.0111, 34.8000],
+    countryName: t("Nepal"),
+  },
+  {
+    name: "Denmark",
+    coordinates: [5.5111, 59.9000],
+    countryName: t("Denmark"),
+  },
+  {
+    name: "Montreal (ICAO)",
+    coordinates: [-82.1111, 50.5000],
+    countryName: t("Canada"),
+  },
+  {
+    name: "Portugal",
+    coordinates: [-11.4999, 45.1000],
+    countryName: t("Portugal"),
+  },
+  {
+    name: "Sweden",
+    coordinates: [10.9900, 64.5000],
+    countryName: t("Sweden"),
+  },
+  {
+    name: "Brüssel (Eurocontrol)",
+    coordinates: [0.00, 55.0000],
+    countryName: t("Belgium"),
+  },
+  {
+    name: "Bishkek",
+    coordinates: [69.5698, 46.4946],
+    countryName: t("Kyrgyzstan"),
+  },
+  {
+    name: "Baku",
+    coordinates: [45.3000, 45.4093],
+    countryName: t("Azerbaijan"),
+  },
+  {
+    name: "Nakhchivan",
+    coordinates: [41.4090, 44.2089],
+    countryName: t("Azerbaijan"),
+  },
 ];
-  const [tooltipContent, setTooltipContent] = useState("");
+  const markerCountryNames = new Set(markers.map((m) => m.countryName));
+
+
 
   return (
-    <section className="bg-white">
+    <section className="bg-white pt-10 pb-3">
 <div className="container py-5 md:py-10 grid grid-cols-1 xl:grid-cols-2 items-center text-start gap-10 space-y-6 md:space-y-0 ">
-        <div className="flex flex-col justify-center "><div className="text-3xl md:text-4xl font-bold !leading-snug">{mapTitle}</div>
+        <div className="flex flex-col justify-center "><h1 className="text-3xl font-bold">{mapTitle}</h1>
         {/* Banner Image */}
-        <div className="relative md:justify-center max-h-[400px] max-w-[800px] object-fill overflow-hidden shadow-lg mt-8">
+        <div className="relative md:justify-center max-h-[400px] max-w-[800px] object-fill overflow-hidden shadow-lg mt-8 rounded-lg">
       {/* Your map component goes here */}
       <ComposableMap
   projection="geoMercator"
@@ -115,30 +169,60 @@ const [selectedMarker, setSelectedMarker] = useState(null);
             geographies.map((geo) => {
               const name = geo.properties.name;
               console.log("Geo country name:", name);
+              const countryName = geo.properties.name;
+              const isMarked = markerCountryNames.has(countryName);
+              const isActive = isMarked && hoveredCountry === countryName;
               return (
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  onMouseEnter={() => setTooltipContent(geo.properties.name)}
-                  onMouseLeave={() => setTooltipContent("")}
+                  onMouseEnter={() => {
+                    const country = geo.properties.name;
+                    const matchedMarkers = markers.filter(m => m.countryName === country);
+                    if (matchedMarkers.length > 0) {
+                      const primary = matchedMarkers[0];
+                      setSelectedMarker(primary.name);
+                      setHoveredMarker(primary.name);
+                      setHoveredCountry(country);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredCountry(null);
+                    setHoveredMarker(null);
+                    setSelectedMarker(null);
+                  }}
                   style={{
+                    // Show active styling when either the geography is hovered
+                    // OR a marker from this country is hovered (we set hoveredCountry in marker handlers).
                     default: {
-                      fill:
-                        hoveredCountry === geo.properties.name
-                          ? "#FF9400"
-                          : "#D6D6DA",
-                      outline: "D6D6DA",
+                      fill: isActive ? "#FF9400" : "#EAEAEA",
+                      stroke: isActive ? "#555" : "#555",
+                      strokeWidth: isActive ? 2.5 : 0.5,
+                      transition: "all 0.2s ease",
                     },
                     hover: {
-                      fill: "gdgfd",
+                      fill: isMarked
+                        ? (hoveredCountry === countryName ? "#FF9400" : "#EAEAEA")
+                        : "#EAEAEA",
+                      stroke: isMarked
+                        ? (hoveredCountry === countryName ? "#555" : "#555")
+                        : "#555",
+                      strokeWidth: isMarked
+                        ? (hoveredCountry === countryName ? 2.5 : 0.5)
+                        : 0.5,
                       outline: "none",
+                      transition: "all 0.2s ease",
                     },
                     pressed: {
-                      fill: "##FF9400",
+                      fill: isActive ? "#FF9400" : "#EAEAEA",
+                      stroke: isActive ? "#FF9400" : "#555",
+                      strokeWidth: isActive ? 2.5 : 0.5,
                       outline: "none",
                     }
                   }}
                 />
+
+
               );
             })
           }
@@ -149,36 +233,47 @@ const [selectedMarker, setSelectedMarker] = useState(null);
       key={name}
       coordinates={coordinates}
       onMouseEnter={() => {
-        setSelectedMarker(name);
-        setHoveredMarker(name);
-        setHoveredCountry(countryName); // highlight the geography
+  setSelectedMarker(name);
+  setHoveredMarker(name);
+  setHoveredCountry(countryName);
+  setselSelectedCountry(countryName); // set selected country
       }}
       onMouseLeave={() => {
         setSelectedMarker(null);
         setHoveredMarker(null);
         setHoveredCountry(null); // remove geography highlight
+        setselSelectedCountry(null); // clear selected country
       }}
     >
   
   <g
     className="cursor-pointer transition-transform duration-300 ease-in-out"
-    style={{
-      transform: hoveredMarker === name ? "scale(1.1)" : "scale(1)",
-      filter: hoveredMarker === name ? "drop-shadow(0 0 5px rgba(0,0,0,0.3))" : "none",
-    }}
+style={{
+  transform:
+    hoveredMarker === name || hoveredCountry === countryName
+      ? "scale(1.1)"
+      : "scale(1)",
+  filter:
+    hoveredMarker === name || hoveredCountry === countryName
+      ? "drop-shadow(0 0 5px rgba(0,0,0,0.3))"
+      : "none",
+}}
   >
     
       {/* Label box if this marker is selected */}
-      {selectedMarker === name && (
-        <foreignObject x={-40} y={47} width={120} height={45}>
-          <div className="bg-secondary text-lg text-white px-2 my-3 rounded-md shadow text-center" >
-            {name}
-          </div>
-        </foreignObject>
-      )}
+{selectedMarker === name && (
+  <foreignObject x={-40} y={35} width={107} height={75}>
+    <div className="bg-primary text-lg text-white my-1 rounded-md shadow text-center" >
+      {name}
+    </div>
+  </foreignObject>
+)}
+
+
+
 
       {/* Marker Icon */}
-      <FaMapMarkerAlt className="text-primary text-5xl shadow-lg" />
+      <FaMapMarkerAlt className="text-primary text-2xl shadow-lg" />
     </g>
    
   </Marker>
@@ -193,8 +288,8 @@ const [selectedMarker, setSelectedMarker] = useState(null);
         {/* Banner Text */}
         <div className="flex flex-col justify-center "onMouseLeave={() => toggleAccordion(null)}>
           <div className="text-center md:text-left space-y-16">
-            <h1 className="text-3xl md:text-4xl font-bold !leading-snug">Why Choose Us</h1>
-            <div className="flex flex-col gap-4 ">
+            <h1 className="text-3xl font-bold">{t("Why Choose Us")}</h1>
+            <div className="flex flex-col gap-4">
               {accordionData.map((item, index) => (
                 <div key={index} className={`p-4 bg-light rounded-2xl text-black transition-all  ease-in-out hover:bg-white hover:scale-5 duration-200 hover:shadow-xl ${activeIndex === index ? "bg-white shadow-2xl" : ""}`}>
                   <div className="flex items-center h-12 justify-between cursor-pointer" onClick={() => toggleAccordion(index)} >

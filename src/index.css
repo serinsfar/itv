@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;700&display=swap');
+@import "swiper/css";
+@import "swiper/css/navigation";
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* your custom CSS can follow; @apply is fine here */
+
 
 
 @layer components {

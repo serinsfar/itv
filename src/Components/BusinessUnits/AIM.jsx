@@ -1,87 +1,131 @@
 import React from 'react';
-import organisation from '../../assets/organisation.jpg';
-import { FaSearch, FaLightbulb, FaUsers } from 'react-icons/fa';
+import { FaProjectDiagram, FaRegListAlt, FaSitemap, FaFileSignature, FaServer, FaClipboardCheck, FaCogs } from 'react-icons/fa';
 import check from '../../assets/check.png';
 import Business from '../BusinessUnits/Business_units';
+import areo from '../../assets/aero-top.jpg';
+import FourPartPageTemplate from '../Template/Services_Template';
+import { TbShoppingCartCog } from 'react-icons/tb';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-const projectPhases = [
-  {
-    icon: <FaSearch className="text-secondary text-2xl" />,
-    title: 'Analysis',
-    description:
-      'As external observers, we assess your organisation to identify strengths, weaknesses, and opportunities for optimisation, considering technical, organisational, and economic aspects.',
-  },
-  {
-    icon: <FaLightbulb className="text-secondary text-2xl" />,
-    title: 'Conception',
-    description:
-      'Together with you and your employees, we develop a strategic concept based on the analysis. Broad acceptance and involvement are key to a successful transformation.',
-  },
-  {
-    icon: <FaUsers className="text-secondary text-2xl" />,
-    title: 'Implementation',
-    description:
-      'We accompany and coach your team throughout the implementation phase. Strategy development beforehand ensures a common understanding of change goals.',
-  },
-];
+function AIM() {
+  const { t } = useTranslation();
 
-const benefits = [
-  'Your organization is prepared for the challenges of the future.',
-  'Your organisation becomes a “learning organisation”, embracing continuous change.',
-  'Your organisation executes tasks efficiently and effectively.',
-  'You save money and reduce internal frictions.',
-];
+  // --- Features (AIM services) ---
+  const features = [
+    {
+      icon: <FaProjectDiagram className="text-secondary text-2xl" />,
+      title: t('AIS→AIM roadmap'),
+      description: t('Develop a roadmap for the transition from AIS to AIM.'),
+    },
+    {
+      icon: <FaRegListAlt className="text-secondary text-2xl" />,
+      title: t('AIM project plan'),
+      description: t('Develop a project plan for the implementation of AIM.'),
+    },
+    {
+      icon: <FaSitemap className="text-secondary text-2xl" />,
+      title: t('Organisation design'),
+      description: t('Design or redesign the AIS organisation to operate as AIM.'),
+    },
+    {
+      icon: <FaFileSignature className="text-secondary text-2xl" />,
+      title: t('Procedures & processes'),
+      description: t('Define new procedures and processes for data origination, management and provision.'),
+    },
+    {
+      icon: <FaServer className="text-secondary text-2xl" />,
+      title: t('Service & technology'),
+      description: t('Identify the required services and information technology needed for AIM.'),
+    },
+    {
+      icon: <FaClipboardCheck className="text-secondary text-2xl" />,
+      title: t('Use cases'),
+      description: t('Prepare and validate the use cases for the AIM service.'),
+    },
+    {
+      icon: <FaCogs className="text-secondary text-2xl" />,
+      title: t('Implementation management'),
+      description: t('Manage the implementation of the AIM service into operations.'),
+    },
+        {
+      icon: <TbShoppingCartCog className="text-secondary text-2xl" />,
+      title: t('Procurement and Specification'),
+      description: t(
+        'ITV supports public tenders with expertise in procurement, evaluation, and legal compliance - delivering tender docs, evaluations, and contract support as needed.'
+      ),
+    },
+  ];
 
-const AIM = () => {
+  // --- Benefits (title + description) ---
+  const benefits = [
+    {
+      title: t('All change aspects addressed'),
+      description: t('Organisation, procedures, processes and technology handled holistically for the AIS to AIM transition.'),
+    },
+    {
+      title: t('Systematic implementation'),
+      description: t('A structured, stage-gated approach to achieving AIM operations.'),
+    },
+    {
+      title: t('Faster compliance'),
+      description: t('Shorten the journey to meet ICAO Annex 15 and PANS-AIM requirements.'),
+    },
+    {
+      title: t('Reduced risk'),
+      description: t('Lower implementation risks with experienced guidance and proven methods.'),
+    },
+  ];
+
   return (
-    <div className="container row-start-2 row-span-5">
-      <Business />
-      <h1 className="pt-10 text-3xl font-bold text-left">Aeronautical Data Management</h1>
-
-      <div className="grid xl:grid-cols-2 gap-8 place-items-center py-10">
-        <div className="border-[3px] border-solid border-gray-200 shadow-sm rounded-lg">
-          <img className="p-4" src={organisation} alt="Aeronautical Data Management" />
-        </div>
-        <div className="mb:pl-12">
-          <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-2">
-            Your Partner for<br />
-            <span className="text-secondary font-normal">Aeronautical Information Evolution</span>
-          </div>
+    <FourPartPageTemplate
+      prelude={<Business />}
+      pageTitle={t('Aeronautical Information Management')}
+      hero={{
+        imageSrc: areo,
+        imageClassName: 'max-w-[449px] object-cover',
+        imageAlt: t('Aeronautical Information Management'),
+        title: t('Your Partner for'),
+        subtitle: t('Aeronautical Information Evolution'),
+        body: (
           <p>
-            The core business of ITV Consult AG is consulting and delivering solutions in the field of Spatial Information Management.
-            We support our clients in evolving from traditional document-based AIS (Aeronautical Information Services) to a
-            data-centric AIM (Aeronautical Information Management) — and further to a service-oriented SWIM (System Wide Information Management) approach.
+            {t(
+              'The revision to ICAO Annex 15 and the introduction of PANS-AIM (Doc 10066) fundamentally changed how aeronautical data is originated, managed and provided. We guide you from document-centric AIS to data-centric AIM — and toward service-oriented SWIM — with a clear roadmap, fit-for-purpose organisation, and operational AIM services.'
+              
+            )}
+
           </p>
-        </div>
-      </div>
+        ),
+      }}
+      featuresTitle={t('Our AIM Implementation Services')}
+      features={features}
+      featuresCols="grid-cols-2"
+      benefitsTitle={t('Your Benefits')}
+      benefits={benefits}
+      benefitsCols="md:grid-cols-2"
+      checkIconSrc={check}
+      servicesTitle={t('Implementation Support')}
+      servicesIntro={
+        <>
+          {t(
+            'Our consultants have hands-on AIS to AIM experience with data originators, regulators and service providers. They have contributed to ICAO Annex 15 and PANS-AIM and are active in ICAO/EUROCONTROL working arrangements as well as CANSO and Global AIM events.'
+          )}
+          <span className="text-primary font-normal block mt-6">
+            <a
+              href="https://itv.aero/assets/cms/uploads/files/AIM_Implementation_Support_Flyer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:shadow-sm hover:bg-light rounded-md p-2"
+            >
+              {t('More about AIM Implementation ...')}
+            </a>
+          </span>
+        </>
+      }
 
-      <h2 className="text-3xl font-bold mb-10 text-left">Our Project Approach</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        {projectPhases.map((phase, i) => (
-          <div
-            key={i}
-            className="p-6 rounded-lg shadow-md bg-white border-l-4 border-secondary flex gap-4 items-start"
-          >
-            <div className="mt-1">{phase.icon}</div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2">{phase.title}</h3>
-              <p className="text-gray-600">{phase.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="text-2xl font-bold mb-6 text-left">Your Benefits</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-        {benefits.map((benefit, i) => (
-          <div key={i} className="bg-light p-6 shadow-sm rounded-lg text-center">
-            <img src={check} alt="check" className="w-6 h-6 mx-auto mb-4" />
-            <p className="text-gray-700">{benefit}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    />
+    
   );
-};
+}
 
 export default AIM;

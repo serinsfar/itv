@@ -1,34 +1,703 @@
-
- {
+{
   
     "Home": "Home",
-    "Services": "Dienste",
+    "Services": "Dienstleistungen",
     "Company": "Unternehmen",
     "References": "Referenzen",
     "Data": "Daten",
     "Infrastructure": "Infrastruktur",
     "People": "Menschen",
-    "Process": "Prozess",
+    "Processes": "Prozess",
     "Organization": "Organisation",
     "Spatial Data Infrastructure": "Geodateninfrastruktur",
-    "Aeronautical Information Management": "Flugverkehrsinformationsmanagement",
+    "Aeronautical Information Management": "Aeronautical Information Management",
     "DCS": "DCS",
-    "Business Units": "Geschäftseinheiten",
+    "Business Units": "Unternehmensbereich",
     "ITV CONSULT AG": "ITV CONSULT AG",
     "Take off into the Future": "Heben Sie ab in Richtung Zukunft!",
     "Contact Us": "Kontaktieren Sie Uns",
     "Organizations Served": "Betreute Organisationen",
     "Hours of Training Delivered": "Stunden Schulung durchgeführt",
     "Successful Projects in 20+ Countries": "Erfolgreiche Projekte in 20+ Ländern",
-    "Our Achievements": "Unsere Leistungen",
-    "Our business units deliver innovative solutions in aeronautical and geospatial information management" : "Unsere Geschäftsbereiche bieten innovative Lösungen für das Management von Luftfahrt- und Geoinformationen und kombinieren ihr Fachwissen in den Bereichen Daten",
+    "Our Achievements": "Unsere Dienstleistungen",
+    "Our business units provide forward-looking consulting and innovative solutions in the fields of aeronautical and geospatial information management, combining expertise in data, infrastructure and processes to meet the needs of the industry." : 
+    "Unsere Geschäftsbereiche bieten zukunftsorientierte Beratung und innovative Lösungen in den Bereichen Luftfahrt und Geodatenmanagement. Dabei kombinieren wir Fachwissen aus den Bereichen Daten, Infrastruktur und Prozesse, um den Anforderungen der Branche gerecht zu werden.",
     "combining expertise in data, infrastructure, and processes to meet industry needs.":"Infrastruktur und Prozesse, um die Anforderungen der Branche zu erfüllen.",
     "Over 30 years of experience":"Über 30 Jahre Erfahrung",
     "Tailored Solutions":"Massgeschneiderte Lösungen",
     "Cutting-Edge Technology":"Hochmoderne Technologie",
     "Trusted by Industry Leaders":"Vertrauen bei Branchenführern",
    "A data model consists of the following parts:":"hello",
-   "Your Partner for your Spatial Data Management The Core Business of ITV Consult AG is consulting and solutions in the field of Spatial Information Management.": "Ihr Partner für Ihr Geodatenmanagement Das Kerngeschäft der ITV Consult AG ist die Beratung und Lösungsentwicklung auf dem Gebiet der raumbezogenen Informationsverarbeitung.Die Integration der geographischen Komponente in das Informationsmanagement einer Verwaltung oder eines Unternehmens unter Berücksichtigung organisatorischer, betriebswirtschaftlicher und technischer Aspekte ist unsere Spezialität."
-    }
+   "Your Partner for your Spatial Data Management The Core Business of ITV Consult AG is consulting and solutions in the field of Spatial Information Management.": 
+   "Ihr Partner für Ihr Geodatenmanagement Das Kerngeschäft der ITV Consult AG ist die Beratung und Lösungsentwicklung auf dem Gebiet der raumbezogenen Informationsverarbeitung.Die Integration der geographischen Komponente in das Informationsmanagement einer Verwaltung oder eines Unternehmens unter Berücksichtigung organisatorischer, betriebswirtschaftlicher und technischer Aspekte ist unsere Spezialität.",
+   "With over three decades in the industry, we bring unmatched expertise and deep-rooted knowledge to every project. Our longevity is a testament to our reliability, quality, and continuous innovation.": "Mit über drei Jahrzehnten Branchenerfahrung bringen wir unvergleichliche Fachkenntnis und tiefes Wissen in jedes Projekt ein. Unsere Beständigkeit ist ein Beweis für unsere Zuverlässigkeit, Qualität und kontinuierliche Innovation.",
+    "We understand that every business is unique. Our team works closely with each client to develop customized solutions that address specific needs, ensuring optimal results and long-term success.": "Wir verstehen, dass jedes Unternehmen einzigartig ist. Unser Team arbeitet eng mit jedem Kunden zusammen, um massgeschneiderte Lösungen zu entwickeln, die spezifische Bedürfnisse ansprechen und optimale Ergebnisse sowie langfristigen Erfolg gewährleisten.",
+    "We leverage the latest technologies and tools to keep you ahead of the curve. From automation to AI integration, our tech-driven approach enhances efficiency, accuracy, and scalability.": "Wir nutzen die neuesten Technologien und Werkzeuge, um Sie an der Spitze zu halten. Von Automatisierung bis hin zur KI-Integration verbessert unser technologiegetriebener Ansatz Effizienz, Genauigkeit und Skalierbarkeit.",
+    "Leading organizations across various sectors rely on our expertise. Our proven track record of delivering quality and consistency has earned us the trust of top-tier clients worldwide." : "Führende Organisationen in verschiedenen Sektoren vertrauen auf unser Fachwissen. Unser nachgewiesener Erfolg bei der Bereitstellung von Qualität und Konsistenz hat uns das Vertrauen erstklassiger Kunden weltweit eingebracht.",
+    "Our Projects Around the World": "Unsere Projekte weltweit",
+    "Why Choose Us": "Warum uns wählen",
+    "Read More": "Mehr lesen",
+    "Phone": "Telefon",
+      "Email": "E-Mail",
+      "Address": "Adresse",
+      "Metadata":"Metadaten",
+      "Data Organisation":"Daten Organisation",
+      "Organization-wide":"Organisation-weit",
+      "Geodata Management":"Geodaten Management",
+      "Today, not only specialists use geodata, but different business areas in an organisation originate, process, publish and use geodata. The definition of an organisation-wide data organisation is needed in a way, that the geodata is not bought several times, the data storage is built up easyly and efficiently, the data transfer between business areas is without frictions and data will be published from one hand only.":
+      "Heute nutzen nicht nur Spezialisten Geodaten, sondern verschiedene Geschäftsbereiche in einer Organisation erzeugen, verarbeiten, veröffentlichen und verwenden Geodaten. Die Definition einer organisation-weiten Datenorganisation ist notwendig, damit die Geodaten nicht mehrfach gekauft werden, der Datenspeicher einfach und effizient aufgebaut wird, der Datentransfer zwischen den Geschäftsbereichen reibungslos erfolgt und die Daten nur von einer Stelle aus veröffentlicht werden.",
+      "Our Services":"Unsere Dienstleistungen",
+      "Innovation": "Innovation",
+      "Your benefits": "Ihre Vorteile",
+      "hero.title": "Intelligente Geodatenbedürfnisse",
+      "hero.subtitle1": "Intelligente Metadaten",
+      "Metadata describing your (geo-) data are needed to better administrate, actualise, and document your data and much more. The necessity of metadata is well acknowledged by a wide circle of persons. With the norm 19115:2003 published by the ISO, the guidelines how to deal with metadata for geoinformation is given.":
+      "Um Ihre (Geo-)Daten besser verwalten, aktualisieren und dokumentieren zu können, sind Metadaten erforderlich, die Ihre Daten beschreiben. Die Notwendigkeit von Metadaten wird von einem breiten Personenkreis anerkannt. Mit der von der ISO veröffentlichten Norm 19115:2003 werden Richtlinien für den Umgang mit Metadaten für Geoinformationen vorgegeben.",
+      "We have defined a significant part of the Swiss Metadata Model and established the respective Swiss standard. Moreover, we accompanied many implementations. This know-how can be beneficial for you.":
+      "Wir haben einen wesentlichen Teil des Schweizer Metadatenmodells definiert und den entsprechenden Standard etabliert. Darüber hinaus haben wir zahlreiche Implementierungen begleitet. Dieses Know-how kann auch für Sie von Nutzen sein.",
+      "Analysis of your requirements with regard to metadata.":"Analyse Ihrer Anforderungen in Bezug auf Metadaten.",
+      "Mapping your requirements to ISO 19115:2003.":"Abgleich Ihrer Anforderungen mit ISO 19115:2003.",
+      "Establishment of a concept for your metadata system.":"Entwicklung eines Konzepts für Ihr Metadatensystem.",
+      "Specification, tender documentation and evaluation of the best fitting metadata system.":"Spezifikation, Ausschreibungsunterlagen und Bewertung des am besten geeigneten Metadatensystems.",
+      "Business Growth": "Geschäftswachstum",
+      "Boost your business with smarter decisions and strategic insights.": "Steigern Sie Ihren Geschäftserfolg, indem Sie intelligentere Entscheidungen treffen und strategische Erkenntnisse gewinnen.",
+      "Increase ROI": "Steigern Sie den ROI",
+      "Optimize resources": "Ressourcen optimieren",
+      "Drive continuous innovation and stay ahead of the competition.": "Treiben Sie kontinuierliche Innovationen voran und bleiben Sie Ihrer Konkurrenz immer einen Schritt voraus.",
+      "Foster creativity": "Kreativität fördern",
+      "Encourage experimentation": "Experimentieren fördern",
+      "Team Alignment": "Team-Ausrichtung",
+      "Improve collaboration and ensure everyone is on the same page.": "Verbessern Sie die Zusammenarbeit und stellen Sie sicher, dass alle auf dem gleichen Stand sind.",
+      "Shared goals": "Gemeinsame Ziele",
+      "Improved communication": "Verbesserte Kommunikation",
+      "Operational Efficiency": "Betriebliche Effizienz",
+      "Streamline processes to reduce waste and save time.": "Optimieren Sie Prozesse, um Verschwendung zu reduzieren und Zeit zu sparen.",
+      "Automation": "Automatisierung",
+      "Lean workflows": "Schlanke Arbeitsabläufe",
+      "Data Flow Analysis": "Datenflussanalyse",
+      "We analyse the current data flows and identify strengths, weaknesses, and areas for improvement.": "Wir analysieren die aktuellen Datenflüsse, um Stärken, Schwächen und Verbesserungsmöglichkeiten zu identifizieren.",
+      "Optimization Proposal":"Optimierungsvorschlag",
+      "Based on the analysis, we outline possibilities for an optimized data organization and discuss them with you.": "Auf Basis der Analyse skizzieren wir Optimierungsmöglichkeiten für Ihre Datenorganisation und besprechen diese mit Ihnen.",
+      "Decision & CoachiFoster creative thinking and explore new ideas.ng": "Entscheidung & Coaching",
+      "Together, we choose the best solution, and we support your team throughout the technical implementation.": "Gemeinsam wählen wir die beste Lösung aus und unterstützen Ihr Team bei der technischen Umsetzung.",
+      "Team Involvement": "Team-Beteiligung",
+      "You and your team are fully involved in every phase of the process for ownership and transparency.": "Um Eigenverantwortung und Transparenz zu gewährleisten, sind Sie und Ihr Team in jede Phase des Prozesses voll eingebunden.",
+      "Foster creative thinking and explore new ideas.": "Fördern Sie kreatives Denken und entdecken Sie neue Ideen.",
+      "Team Collaboration":"Teamzusammenarbeit",
+      "Empower your team with better communication tools.": "Stärken Sie Ihr Team mit besseren Kommunikationswerkzeugen!",
+      "Data-Driven Decisions":"Datengestützte Entscheidungen",
+      "Leverage analytics to make better strategic choices.": "Nutzen Sie Analysen, um strategische Entscheidungen zu optimieren.",
+      "Efficiency":"Effizienz",
+      "Automate routine tasks and save valuable time.":"Automatisieren Sie Ihre Routineaufgaben und sparen Sie wertvolle Zeit",
+      "Data Modeling":"Datenmodellierung",
+      "The Foundation of":"Die Gründung von",
+      "System Architecture":"Systemarchitektur",
+      "Specification":"Spezifikation",
+      "Procurement of a System":"System-Beschaffung",
+      "Every system needs a fitting IT infrastructure. For a system replacement, it is crucial to define the implementation environment early. A clear system architecture tailored to your activities aligns data and components cleanly, avoids redundancies, and enables smooth communication between software and hardware levels.":
+      "Jedes System braucht eine passende IT-Infrastruktur. Für einen Systemersatz ist es zentral, die Umsetzungsumgebung frühzeitig zu definieren. Eine klare, auf Ihre Aktivitäten zugeschnittene Systemarchitektur stimmt Daten und Komponenten sauber aufeinander ab, vermeidet Doppelspurigkeiten und ermöglicht reibungslose Kommunikation zwischen Software- und Hardware-Ebene.",
+      "We first analyze the existing environment together with your team. Based on this, we develop a future-proof system architecture that meets your technical and operational requirements – and optimizes your current setup if needed. We document the target architecture clearly in text and diagrams.":
+      "Zuerst analysieren wir gemeinsam mit Ihrem Team die bestehende Umgebung. Darauf basierend erarbeiten wir eine zukunftsfähige Systemarchitektur, die Ihre technischen und betrieblichen Anforderungen erfüllt – und bei Bedarf Ihr aktuelles Setup optimiert. Die Zielarchitektur dokumentieren wir verständlich in Text und Diagrammen.",
+      "Implementation Environment":"Umsetzungsumgebung",
+      "Before any replacement, the project and operational environment must be defined early and fittingly.":"Vor jeder Ablösung ist die Projekt- und Betriebsumgebung frühzeitig und passend zu definieren.",
+      "We develop a tailored architecture based on your current and planned activities – for efficient integration.":"Wir erarbeiten eine massgeschneiderte Architektur auf Basis Ihrer aktuellen und geplanten Aktivitäten – für effiziente Integration.",
+      "Technical Optimization":"Technische Optimierung",
+      "Clear & Consistent":"Klar & Konsistent",
+      "Specifications that Deliver":"Spezifikationen, die liefern",
+      "Be it for the procurement of a new system, the purchase of services, or the acquisition of data, you always need a consistent and clear specification of your wishes and requirements. With our long-standing experience, we ensure that your specifications are complete, clearly understood by suppliers, and require minimal effort from your team.":
+      "Ob bei der Beschaffung eines neuen Systems, dem Kauf von Dienstleistungen oder der Akquisition von Daten – Sie benötigen stets eine konsistente und klare Spezifikation Ihrer Wünsche und Anforderungen. Mit unserer langjährigen Erfahrung stellen wir sicher, dass Ihre Spezifikationen vollständig sind, von den Anbietern klar verstanden werden und nur minimalen Aufwand für Ihr Team erfordern.", 
+      "Specification Services":"Spezifikationsdienstleistungen",
+      "Define how users will interact with the system to ensure expectations are aligned.":"Definieren Sie, wie Benutzer mit dem System interagieren, um sicherzustellen, dass die Erwartungen übereinstimmen.",  
+      "Specification Writing":"Spezifikationsschreiben",
+      "Establish precise descriptions of functionalities, forming the basis for the tender documentation.":"Erstellen Sie präzise Beschreibungen von Funktionalitäten, die die Grundlage für die Ausschreibungsunterlagen bilden.", 
+      "Project Experience":"Projekterfahrung",
+      "Leverage insights and best practices gained through many successfully completed projects.":"Nutzen Sie Erkenntnisse und bewährte Verfahren aus zahlreichen erfolgreich abgeschlossenen Projekten.",
+      "Requirements Engineering":"Anforderungsmanagement",
+      "Your Benefits":"Ihre Vorteile",
+      "Comprehensive coverage":"Umfassende Abdeckung",
+      "Covers all relevant aspects thanks to extensive experience.":"Deckt dank umfangreicher Erfahrung alle relevanten Aspekte ab.", 
+      "Clarity for suppliers": "Klarheit für Anbieter",
+      "Ensures clear understanding by suppliers.":"Sorgt für ein klares Verständnis bei den Anbietern.",
+      "Reduced internal effort":"Reduzierter interner Aufwand",
+      "Identify and structure the requirements of your users clearly and completely.":"Identifizieren und strukturieren Sie die Anforderungen Ihrer Nutzer klar und vollständig.",  
+      "Use Case Definition":"Definition des Anwendungsfalls",
+      "Minimizes your internal workload and resource needs.":"Minimiert Ihren internen Arbeitsaufwand und Ressourcenbedarf.", 
+      "Our Service":"Unser Service",
+      "Our services in establishing a specification include requirements engineering, use case definition, functionality description, and compiling the specification as part of your tender documentation. With our background and project experience, we translate user requirements into clear, actionable language that suppliers understand.":"Unsere Dienstleistungen bei der Erstellung einer Spezifikation umfassen Requirements Engineering, Definition von Anwendungsfällen, Beschreibung der Funktionalität und Zusammenstellung der Spezifikation als Teil Ihrer Ausschreibungsunterlagen. Mit unserem Hintergrund und unserer Projekterfahrung übersetzen wir die Anforderungen der Nutzer in eine klare, umsetzbare Sprache, die die Lieferanten verstehen.",
+      "We optimize your existing IT infrastructure for more performance, security, and future scalability.":"Wir optimieren Ihre bestehende IT-Infrastruktur für mehr Leistung, Sicherheit und zukünftige Skalierbarkeit.",   
+      "systemArch.features.architecture.desc1":"Vor der Einführung eines Ersatzes ist es entscheidend, die Implementierungsumgebung zu definieren, die den Projektanforderungen entspricht.",
+      "Specification & Requirements":"Spezifikation & Anforderungen",
+      "Define ownership, roles, and lifecycle rules in line with business objectives.":"Definieren Sie Eigentum, Rollen und Lebenszyklusregeln im Einklang mit den Geschäftszielen.",
+      "ISO 19115 Profile & Mapping":"ISO 19115 Profil & Zuordnung",
+      "A data model is composed of several interrelated components that together provide a clear, structured understanding of real-world information. It begins with a semantic description, where subject specialists describe the real world using plain, common language that is easily understood across disciplines. This is followed by a catalogue of objects, which defines each element—such as classes and attributes—along with data capturing rules. This catalogue, developed in collaboration between domain experts and modeling specialists, serves as the crucial interface between semantics and the formal structure of the model. Finally, the conceptual data model represents the real world using structured text and diagrams, formalized by modeling experts, providing the foundation for implementation and system integration.":"Ein Datenmodell besteht aus mehreren miteinander verbundenen Komponenten, die zusammen ein klares, strukturiertes Verständnis der Informationen aus der realen Welt vermitteln. Es beginnt mit einer semantischen Beschreibung, in der Fachleute die reale Welt mit einer einfachen, allgemein verständlichen Sprache beschreiben, die in allen Disziplinen leicht verständlich ist. Darauf folgt ein Objektkatalog, der jedes Element – wie Klassen und Attribute – zusammen mit Regeln zur Datenerfassung definiert. Dieser Katalog, der in Zusammenarbeit zwischen Fachleuten und Modellierungsspezialisten entwickelt wurde, dient als wichtige Schnittstelle zwischen Semantik und der formalen Struktur des Modells. Schließlich repräsentiert das konzeptionelle Datenmodell die reale Welt mithilfe von strukturiertem Text und Diagrammen, die von Modellierungsexperten formalisiert wurden und die Grundlage für die Implementierung und Systemintegration bilden.",
+      "features.requirements.title": "Anforderungen & Governance",
+      "features.requirements.desc": "Definieren Sie Eigentum, Rollen und Lebenszyklusregeln im Einklang mit den Geschäftszielen.",
+      "features.iso.title": "ISO 19115 Profil & Zuordnung",
+      "features.iso.desc": "Ordnen Sie vorhandene Felder ISO 19115 und kontrollierten Vokabularen für Interoperabilität zu.",
+      "features.catalog.title": "Katalog & Workflows",
+      "features.catalog.desc": "Wählen und konfigurieren Sie Katalog, Editoren und Harvester; automatisieren Sie Erstellung und Validierung.",
+      "features.quality.title": "Qualität & Veröffentlichung",
+      "features.quality.desc": "Wenden Sie Validierungs- und Vollständigkeitsprüfungen an und veröffentlichen Sie durchsuchbare Datensätze in Portalen/APIs.",
+      "benefits.result.title": "Ergebnisorientierte Unterstützung",
+      "benefits.result.desc": "Wir arbeiten auf messbare Ergebnisse hin, die für Ihre Organisation wichtig sind.",
+      "benefits.tailored.title": "Massgeschneidert für Ihre Bedürfnisse",
+      "benefits.tailored.desc": "Unser Ansatz wird an Ihren spezifischen Kontext, Ihre Einschränkungen und Ziele angepasst.",
+      "benefits.independent.title": "Unabhängige Expertise",
+      "benefits.independent.desc": "Ein erfahrenes, neutrales Team bringt eine externe Sichtweise ein.",
+      "benefits.endtoend.title": "End-to-End Umsetzung",
+      "benefits.endtoend.desc": "Von Empfehlungen und Aktionsplänen bis zum implementierten System – ein Partner.",
+      "services.list.0": "Analyse Ihrer Anforderungen in Bezug auf Metadaten.",
+      "services.list.1": "Abgleich Ihrer Anforderungen mit ISO 19115:2003.",
+      "services.list.2": "Entwicklung eines Konzepts für Ihr Metadatensystem.",
+      "services.list.3": "Spezifikation, Ausschreibungsunterlagen und Bewertung des am besten geeigneten Metadatensystems.",
+      "pageTitle": "Metadaten",
+      "hero.alt": "Metadaten",
+      "hero.subtitle": "Intelligente Metadaten",
+      "hero.body": "Um Ihre (Geo-)Daten besser verwalten, aktualisieren und dokumentieren zu können, sind Metadaten erforderlich, die Ihre Daten beschreiben. Die Notwendigkeit von Metadaten wird von einem breiten Personenkreis anerkannt. Mit der von der ISO veröffentlichten Norm 19115:2003 werden Richtlinien für den Umgang mit Metadaten für Geoinformationen vorgegeben.",
+      "features.title": "Metadaten-Funktionen",
+      "benefits.title": "Ihre Vorteile",
+      "services.title": "Unsere Dienstleistungen",
+      "services.intro": "Wir haben einen wesentlichen Teil des Schweizer Metadatenmodells definiert und den entsprechenden Standard etabliert. Darüber hinaus haben wir zahlreiche Implementierungen begleitet. Dieses Know-how kann auch für Sie von Nutzen sein.",
+      "services.lead": "Wir bieten folgende Dienstleistungen an:",
+  "dataOrg.pageTitle": "Datenorganisation",
+  "dataOrg.hero.alt": "Datenorganisation",
+  "dataOrg.hero.title": "Unternehmensweit",
+  "dataOrg.hero.subtitle": "Geodatenmanagement",
+  "dataOrg.hero.body": "Heute arbeiten nicht nur Spezialistinnen und Spezialisten mit Geodaten. In verschiedenen Fachbereichen einer Organisation entstehen Geodaten, werden verarbeitet, veröffentlicht und genutzt. Eine unternehmensweite Datenorganisation ist nötig, damit Geodaten nicht mehrfach beschafft werden, die Datenspeicherung einfach und effizient aufgebaut ist, der Datenaustausch zwischen Bereichen reibungslos funktioniert und die Veröffentlichung aus einer Hand erfolgt.",
 
+  "dataOrg.features.title": "Daten-Governance & Prozessbereiche",
+  "dataOrg.features.roles.title": "Rollen & Governance",
+  "dataOrg.features.roles.desc": "Zuständigkeiten, Eigentümerschaft und Entscheidungswege bereichsübergreifend klären.",
+  "dataOrg.features.flow.title": "Datenfluss-Konzept",
+  "dataOrg.features.flow.desc": "Schlanke Datenflüsse entwerfen und Doppelspurigkeiten sowie Reibungen vermeiden.",
+  "dataOrg.features.integration.title": "Integration & Schnittstellen",
+  "dataOrg.features.integration.desc": "Definieren, wie Systeme Daten zuverlässig und konsistent austauschen.",
+  "dataOrg.features.ops.title": "Betrieb & Verantwortlichkeiten",
+  "dataOrg.features.ops.desc": "Lebenszyklus, Stewardship und Veröffentlichung aus einer Hand klären.",
+
+  "dataOrg.benefits.title": "Ihre Vorteile",
+  "dataOrg.benefits.innovation.title": "Innovation",
+  "dataOrg.benefits.innovation.desc": "Kreatives Denken fördern und neue Ansätze erproben.",
+  "dataOrg.benefits.collab.title": "Teamzusammenarbeit",
+  "dataOrg.benefits.collab.desc": "Teams mit besseren Kommunikationswegen befähigen.",
+  "dataOrg.benefits.dataDriven.title": "Datenbasierte Entscheide",
+  "dataOrg.benefits.dataDriven.desc": "Analysen nutzen, um bessere strategische Entscheide zu treffen.",
+  "dataOrg.benefits.efficiency.title": "Effizienz",
+  "dataOrg.benefits.efficiency.desc": "Routineaufgaben automatisieren und wertvolle Zeit sparen.",
+
+  "dataOrg.services.title": "Unsere Dienstleistungen",
+  "dataOrg.services.intro": "Wir unterstützen Sie beim Entwurf eines unternehmensweiten Operating Models für Geodaten: Rollen und Verantwortlichkeiten klären, Governance definieren sowie passende Werkzeuge und Schnittstellen auswählen. Von Architektur bis Change Management – wir richten Prozesse und Systeme so aus, dass Daten ohne Reibung durch Ihr Unternehmen fliessen.",
   
+  "dataModel.pageTitle": "Datenmodellierung",
+  "dataModel.image.alt": "Diagramm des Datenmodells",
+
+  "dataModel.lead.title": "Die Grundlage",
+  "dataModel.lead.highlight": "strukturierter Daten",
+  "dataModel.lead.body": "Ein Datenmodell besteht aus mehreren miteinander verknüpften Komponenten, die zusammen ein klares, strukturiertes Verständnis realer Informationen ermöglichen. Es beginnt mit einer semantischen Beschreibung, in der Fachexperten die reale Welt in einer verständlichen, gemeinsamen Sprache beschreiben. Darauf folgt ein Objektkatalog, der jedes Element – etwa Klassen und Attribute – zusammen mit Regeln zur Datenerfassung definiert. Dieser Katalog, in Zusammenarbeit zwischen Domänenexperten und Modellierungsspezialisten erarbeitet, bildet die entscheidende Schnittstelle zwischen Semantik und der formalen Struktur des Modells. Schliesslich stellt das konzeptuelle Datenmodell die reale Welt mit strukturiertem Text und Diagrammen dar und bildet die Grundlage für Implementierung und Systemintegration.",
+
+  "dataModel.sections.partsTitle": "Datenmodell",
+
+  "dataModel.parts.semantic.title": "Semantische Beschreibung",
+  "dataModel.parts.semantic.desc": "Beschreibung der realen Welt durch Fachexperten in einer gemeinsamen, für alle verständlichen Sprache.",
+
+  "dataModel.parts.catalog.title": "Objektkatalog",
+  "dataModel.parts.catalog.desc": "Definition jedes Elements (Klasse und Attribut) mit Regeln zur Datenerfassung. Dient als Schnittstelle zwischen Semantik und konzeptuellem Modell.",
+
+  "dataModel.parts.conceptual.title": "Konzeptuelles Datenmodell",
+  "dataModel.parts.conceptual.desc": "Formale Darstellung der realen Welt in Diagrammen und strukturiertem Text, erstellt von Modellierungsspezialisten.",
+
+  "dataModel.benefits.title": "Ihre Vorteile",
+  "dataModel.benefits.intro": "Wir haben einen wesentlichen Teil des Schweizer Metadatenmodells mitgestaltet und den entsprechenden Standard mitetabliert. Zahlreiche Implementierungen profitieren von diesem Know-how – auch Sie können davon profitieren.",
+  "dataModel.benefits.list.0": "Unabhängiger externer Blick durch unsere Berater.",
+  "dataModel.benefits.list.1": "Definierte Methode zur Ausarbeitung der verschiedenen Modellstufen.",
+  "dataModel.benefits.list.2": "Unterstützung genau in der Phase, in der Sie sie benötigen.",
+
+  "dataModel.services.title": "Unser Service",
+  "dataModel.services.intro": "Wir unterstützen und begleiten Sie und Ihr Team in jeder Phase der Datenmodellierung – sei es durch moderierte Workshops oder von uns erarbeitete Beschreibungen.",
+   "dataModel": {
+    "parts": {
+      "semantic": {
+        "title": "Semantische Beschreibung",
+        "desc": "Beschreibung der realen Welt durch Fachexperten in einer gemeinsamen Sprache, die für alle verständlich ist."
+      },
+      "catalog": {
+        "title": "Objektkatalog",
+        "desc": "Definition jedes Elements (Klasse und Attribut) mit Regeln zur Datenerfassung. Schnittstelle zwischen Semantik und konzeptionellem Modell."
+      },
+      "conceptual": {
+        "title": "Konzeptionelles Datenmodell",
+        "desc": "Formale Darstellung der realen Welt in Diagrammen und strukturiertem Text, erstellt von Modellierungsspezialisten."
+      }
+    },
+    "benefits": {
+      "cards": {
+        "0": {
+          "title": "Unabhängige externe Sichtweise",
+          "desc": "Durch unsere erfahrenen Berater."
+        },
+        "1": {
+          "title": "Definierte Methode",
+          "desc": "Strukturierter Ansatz über alle Modellphasen hinweg."
+        },
+        "2": {
+          "title": "Unterstützung nach Bedarf",
+          "desc": "Gezielte Hilfe genau dann, wenn Sie sie benötigen."
+        }
+      }
+    },
+     "services": {
+      "lead": "Wir bieten folgende Dienstleistungen an:",
+      "title": "Unsere Dienstleistungen",
+      "list": {
+        "0": "Anforderungs- und Umfangs-Workshops",
+        "1": "Unterstützung bei der semantischen Beschreibung",
+        "2": "Erstellung und Regeln des Objektkatalogs",
+        "3": "Konzeptionelles Modellieren (UML/ERD)",
+        "4": "Validierung, Governance und Übergabe"
+      }
+    }
+  },
+  "systemArch": {
+    "pageTitle": "Systemarchitektur",
+    "hero": {
+      "alt": "Systemarchitektur",
+      "title": "Zukunftsfähig gestalten",
+      "subtitle": "Systemarchitektur",
+      "body": "Jedes System braucht eine passende IT-Infrastruktur. Für einen Systemersatz ist es zentral, die Umsetzungsumgebung frühzeitig zu definieren. Eine klare, auf Ihre Aktivitäten zugeschnittene Systemarchitektur stimmt Daten und Komponenten sauber aufeinander ab, vermeidet Doppelspurigkeiten und ermöglicht reibungslose Kommunikation zwischen Software- und Hardware-Ebene."
+    },
+    "features": {
+      "title": "Systemarchitektur – Überblick",
+      "Implementation": {
+        "title1": "Umsetzungsumgebung",
+        "desc1": "Vor jeder Ablösung ist die Projekt- und Betriebsumgebung frühzeitig und passend zu definieren."
+      },
+      "architecture": {
+        "title2": "Systemarchitektur",
+        "desc2": "Wir erarbeiten eine massgeschneiderte Architektur auf Basis Ihrer aktuellen und geplanten Aktivitäten – für effiziente Integration."
+      },
+      "optimization": {
+        "title3": "Technische Optimierung",
+        "desc3": "Wir optimieren Ihre bestehende IT-Infrastruktur für mehr Leistung, Sicherheit und zukünftige Skalierbarkeit."
+      }
+    },
+    "benefits": {
+      "title": "Ihre Vorteile",
+      "cards": {
+        "0": {
+          "title": "Verbesserte Datenflüsse",
+          "desc": "Verschlankte Integrationen und weniger Engpässe."
+        },
+        "1": {
+          "title": "Unabhängiger Blick auf die Architektur",
+          "desc": "Neutrale Beurteilung durch erfahrene Berater."
+        },
+        "2": {
+          "title": "Erfahrung aus vielen Projekten",
+          "desc": "Bewährte Muster anwenden und typische Fallstricke vermeiden."
+        },
+        "3": {
+          "title": "Keine unkontrollierten Redundanzen",
+          "desc": "Konsolidierte Komponenten und klare Verantwortlichkeiten."
+        },
+        "4": {
+          "title": "Passende Architektur von Experten",
+          "desc": "Zukunftsfähig, skalierbar und wartbar."
+        }
+      }
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen",
+      "intro": "Zuerst analysieren wir gemeinsam mit Ihrem Team die bestehende Umgebung. Darauf basierend erarbeiten wir eine zukunftsfähige Systemarchitektur, die Ihre technischen und betrieblichen Anforderungen erfüllt – und bei Bedarf Ihr aktuelles Setup optimiert. Die Zielarchitektur dokumentieren wir verständlich in Text und Diagrammen.",
+      "lead": "Wir bieten folgende Leistungen an:",
+      "list": {
+        "0": "Ist-Analyse & Umfeldaufnahme",
+        "1": "Zielarchitektur & Leitprinzipien",
+        "2": "Integrations-Blueprint",
+        "3": "Dokumentation & Diagramme"
+      }
+    }
+  },
+  "Full Procurement Support": "Vollständige Unterstützung im Beschaffungswesen",
+  "The procurement of a system typically involves the phases &quot;specification&quot;, &quot;tendering and evaluation&quot;, and &quot;implementation&quot;. You decide which phase—or parts of a phase—you hand over to our responsibility. Our experts guide your project to success, flexibly supporting you where needed most.":"Die Beschaffung eines Systems umfasst in der Regel die Phasen \"Spezifikation\", „Ausschreibung und Evaluation“ sowie \"Implementierung\". Sie entscheiden, welche Phase – oder Teile einer Phase – Sie in unsere Verantwortung übergeben. Unsere Experten führen Ihr Projekt zum Erfolg und unterstützen Sie flexibel dort, wo Sie es am meisten benötigen.",
+  "Procurement Phases": "Beschaffungsphasen",
+  "Specification Phase": "Spezifikationsphase",
+  "Tendering & Evaluation" : "Ausschreibung & Evaluation",
+  "We support or lead the tendering process with fair, transparent evaluation criteria that withstand objections.": "Wir unterstützen oder leiten den Ausschreibungsprozess mit fairen, transparenten Bewertungskriterien, die Einsprachen standhalten.",
+  "Implementation" : "Implementierung",
+  "From coaching your team to leading the full implementation, we help manage resources and timelines effectively." : "Von der Begleitung und Schulung Ihres Teams bis hin zur vollständigen Leitung der Implementierung – wir helfen, Ressourcen und Zeitpläne effektiv zu managen.",
+  "Flexible Engagement": "Flexible Zusammenarbeit",
+  "You decide which phase or part of a phase you delegate to us based on your internal resources." : "Sie entscheiden, welche Phase oder welchen Teil einer Phase Sie uns – je nach Ihren internen Ressourcen – delegieren.",
+  "Clear documentation": "Klare Dokumentation",
+  "Consistent and clear specification and tender documentation.": "Konsistente und verständliche Spezifikations- und Ausschreibungsunterlagen.",
+  "Transparent evaluation": "Transparente Evaluation",
+  "Evaluation criteria and process that withstand objections." :"Bewertungskriterien und -verfahren, die Einsprachen standhalten.",
+  "Flexible support" :"Flexible Unterstützung",
+  "Help during peak effort phases where you need it most." :"Hilfe in arbeitsintensiven Phasen, genau dort, wo Sie sie am meisten brauchen.",
+  "Experienced leadership" :"Erfahrene Leitung",
+  "Seasoned project managers for smooth execution." :"Erprobte Projektleiter für eine reibungslose Durchführung.",
+  "Specification included" :"Spezifikation inbegriffen",
+  "Specification prepared as part of your tender documentation." :"Die Spezifikation wird als Teil Ihrer Ausschreibungsunterlagen erstellt.",
+  "We support you in every phase of the procurement process: from requirements engineering and specification writing to elaborating tender documentation and defining evaluation criteria. We also bring the experience of many projects and can either coach your implementation team or take full responsibility as project manager." :"Wir unterstützen Sie in jeder Phase des Beschaffungsprozesses: von der Anforderungserhebung und Spezifikationserstellung über die Ausarbeitung der Ausschreibungsunterlagen bis hin zur Definition der Bewertungskriterien. Dank unserer Erfahrung aus zahlreichen Projekten können wir Ihr Implementierungsteam entweder coachen oder die volle Verantwortung als Projektleiter übernehmen.",
+   "Software Testing & Quality Assurance": "Softwaretest & Qualitätssicherung",
+
+  "Software Testing": "Softwaretest",
+  "Systematic Testing": "Systematisches Testen",
+  "for Reliable Software": "für zuverlässige Software",
+
+  "Many companies understand the critical dependency on software systems and actively work toward improved software quality. Frictionless processes rely on reliable, high-performance software. One of the most effective ways to achieve this is through systematic testing and auditing, ensuring the software aligns with your requirements and expectations.": "Viele Unternehmen sind sich der entscheidenden Abhängigkeit von Softwaresystemen bewusst und arbeiten aktiv an einer verbesserten Softwarequalität. Reibungslose Prozesse basieren auf zuverlässiger, leistungsstarker Software. Einer der wirksamsten Wege, dies zu erreichen, ist systematisches Testen und Auditing, um sicherzustellen, dass die Software mit Ihren Anforderungen und Erwartungen übereinstimmt.",
+
+  "Testing Process & Focus Areas": "Testprozess & Schwerpunkte",
+
+  "Test Management": "Test Management",
+  "Plan, control and monitor the entire testing process tailored to your organization’s resources and goals.": "Planung, Steuerung und Überwachung des gesamten Testprozesses – zugeschnitten auf die Ressourcen und Ziele Ihrer Organisation.",
+
+  "Test Planning": "Testplanung",
+  "Define the strategy, scope, objectives and schedule of testing activities, including required resources.": "Definition von Strategie, Umfang, Zielen und Zeitplan der Testaktivitäten, einschließlich der benötigten Ressourcen.",
+
+  "Test Execution": "Testdurchführung",
+  "Run test cases and document results systematically to verify software against your requirements.": "Ausführung von Testfällen und systematische Dokumentation der Ergebnisse zur Überprüfung der Software anhand Ihrer Anforderungen.",
+
+  "Proven Standards": "Bewährte Standards",
+  "Apply established testing models such as the V-model with ISTQB-certified professionals for reliability.": "Anwendung etablierter Testmodelle wie dem V-Modell mit ISTQB-zertifizierten Fachleuten für höchste Zuverlässigkeit.",
+
+  "Higher software quality": "Höhere Softwarequalität",
+  "Independent test management increases reliability and user confidence.": "Unabhängiges Testmanagement erhöht die Zuverlässigkeit und das Vertrauen der Anwender.",
+
+  "Right-sized support": "Bedarfsgerechte Unterstützung",
+  "We help exactly where you need it, based on your internal resources.": "Wir helfen Ihnen genau dort, wo Sie es benötigen – abgestimmt auf Ihre internen Ressourcen.",
+
+  "Traceable outcomes": "Nachvollziehbare Ergebnisse",
+  "Consistent documentation of all testing activities and results.": "Konsistente Dokumentation aller Testaktivitäten und Ergebnisse.",
+
+  "Proven methodology": "Bewährte Methodik",
+  "Well-known standards like the V-model reduce risk and rework.": "Bekannte Standards wie das V-Modell reduzieren Risiko und Nacharbeit.",
+  "We provide trustworthy and active support across the complete software testing process. Whether you're a producer, supplier, or purchaser of software modules, we assist with test management, planning and execution — aligned with standards such as the V-model. Our team includes Certified Testers (Advanced Level) accredited by ISTQB.": "Wir bieten zuverlässige und aktive Unterstützung über den gesamten Softwaretestprozess hinweg. Ob als Hersteller, Lieferant oder Einkäufer von Softwaremodulen – wir unterstützen Sie bei Testmanagement, Planung und Durchführung, ausgerichtet an Standards wie dem V-Modell. Unser Team umfasst Certified Tester (Advanced Level), akkreditiert durch ISTQB.",
+  
+  "Awareness": "Sensibilisierung",
+  "Training": "Schulung/Training",
+  "Legal & Regulatory Awareness": "Rechts- & Regulierungsbewusstsein",
+  "Legal Awareness": "Rechtsbewusstsein",
+  "Clarity in Complexity": "Klarheit in der Komplexität",
+  "Understanding Rules That Matter": "Die wichtigen Regeln verstehen",
+
+  "In a constantly evolving environment, organisations face new rules, laws, and obligations. Often, this abundance overwhelms employees who lack the time or clarity to fully grasp what these changes mean. At ITV Consult, we make it our mission to translate complex regulations into actionable insights that empower your workforce and maintain compliance.": "In einem sich ständig wandelnden Umfeld sehen sich Organisationen mit neuen Regeln, Gesetzen und Verpflichtungen konfrontiert. Oft überfordert diese Fülle die Mitarbeitenden, denen Zeit oder Klarheit fehlt, um vollständig zu verstehen, was diese Änderungen bedeuten. Bei ITV Consult ist es unsere Mission, komplexe Vorschriften in umsetzbare Erkenntnisse zu übersetzen, die Ihre Mitarbeitenden befähigen und die Compliance sicherstellen.",
+
+  "Our Approach": "Unser Ansatz",
+
+  "Simplified Interpretation": "Vereinfachte Interpretation",
+  "We distill the essence of new laws and regulations, helping employees understand what matters and how it impacts their role.": "Wir destillieren das Wesentliche neuer Gesetze und Vorschriften, damit Mitarbeitende verstehen, was wichtig ist und wie es ihre Rolle beeinflusst.",
+
+  "Legal and Regulatory Expertise": "Rechts und Regulierungsexpertise",
+  "Through active involvement in working groups and committees, we stay up to date with legal developments and their practical implications.": "Durch unsere aktive Mitarbeit in Arbeitsgruppen und Ausschüssen bleiben wir stets über rechtliche Entwicklungen und deren praktische Auswirkungen informiert.",
+
+  "Time-Saving Guidance": "Zeitsparende Orientierung",
+  "Employees no longer need to navigate lengthy documents. We deliver the key points clearly, efficiently, and in a format that supports daily operations.": "Mitarbeitende müssen sich nicht mehr durch lange Dokumente arbeiten. Wir liefern die Kernpunkte klar, effizient und in einem Format, das den täglichen Betrieb unterstützt.",
+
+
+
+  "All employees are aware of new requirements and their impact on daily work.": "Alle Mitarbeitenden sind über neue Anforderungen und deren Auswirkungen auf die tägliche Arbeit informiert.",
+  "Employees save time by receiving the core message without having to study complex documents.": "Mitarbeitende sparen Zeit, da sie die Kernaussagen erhalten, ohne komplexe Dokumente studieren zu müssen.",
+
+  "From our long-standing practice in this branch and the active collaboration in working groups and committees we are familiar with the relevant conditions, rules and laws and we know their direction of impact and logic.": "Durch unsere langjährige Tätigkeit in dieser Branche und der aktiven Teilnahme in Arbeitsgruppen und Gremien sind uns die für Sie wesentlichen Rahmenbedingungen, Regeln und Gesetze bekannt und wir kennen deren Stossrichtung und Logik. Unsere Dienstleistung in diesem Bereich ist, dass wir für Sie und Ihre Mitarbeitenden die wesentlichen Veränderungen in Ihrem Umfeld identifizieren, dokumentieren und in eine leicht verständliche Form aufbereiten und präsentieren.",
+   "Training & Knowledge Transfer": "Training & Wissenstransfer",
+  "Targeted Learning": "Zielgerichtetes Lernen",
+  "with Expert-Led Sessions": "mit von Expertinnen und Experten geleiteten Sessions",
+
+  "We ensure that complex topics are prepared and presented in a way that every team member can understand and relate to. Our training sessions combine hands-on exercises, participant collaboration, and theory in a balanced, engaging manner. Involving participants early — even in preparation — is a key factor in making knowledge transfer successful and sustainable.": "Wir bereiten komplexe Themen so auf und präsentieren sie so, dass jedes Teammitglied sie versteht und den Bezug zur eigenen Rolle herstellen kann. Unsere Schulungen verbinden praktische Übungen, Zusammenarbeit der Teilnehmenden und Theorie in einer ausgewogenen, motivierenden Form. Die frühe Einbindung der Teilnehmenden – bereits in der Vorbereitung – ist ein Schlüsselfaktor für erfolgreichen, nachhaltigen Wissenstransfer.",
+
+  "Our Training Approach": "Unser Schulungsansatz",
+
+  "Tailored Content Delivery": "Massgeschneiderte Inhaltsvermittlung",
+  "We prepare relevant topics so they are clearly understood by all participants. We prioritize clarity and context-driven explanations.": "Wir bereiten relevante Themen so auf, dass sie für alle Teilnehmenden klar verständlich sind. Klarheit und kontextbezogene Erklärungen haben Priorität.",
+
+  "Interactive Learning": "Interaktives Lernen",
+  "Our trainings include a balance of tutorials, group work, and real-world case studies to ensure practical understanding.": "Unsere Schulungen kombinieren Anleitungen, Gruppenarbeiten und praxisnahe Fallstudien, um ein handlungsorientiertes Verständnis zu sichern.",
+
+  "Participant Involvement": "Einbindung der Teilnehmenden",
+  "We encourage participants to get involved early — even during preparation — which leads to stronger engagement and better results.": "Wir binden die Teilnehmenden frühzeitig ein – bereits in der Vorbereitung –, was zu stärkerem Engagement und besseren Ergebnissen führt.",
+  "Focused & customized": "Fokussiert & massgeschneidert",
+  "Focused and customized training aligned to your needs.": "Fokussierte und massgeschneiderte Schulungen, ausgerichtet auf Ihre Bedürfnisse.",
+  "Reduced training time": "Verkürzte Schulungszeit",
+  "Targeting only critical and relevant themes shortens training effort.": "Die Konzentration auf kritische und relevante Themen reduziert den Schulungsaufwand.",
+  "Experienced trainers": "Erfahrene Trainerinnen und Trainer",
+  "Knowledge transfer from experienced, professional trainers.": "Wissenstransfer durch erfahrene, professionelle Trainerinnen und Trainer.",
+  "We are visiting lecturers of the Swiss Federal Institute of Technology Zurich and instructors of different trainings and educations. We know how to communicate complex themes in an understandable way. Moreover we have the agility to react very fast on your request.": "Durch unsere Erfahrung als Lehrbeauftragte der ETH Zürich und Referenten verschiedener Trainings und Schulungen, die wir durchgeführt haben, können wir auch komplexe Themen einfach verständlich präsentieren. Wir sehen uns zudem im Stande, rasch auf Ihre Bedürfnisse reagieren zu können.",
+  "We Take Pride in Delivering": "Wir sind stolz darauf, Ergebnisse mit hohem Mehrwert zu liefern",
+  "High-values": "hohen Mehrwert",
+
+  "Our specialty is the integration of the geospatial component in the information system or information management of an administration or a company. Thereby we are taking into account organisational, economical, and technical aspects.": "Die Integration der geographischen Komponente in das Informationsmanagement einer Verwaltung oder eines Unternehmens unter Berücksichtigung organisatorischer, betriebswirtschaftlicher und technischer Aspekte ist unsere Spezialität.",
+  "The main focus is on the business areas: Spatial Data Infrastructures (SDI), transportation/traffic/supply and information management in the aviation sector (AIM).": "Der Schwerpunkt liegt auf den Geschäftsfeldern: Geodateninfrastrukturen (SDI), Verkehr/Transport/Versorgung sowie Informationsmanagement im Luftfahrtbereich (AIM).",
+
+  "Team": "Team",
+
+  "Managing Director - Senior Consultant": "Geschäftsführer - Senior Consultant",
+  "Senior Consultant": "Senior Consultant",
+  "Head of DCS": "Leiter DCS",
+  "Assistant": "Assistentin",
+  "DCS / Consultant": "DCS / Consultant",
+  "DCS / Intern": "DCS / Junior Consultant",
+
+  "History": "Geschichte",
+  "Abstract of": "Auszug aus",
+  "the History of the Company": "der Firmengeschichte",
+
+  "1990 Gründung der ITV AG CAD für Ingenieurtechnik und Vermessung durch das Konsortium der Unternehmen Basler & Hofmann, Balzari und Schudel, CAD Rechenzentrum, und Swissair Photo + Vermessung (heute BSF Swissphoto AG).": "1990 Gründung der ITV AG CAD für Ingenieurtechnik und Vermessung durch das Konsortium der Unternehmen Basler & Hofmann, Balzari und Schudel, CAD Rechenzentrum, und Swissair Photo + Vermessung (heute BSF Swissphoto AG).",
+  "Das DfA Projekt der SBB prägt die ersten Jahre der ITV und veranlasst 1991 die SBB fünfter Aktionär der ITV zu werden.": "Das DfA Projekt der SBB prägt die ersten Jahre der ITV und veranlasst 1991 die SBB fünfter Aktionär der ITV zu werden.",
+  "Der Geschäftsführer und seine Projektleiter bauen neben dem Bereich Lösungen auch die Beratung und internationale Projekte aus.": "Der Geschäftsführer und seine Projektleiter bauen neben dem Bereich Lösungen auch die Beratung und internationale Projekte aus.",
+  "Um der Tätigkeit besser Ausdruck zu vermitteln wird das Unternehmen in die ITV Geomatik AG umfirmiert.": "Um der Tätigkeit besser Ausdruck zu vermitteln wird das Unternehmen in die ITV Geomatik AG umfirmiert.",
+  "Seit 2002 ist die ITV Geomatik AG im Mehrheitsbesitz des Managements.": "Seit 2002 ist die ITV Geomatik AG im Mehrheitsbesitz des Managements.",
+  "Seit Mitte 2013 tritt die ITV unter dem Namen ITV Consult AG auf.": "Seit Mitte 2013 tritt die ITV unter dem Namen ITV Consult AG auf.",
+  "Der langjährige Geschäftsführer Rudolf Schneeberger übergibt die Geschäftsleitung per 01.01.2019 an Dominik Angst, der seit 2010 als Senior Consultant bei der ITV Consult AG tätig ist.": "Der langjährige Geschäftsführer Rudolf Schneeberger übergibt die Geschäftsleitung per 01.01.2019 an Dominik Angst, der seit 2010 als Senior Consultant bei der ITV Consult AG tätig ist.",
+
+  "Dorfstrasse 53": "Dorfstrasse 53",
+  "8105 Regensdorf-Watt": "8105 Regensdorf-Watt",
+  "Telefon: +41 44 871 21 90": "Telefon: +41 44 871 21 90",
+  "Email : Info@itv.ch": "E-Mail: info@itv.ch",
+
+  "Social networks": "Soziale Netzwerke",
+
+  "DCS Service Hotline": "DCS Service-Hotline",
+  "Monday to Friday": "Montag bis Freitag",
+  "08h30 - 11h30": "08:30 - 11:30",
+  "13h30 - 16h30": "13:30 - 16:30",
+  "Hotline: +41 44 871 21 99": "Hotline: +41 44 871 21 99",
+  "Email: obstacles@itv.ch": "E-Mail: obstacles@itv.ch",
+  
+  
+  "Process Documentation": "Prozess Dokumentation",
+  "Process Design": "Prozess Design",
+  "Process Optimization": "Prozess Optimierung",
+  "Transparent Workflows": "Transparente Arbeitsabläufe",
+  "Enable Efficient Operations": "Effiziente Abläufe ermöglichen",
+
+  "Process documentation is a key factor for enabling employees to truly understand their daily work. With a common understanding of workflows, your team can operate efficiently and consistently. Moreover, comprehensive and accessible documentation forms the foundation for identifying optimization opportunities.": "Prozessdokumentation ist ein Schlüsselfaktor, damit Mitarbeitende ihre tägliche Arbeit wirklich verstehen. Mit einem gemeinsamen Verständnis der Abläufe kann Ihr Team effizient und konsistent arbeiten. Zudem bildet eine umfassende und leicht zugängliche Dokumentation die Grundlage, um Optimierungspotenziale zu erkennen.",
+
+  "Our Documentation Approach": "Unser Dokumentationsansatz",
+  "Process Mapping": "Prozessaufnahme",
+  "We analyze your daily operations with your team and convert them into structured process diagrams and documentation.": "Wir analysieren Ihre täglichen Abläufe gemeinsam mit Ihrem Team und überführen sie in strukturierte Prozessdiagramme und eine verständliche Dokumentation.",
+
+  "Clear & Transparent Descriptions": "Klare & transparente Beschreibungen",
+  "We describe each process clearly and understandably to make workflows transparent for all employees.": "Wir beschreiben jeden Prozess klar und verständlich, damit die Abläufe für alle Mitarbeitenden transparent werden.",
+
+
+  "Your team is actively involved in the documentation process, ensuring accuracy, acceptance, and ownership.": "Ihr Team wird aktiv in die Dokumentation eingebunden – das sichert Richtigkeit, Akzeptanz und Verantwortung.",
+
+  "Instruction & KPI Definition": "Arbeitsanweisungen & KPI-Definition",
+  "Where needed, we define work instructions and relevant key performance indicators for each step.": "Wo nötig, definieren wir Arbeitsanweisungen und relevante Kennzahlen (KPIs) für jeden Schritt.",
+
+
+
+  "Documented actual processes": "Dokumentierte Ist-Prozesse",
+  "Your actual processes are documented and the base for optimization is set.": "Ihre tatsächlichen Prozesse sind dokumentiert – die Basis für Optimierungen ist gelegt.",
+
+  "Clarity & transparency": "Klarheit & Transparenz",
+  "The processes are described clearly and transparently, and are understandable for everyone.": "Die Prozesse sind klar und transparent beschrieben und für alle verständlich.",
+
+  "Staff engagement": "Einbindung der Mitarbeitenden",
+  "Process documentation enables all staff to form an informed opinion and contribute to improvement.": "Die Prozessdokumentation ermöglicht allen Mitarbeitenden, sich fundiert einzubringen und Verbesserungen mitzugestalten.",
+
+
+  "In collaboration with your staff, we document real work processes using diagrams and descriptions. When needed, we create detailed work instructions and define key performance indicators for each step. This not only sets the foundation for improvement but also empowers your team to fully understand, own, and refine their workflows.": "Gemeinsam mit Ihren Mitarbeitenden dokumentieren wir reale Arbeitsprozesse anhand von Diagrammen und Beschreibungen. Bei Bedarf erstellen wir detaillierte Arbeitsanweisungen und definieren für jeden Schritt relevante Kennzahlen. Das schafft nicht nur die Grundlage für Verbesserungen, sondern befähigt Ihr Team, Abläufe vollständig zu verstehen, zu verantworten und gezielt weiterzuentwickeln.",
+  
+  "Process Design & Optimization": "Prozessgestaltung & -optimierung",
+  "Prozess Design": "Prozessgestaltung",
+  "Designing Better Workflows": "Bessere Workflows gestalten",
+  "Through Iteration & Insight": "Durch Iteration & Erkenntnis",
+
+  "What is the best sequence of tasks? What can be done in parallel? Every organization faces these questions. To find the right answers, we analyze a variety of influencing factors — from customer requirements to internal and external interfaces. Your employees are the most valuable source of insight in this process, and we work with them to create effective, optimized operations.": "Was ist die beste Reihenfolge der Aufgaben? Was lässt sich parallel erledigen? Jede Organisation steht vor diesen Fragen. Um die richtigen Antworten zu finden, analysieren wir vielfältige Einflussfaktoren – von Kundenanforderungen bis zu internen und externen Schnittstellen. Ihre Mitarbeitenden sind die wertvollste Wissensquelle in diesem Prozess, und gemeinsam mit ihnen gestalten wir wirkungsvolle, optimierte Abläufe.",
+
+  "Process Drivers Analysis": "Analyse der Prozesstreiber",
+  "We identify and analyze relevant parameters such as customer needs, supplier inputs, employee roles, and cross-organization interfaces.": "Wir identifizieren und analysieren relevante Parameter wie Kundenbedürfnisse, Zulieferungen, Rollen der Mitarbeitenden sowie Schnittstellen innerhalb und ausserhalb der Organisation.",
+
+  "Collaborative Workshops": "Gemeinsame Workshops",
+  "With your team, we design or redesign processes in iterative workshops by eliminating, relocating, or adding steps.": "Gemeinsam mit Ihrem Team entwerfen oder überarbeiten wir Prozesse in iterativen Workshops, indem wir Schritte eliminieren, verlagern oder ergänzen.",
+
+  "Unconventional Thinking": "Unkonventionelles Denken",
+  "We challenge assumptions, ask critical questions, and bring fresh ideas based on our external perspective and experience.": "Wir hinterfragen Annahmen, stellen kritische Fragen und bringen dank externer Perspektive und Erfahrung frische Ideen ein.",
+
+  "Final Documentation": "Abschliessende Dokumentation",
+  "Once consensus is reached, we formalize your new processes in clear and consistent process documentation.": "Sobald Einigkeit besteht, formalisieren wir die neuen Abläufe in einer klaren und konsistenten Prozessdokumentation.",
+  "Independent external view": "Unabhängiger externer Blick",
+  "External view from independent consultants enables unconventional solutions.": "Der unabhängige Blick externer Berater ermöglicht unkonventionelle Lösungen.",
+
+  "Focused facilitation": "Fokussierte Moderation",
+  "Defined and focused leading of the team during process design.": "Klare, fokussierte Führung des Teams während der Prozessgestaltung.",
+
+  "Fit-for-purpose operations": "Zweckmässige Abläufe",
+  "Redesign or creation of operations that fit your real-world challenges.": "Neugestaltung oder Aufbau von Abläufen, die zu Ihren realen Herausforderungen passen.",
+  "We guide you and your team in identifying key process drivers, lead design workshops to (re)structure your workflows, and iterate until consensus is reached. Our job is to moderate, question, provoke new thinking, and help finalize your optimized processes through structured documentation.": "Wir unterstützen Sie und Ihr Team dabei, wesentliche Prozesstreiber zu erkennen, führen Design-Workshops zur (Neu-)Strukturierung Ihrer Abläufe durch und iterieren bis zum Konsens. Unsere Aufgabe ist es, zu moderieren, zu hinterfragen, neues Denken anzuregen und Ihre optimierten Prozesse durch eine strukturierte Dokumentation abzuschliessen.",
+  
+  "Process Optimization & Implementation": "Prozessoptimierung & Umsetzung",
+  "Prozess Optimierung": "Prozessoptimierung",
+  "Practical Process Changes": "Praktische Prozessänderungen",
+  "With Lasting Impact": "Mit nachhaltiger Wirkung",
+
+  "To save costs, reduce effort, and improve effectiveness, it's essential to regularly analyze and optimize your processes. Optimization doesn’t always mean shortening — it means making workflows easier and more logical to execute. For the changes to be truly effective, they must be implemented all the way to the bottom of the organization. Only then can their full potential be realized.": "Um Kosten zu sparen, Aufwand zu reduzieren und die Wirksamkeit zu erhöhen, ist es entscheidend, Ihre Prozesse regelmässig zu analysieren und zu optimieren. Optimierung bedeutet nicht immer Verkürzung — sondern, Abläufe einfacher und logischer ausführbar zu machen. Damit die Veränderungen wirklich wirken, müssen sie bis in alle Ebenen der Organisation umgesetzt werden. Erst dann entfalten sie ihr volles Potenzial.",
+
+  "Our Optimization Approach": "Unser Optimierungsansatz",
+  "Prozess Dokumentation": "Prozessdokumentation",
+  "We begin by documenting your current processes clearly to create a solid base for optimization.": "Wir beginnen damit, Ihre aktuellen Prozesse klar zu dokumentieren, um eine verlässliche Grundlage für die Optimierung zu schaffen.",
+
+  "Analysis of Potential": "Potenzialanalyse",
+  "Together with your team, we identify strengths, weaknesses, and opportunities for improvement.": "Gemeinsam mit Ihrem Team identifizieren wir Stärken, Schwächen und Verbesserungsmöglichkeiten.",
+
+  "Redesign of Workflows": "Neugestaltung der Abläufe",
+  "We design and describe improved workflows by eliminating, relocating, or adding steps where needed.": "Wir gestalten und beschreiben verbesserte Abläufe, indem wir Schritte wo nötig eliminieren, verlagern oder ergänzen.",
+
+  "Implementation & Enablement": "Umsetzung & Befähigung",
+  "We support you throughout the implementation process — either as coach, enabler, or project leader — down to all levels of your organization.": "Wir begleiten Sie während der gesamten Umsetzung – als Coach, Enabler oder Projektleiter – bis in alle Ebenen Ihrer Organisation.",
+
+
+
+  "Cost efficiency": "Kosteneffizienz",
+  "Cost efficiency through simplified and more efficient workflows.": "Kosteneffizienz durch vereinfachte und effizientere Abläufe.",
+
+  "Satisfied employees": "Zufriedene Mitarbeitende",
+  "Satisfied employees through better coordinated process steps.": "Zufriedene Mitarbeitende dank besser aufeinander abgestimmter Prozessschritte.",
+
+  "Independent perspective": "Unabhängige Perspektive",
+  "External point of view through our independent consultants.": "Externer Blick durch unsere unabhängigen Berater.",
+
+
+  "We support your process optimization efforts through all key phases: documenting your actual workflows, identifying weak spots and potential improvements, designing more effective processes, and supporting their successful implementation within your organization — whether as advisors, coaches, or project managers.": "Wir unterstützen Ihre Prozessoptimierung in allen wesentlichen Phasen: Dokumentation Ihrer Ist-Abläufe, Identifikation von Schwachstellen und Potenzialen, Gestaltung wirksamerer Prozesse sowie Begleitung der erfolgreichen Umsetzung in Ihrer Organisation – als Berater, Coaches oder Projektleiter.",
+  "Organisation": "Organisation",
+  "Strategy": "Strategie",
+  "Organisational Development": "Organisationsentwicklung",
+  "Strategy Development": "Strategieentwicklung",
+  "Aligning Vision with Action": "Vision und Umsetzung in Einklang bringen",
+  "Strategic Clarity for Your Future": "Strategische Klarheit für Ihre Zukunft",
+  "We apply recognized strategic planning methods and tailor them to your unique needs. Based on our extensive experience, the best results are achieved by working closely with a core team in workshops, each focusing on a specific theme. The resulting strategy is then reviewed by a wider group to ensure organization-wide support, which is key for successful implementation.": "Wir wenden anerkannte Methoden der strategischen Planung an und passen sie Ihren spezifischen Bedürfnissen an. Aufgrund unserer umfassenden Erfahrung erzielen wir die besten Resultate in enger Zusammenarbeit mit einem Kernteam in Workshops, die jeweils ein konkretes Thema vertiefen. Die entstandene Strategie wird anschliessend von einem erweiterten Kreis überprüft, um organisationsweite Unterstützung sicherzustellen – ein Schlüsselfaktor für die erfolgreiche Umsetzung.",
+  "Workshop-Based Approach": "Workshopbasierter Ansatz",
+  "We work with a core team across multiple workshops, each focused on a specific strategic topic tailored to your needs.": "Wir arbeiten mit einem Kernteam in mehreren Workshops, die jeweils auf ein strategisches Thema zugeschnitten sind.",
+  "Clear Vision & Direction": "Klare Vision & Ausrichtung",
+  "Together we develop a documented vision and concrete measures to achieve it, aligned with your organizations values and goals.": "Gemeinsam entwickeln wir eine dokumentierte Vision sowie konkrete Massnahmen zu deren Erreichung – ausgerichtet an den Werten und Zielen Ihrer Organisation.",
+  "Inclusive Review & Commitment": "Breite Überprüfung & Commitment",
+  "The broader organization is involved in reviewing the strategy to ensure understanding, support, and readiness for implementation.": "Die breitere Organisation wird in die Überprüfung einbezogen, um Verständnis, Unterstützung und Umsetzungsbereitschaft sicherzustellen.",
+  "Implementation Readiness": "Umsetzungsreife",
+  "We support you from concept to implementation by facilitating buy-in, setting roles, and aligning resources with clear priorities.": "Wir begleiten Sie von der Konzeption bis zur Umsetzung – fördern das Buy-in, definieren Rollen und richten Ressourcen klar an Prioritäten aus.",
+  
+  "Leadership & shared vision": "Führung & geteilte Vision",
+  "Improved leadership and a clearly documented vision understood by all.": "Verbesserte Führung und eine klar dokumentierte Vision, die von allen verstanden wird.",
+  "Simplified processes": "Vereinfachte Prozesse",
+  "Simplified processes through clear analysis of critical points and roles.": "Vereinfachte Abläufe durch klare Analyse kritischer Punkte und Rollen.",
+  "No duplication": "Keine Doppelspurigkeiten",
+  "Elimination of duplication via defined responsibilities.": "Beseitigung von Doppelspurigkeiten dank klar definierter Verantwortlichkeiten.",
+  "Better coordination": "Bessere Koordination",
+  "Better coordination of business units and their tasks.": "Bessere Koordination der Geschäftsbereiche und ihrer Aufgaben.",
+  "Daily guidance": "Tägliche Orientierung",
+  "Increased efficiency with daily business guidelines in place.": "Höhere Effizienz dank Richtlinien für das Tagesgeschäft.",
+  "Focused budgets": "Fokussierte Budgets",
+  "Focused use of limited budgets for essential actions.": "Gezielter Einsatz begrenzter Budgets für das Wesentliche.",
+  
+  "Strategy development has a long tradition at ITV Consult AG and is one of our core competencies. Our experienced consultants accompany and coach you through the entire process, taking a leadership role while collaborating closely with you. We ensure the strategy is practical, accepted, and ready to drive long-term success.": "Die Strategieentwicklung hat bei der ITV Consult AG eine lange Tradition und gehört zu unseren Kernkompetenzen. Unsere erfahrenen Berater begleiten und coachen Sie durch den gesamten Prozess, übernehmen Führung und arbeiten eng mit Ihnen zusammen. So stellen wir sicher, dass die Strategie praxisnah, breit akzeptiert und bereit für den langfristigen Erfolg ist.",
+  "Controlled Change": "Gesteuerte Veränderung",
+  "That Empowers People & Performance": "die Menschen & Leistung stärkt",
+  "Organisational development aims to increase productivity while encouraging personal and team growth. In today’s dynamic environment, adapting the organisation to new conditions is essential. Our experience shows that successful restructuring comes from involving everyone in the process — not just leading from the top.": "Organisationsentwicklung zielt darauf ab, die Produktivität zu steigern und zugleich persönliches sowie teambezogenes Wachstum zu fördern. In einem dynamischen Umfeld ist die Anpassung der Organisation an neue Gegebenheiten essenziell. Unsere Erfahrung zeigt: Nachhaltige Veränderungen gelingen, wenn alle Beteiligten einbezogen werden – nicht nur durch Top-down-Vorgaben.",
+  "Analysis": "Analyse",
+  "We analyze your organization from an external perspective, identifying strengths, weaknesses, and opportunities while also considering technical and economic aspects.": "Wir analysieren Ihre Organisation mit einem externen Blick, identifizieren Stärken, Schwächen und Chancen – unter Berücksichtigung technischer und wirtschaftlicher Aspekte.",
+  "Conception": "Konzeption",
+  "Based on the analysis, we create a concept collaboratively with your team — ensuring ownership, alignment, and broad acceptance across the organization.": "Auf Basis der Analyse erarbeiten wir gemeinsam mit Ihrem Team ein Konzept – für Ownership, Ausrichtung und breite Akzeptanz in der Organisation.",
+  "Implementierung": "Implementierung",
+  "We accompany you and your staff as coaches or project leaders, guiding the process step-by-step toward a successful transformation.": "Wir begleiten Sie und Ihre Mitarbeitenden als Coaches oder Projektleitende und steuern den Prozess Schritt für Schritt hin zu einer erfolgreichen Transformation.",
+  "Future-ready organisation": "Zukunftsfähige Organisation",
+  "Your organization is prepared for the challenges of the future.": "Ihre Organisation ist für die Herausforderungen der Zukunft gerüstet.",
+  "Learning organisation": "Lernende Organisation",
+  "Your organisation becomes a “learning organisation” embracing continuous change.": "Ihre Organisation wird zur „lernenden Organisation“, die kontinuierlichen Wandel begrüsst.",
+  "Efficient execution": "Effiziente Umsetzung",
+  "Efficient task execution saves time and reduces internal friction.": "Effiziente Aufgabenerledigung spart Zeit und reduziert interne Reibungsverluste.",
+  "Data Collection Service (DCS)": "Data Collection Service (DCS)",
+  "Data Collection Service": "Data Collection Service",
+  "Modernizing Aeronautical Data Management": "Modernisierung des aeronautischen Datenmanagements",
+  "with DCS": "mit DCS",
+  "The Data Collection Service (DCS) is a digital platform operated by ITV Consult AG on behalf of the Swiss Federal Office of Civil Aviation (FOCA). It facilitates the efficient submission and management of aeronautical data, particularly concerning air navigation obstacles. By leveraging modern technology, DCS enhances data quality and ensures compliance with aviation safety regulations.": "Der Data Collection Service (DCS) ist eine digitale Plattform der ITV Consult AG im Auftrag des Bundesamtes für Zivilluftfahrt (BAZL). Sie erleichtert die effiziente Einreichung und Verwaltung aeronautischer Daten – insbesondere zu Luftfahrthindernissen. Durch den Einsatz moderner Technologien verbessert DCS die Datenqualität und stellt die Einhaltung der luftfahrtrechtlichen Vorgaben sicher.",
+  "Open DCS": "DCS öffnen",
+  "Key Features": "Hauptfunktionen",
+  "Digital Submission": "Digitale Einreichung",
+  "Seamless digital delivery and handling of aeronautical data, including obstacles.": "Nahtlose digitale Übermittlung und Verarbeitung aeronautischer Daten – einschliesslich Hindernisdaten.",
+  "Obstacle Assessment": "Hindernisbeurteilung",
+  "Automated evaluation to determine if an object constitutes an air navigation obstacle.": "Automatisierte Bewertung, ob ein Objekt ein Luftfahrthindernis darstellt.",
+  "Regulatory Compliance": "Regulatorische Konformität",
+  "Ensures adherence to FOCA regulations for obstacle registration and approval.": "Stellt die Einhaltung der BAZL-Vorgaben für Hindernisregistrierung und -bewilligung sicher.",
+  "User-Friendly Portal": "Benutzerfreundliches Portal",
+  "Intuitive interface for registering and managing obstacle data efficiently.": "Intuitive Oberfläche zur effizienten Erfassung und Verwaltung von Hindernisdaten.",
+  "Streamlined process": "Verschlankter Prozess",
+  "Streamlined process for obstacle registration and approval.": "Verschlankter Prozess für die Registrierung und Bewilligung von Hindernissen.",
+  "Data accuracy": "Datenqualität",
+  "Enhanced data accuracy and consistency.": "Höhere Datenqualität und -konsistenz.",
+  "Aviation safety": "Flugsicherheit",
+  "Improved aviation safety through up-to-date aeronautical information.": "Mehr Flugsicherheit dank aktueller aeronautischer Informationen.",
+  "Lower administrative effort": "Weniger administrativer Aufwand",
+  "Reduced administrative burden for stakeholders.": "Reduzierte administrative Belastung für alle Beteiligten.",
+  "Your Partner for": "Ihr Partner für",
+  "Spatial Information Management": "Geoinformationsmanagement",
+  "The core business of ITV Consult AG is consulting and delivering solutions in the field of Spatial Information Management. We specialize in integrating spatially related components into the broader information management of administrations or companies — always considering organisational, economic, and technical dimensions.": "Das Kerngeschäft der ITV Consult AG ist die Beratung und Umsetzung von Lösungen im Bereich des Geoinformationsmanagements. Wir integrieren raumbezogene Komponenten in das übergeordnete Informationsmanagement von Verwaltungen oder Unternehmen – stets unter Berücksichtigung organisatorischer, wirtschaftlicher und technischer Dimensionen.",
+  "Our Project Approach": "Unser Projektansatz",
+  "We analyse your organisation with an external, neutral point of view — identifying strengths, weaknesses and optimisation potential, considering organisational, technical and economic aspects.": "Wir analysieren Ihre Organisation aus externer, neutraler Sicht – erkennen Stärken, Schwächen und Optimierungspotenziale unter organisatorischen, technischen und wirtschaftlichen Gesichtspunkten.",
+  "Based on our findings, we collaboratively develop a concept that provides a clear direction for your organisation’s development. Involvement from you and your team is essential for acceptance and success.": "Auf Basis der Ergebnisse erarbeiten wir gemeinsam ein Konzept, das eine klare Richtung für die Weiterentwicklung Ihrer Organisation vorgibt. Die aktive Einbindung von Ihnen und Ihrem Team ist für Akzeptanz und Erfolg entscheidend.",
+  "We guide and support your team throughout the implementation — acting as coaches or leading figures — to ensure real change is embedded within your organisation.": "Wir begleiten und unterstützen Ihr Team während der Umsetzung – als Coaches oder in führenden Rollen – damit Veränderungen nachhaltig in Ihrer Organisation verankert werden.",
+  "Strategic Development": "Strategische Weiterentwicklung",
+  "Before organisational change, we recommend aligning on a common strategy to clarify the focus and direction of transformation across the entire organisation.": "Vor strukturellen Veränderungen empfehlen wir eine gemeinsame strategische Ausrichtung, um Fokus und Richtung der Transformation in der gesamten Organisation zu klären.",
+  "Learning organisation, embracing change.": "Lernende Organisation, die Wandel aktiv annimmt.",
+  "Your organisation executes tasks more efficiently and effectively.": "Ihre Organisation erledigt Aufgaben effizienter und wirksamer.",
+  "You reduce costs and internal frictions.": "Sie reduzieren Kosten und interne Reibungen.",
+  "You benefit from our decades of experience in spatial information management and GIS consulting.": "Sie profitieren von unseren jahrzehntelangen Erfahrungen im Geoinformationsmanagement und in der GIS-Beratung.",
+  "Aeronautical Information Evolution": "die Weiterentwicklung der Aeronautischen Information",
+
+  "The revision to ICAO Annex 15 and the introduction of PANS-AIM (Doc 10066) fundamentally changed how aeronautical data is originated, managed and provided. We guide you from document-centric AIS to data-centric AIM — and toward service-oriented SWIM — with a clear roadmap, fit-for-purpose organisation, and operational AIM services.": "Die Revision des ICAO Anhangs 15 sowie die Einführung von PANS-AIM (Doc 10066) haben die Entstehung, Bewirtschaftung und Bereitstellung aeronautischer Daten grundlegend verändert. Wir begleiten Sie vom dokumentzentrierten AIS zum datenorientierten AIM – und weiter zu einem dienstorientierten SWIM – mit klarer Roadmap, zweckmässiger Organisation und betrieblichen AIM-Services.",
+
+  "Our AIM Implementation Services": "Unsere AIM-Implementierungsleistungen",
+
+  "AIS→AIM roadmap": "AIS→AIM-Roadmap",
+  "Develop a roadmap for the transition from AIS to AIM.": "Erarbeitung einer Roadmap für den Übergang von AIS zu AIM.",
+
+  "AIM project plan": "AIM-Projektplan",
+  "Develop a project plan for the implementation of AIM.": "Ausarbeitung eines Projektplans für die Einführung von AIM.",
+
+  "Organisation design": "Organisationsgestaltung",
+  "Design or redesign the AIS organisation to operate as AIM.": "Gestaltung oder Neuausrichtung der AIS-Organisation für den AIM-Betrieb.",
+
+  "Procedures & processes": "Verfahren & Prozesse",
+  "Define new procedures and processes for data origination, management and provision.": "Definition neuer Verfahren und Prozesse für Datenerhebung, -management und -bereitstellung.",
+
+  "Service & technology": "Services & Technologie",
+  "Identify the required services and information technology needed for AIM.": "Identifikation der benötigten Services und Informationstechnologien für AIM.",
+
+  "Use cases": "Use Cases",
+  "Prepare and validate the use cases for the AIM service.": "Ausarbeitung und Validierung der Use Cases für AIM-Services.",
+
+  "Implementation management": "Umsetzungsmanagement",
+  "Manage the implementation of the AIM service into operations.": "Steuerung der Einführung der AIM-Services in den Betrieb.",
+
+  "Procurement and Specification": "Beschaffung & Spezifikation",
+  "ITV supports public tenders with expertise in procurement, evaluation, and legal compliance - delivering tender docs, evaluations, and contract support as needed.": "ITV unterstützt öffentliche Ausschreibungen mit Expertise in Beschaffung, Evaluation und rechtlicher Konformität – inklusive Ausschreibungsunterlagen, Auswertungen und Vertragsunterstützung nach Bedarf.",
+
+
+
+  "All change aspects addressed": "Alle Veränderungsaspekte abgedeckt",
+  "Organisation, procedures, processes and technology handled holistically for the AIS to AIM transition.": "Organisation, Verfahren/Prozesse und Technologie werden für den Übergang AIS→AIM ganzheitlich adressiert.",
+
+  "Systematic implementation": "Systematische Umsetzung",
+  "A structured, stage-gated approach to achieving AIM operations.": "Strukturierter, phasenorientierter Ansatz zur Erreichung des AIM-Betriebs.",
+
+  "Faster compliance": "Schnellere Compliance",
+  "Shorten the journey to meet ICAO Annex 15 and PANS-AIM requirements.": "Verkürzter Weg zur Erfüllung der Anforderungen aus ICAO Anhang 15 und PANS-AIM.",
+
+  "Reduced risk": "Reduziertes Risiko",
+  "Lower implementation risks with experienced guidance and proven methods.": "Geringere Einführungsrisiken dank erfahrener Begleitung und bewährter Methoden.",
+
+  "Implementation Support": "Implementierungs-Support",
+  "Our consultants have hands-on AIS to AIM experience with data originators, regulators and service providers. They have contributed to ICAO Annex 15 and PANS-AIM and are active in ICAO/EUROCONTROL working arrangements as well as CANSO and Global AIM events.": "Unsere Berater verfügen über praktische AIS-zu-AIM-Erfahrung mit Datenlieferanten, Aufsichtsbehörden und Dienstleistern. Sie haben an ICAO Anhang 15 und PANS-AIM mitgewirkt und sind in ICAO/EUROCONTROL-Arbeitsgremien sowie bei CANSO- und Global-AIM-Veranstaltungen aktiv.",
+
+  "More about AIM Implementation ...": "Mehr zur AIM-Implementierung …",
+   "Aeronautical Information Management (AIM)": "Aeronautical Information Management (AIM)",
+  "Spatial Data Infrastructure (SDI)": "Geodateninfrastruktur (SDI)",
+  "Confederation": "Bund",
+  "Cantons": "Kantone",
+  "Cities and Municipalities": "Städte und Gemeinden",
+  "Various and international projects": "Verschiedene und internationale Projekte",
+  "Infrastructure Management (Utilities, Public Transportation, ... )": "Infrastrukturmanagement (Versorger, öffentlicher Verkehr, ... )"
+
+
+}
+
+

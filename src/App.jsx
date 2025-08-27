@@ -62,7 +62,6 @@ const App = () => {
         <Route path="/SDI" element={<SDI />} />
         <Route path="/DCS" element={<DCS/>} />
         <Route path="/References" element={<References/>} />
-        <Route path="/Contact_Us" element={<Contact_Us/>} />
         <Route path="/news/:id" element={<NewsDetail />} />
         <Route path="/Pop" element={<Pop/>} />
       </Route>
