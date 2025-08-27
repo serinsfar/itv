@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoIosArrowForward } from "react-icons/io";
+import { FaDatabase } from "react-icons/fa"
 import { NavLink } from "react-router-dom";
 import StorageIcon from '@mui/icons-material/Storage';
 import { useTranslation } from 'react-i18next';
@@ -16,7 +17,7 @@ const Data = () => {
     <div className="w-full pt-10">
       <div className='flex flex-col items-center md:flex-row md:justify-start'>
       <div className="flex md:flex-row items-center gap-4 md:pr-6 mb-6 md:mb-0">
-        <StorageIcon className="text-xl" />
+        <FaDatabase className="text-xl" />
         <span className="text-lg font-bold">{t("Data")}</span>
       </div>
       <div className="flex flex-col md:flex-row md:flex-wrap gap-2 md:gap-4">
