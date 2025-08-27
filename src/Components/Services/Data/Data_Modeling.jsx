@@ -3,7 +3,7 @@ import { FaBook, FaDatabase, FaProjectDiagram } from 'react-icons/fa';
 import check from '../../../assets/check.png';
 import Data from '../../Services/Data/Data';
 import { useTranslation } from 'react-i18next';
-import dataModelImg from '../../../assets/datamodel.png';
+import dataModelImg from '../../../assets/dataModel.png';
 import FourPartPageTemplate from '../../Template/Services_Template';
 
 const Data_Modeling = () => {
