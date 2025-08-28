@@ -54,7 +54,6 @@ import caa from '../../assets/CAA.png'
 import meteoschweiz from '../../assets/meteoschweiz.png'
 import glarus from '../../assets/glarus.jpg'
 import Graubünden from '../../assets/Graubünden.png'
-import Sudan from '../../assets/sudan.jpg'
 import { useTranslation } from 'react-i18next';
 
 const AIMRef = [
@@ -268,11 +267,6 @@ const SDIRefCan = [
       name: "Chongqing Urban Environment Project (GIS-Komponente), China",
       link: "https://www.chongqing.gov.cn/",
     },
-      { imageLink: Sudan, // placeholder
-    name: "Projekt Sudan",
-    link: "#",
-
-  },
 
 
 
