@@ -176,6 +176,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
+                  tabIndex={-1}                       // 🔑 empêche le focus
                   onMouseEnter={() => {
                     const country = geo.properties.name;
                     const matchedMarkers = markers.filter(m => m.countryName === country);
@@ -191,37 +192,44 @@ const [selectedMarker, setSelectedMarker] = useState(null);
                     setHoveredMarker(null);
                     setSelectedMarker(null);
                   }}
+                  onClick={(e) => {                   // 🔑 clic = même effet que hover
+                    const country = geo.properties.name;
+                    const matched = markers.find(m => m.countryName === country);
+                    if (matched) {
+                      setSelectedMarker(matched.name);
+                      setHoveredMarker(matched.name);
+                      setHoveredCountry(country);
+                    }
+                    // évite le focus visuel
+                    e.currentTarget.blur?.();
+                  }}
                   style={{
-                    // Show active styling when either the geography is hovered
-                    // OR a marker from this country is hovered (we set hoveredCountry in marker handlers).
                     default: {
                       fill: isActive ? "#FF9400" : "#EAEAEA",
-                      stroke: isActive ? "#555" : "#555",
+                      stroke: "#555",
                       strokeWidth: isActive ? 2.5 : 0.5,
                       transition: "all 0.2s ease",
+                      outline: "none",             
                     },
                     hover: {
                       fill: isMarked
                         ? (hoveredCountry === countryName ? "#FF9400" : "#EAEAEA")
                         : "#EAEAEA",
-                      stroke: isMarked
-                        ? (hoveredCountry === countryName ? "#555" : "#555")
-                        : "#555",
+                      stroke: "#555",
                       strokeWidth: isMarked
                         ? (hoveredCountry === countryName ? 2.5 : 0.5)
                         : 0.5,
-                      outline: "none",
+                      outline: "none",               
                       transition: "all 0.2s ease",
                     },
                     pressed: {
                       fill: isActive ? "#FF9400" : "#EAEAEA",
                       stroke: isActive ? "#FF9400" : "#555",
                       strokeWidth: isActive ? 2.5 : 0.5,
-                      outline: "none",
+                      outline: "none",               
                     }
                   }}
                 />
-
 
               );
             })
