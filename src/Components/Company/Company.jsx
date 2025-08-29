@@ -54,7 +54,7 @@ const Company = () => {
      <img className='w-[400px] p-2' src ={company} alt=""/>
      </div>
      <div className='mb:pl-12'>
-        <div className='font-bold sm:text-[1.875rem] text-[1.5rem] mb-2'>{t('We Take Pride in Delivering')} <br /> <span className='text-secondary font-normal'>{t('High-values')}</span></div>
+        <div className='font-bold sm:text-[1.875rem] text-[1.5rem] mb-2'>{t('We Take Pride in Delivering')} <br /> <span className='text-secondary font-normal'>{t('High-Values')}</span></div>
         <ul className="list-disc pl-5 space-x-0 space-y-3">
           <li>
           {t('Our specialty is the integration of the geospatial component in the information system or information management of an administration or a company. Thereby we are taking into account organisational, economical, and technical aspects.')}
@@ -94,25 +94,25 @@ const Company = () => {
         <p>
         <ul className="list-disc pl-5 space-y-3">
          <li>
-          {t('1990 Gründung der ITV AG CAD für Ingenieurtechnik und Vermessung durch das Konsortium der Unternehmen Basler & Hofmann, Balzari und Schudel, CAD Rechenzentrum, und Swissair Photo + Vermessung (heute BSF Swissphoto AG).')}
+          {t('1990, foundation of the "ITV AG - CAD für Ingeniertechnik und Vermessung" by the consortium of companies Basler & Hofmann, Balzari and Schudel, CAD Rechenzentrum, and Swissair Photo + Vermessung')}
          </li>
         <li>
-          {t('Das DfA Projekt der SBB prägt die ersten Jahre der ITV und veranlasst 1991 die SBB fünfter Aktionär der ITV zu werden.')}
+          {t('The project "DfA" of the Swiss Federal Railways (SBB) shaping the early years of ITV and initiated in 1991, SBB to be the fifth shareholder of ITV')}
           </li>
         <li>
-          {t('Der Geschäftsführer und seine Projektleiter bauen neben dem Bereich Lösungen auch die Beratung und internationale Projekte aus.')}
+          {t('The general manager and his project managers expand the field of activities next to the business field "solutions", in consulting and international projects')}
           </li>
         <li>
-          {t('Um der Tätigkeit besser Ausdruck zu vermitteln wird das Unternehmen in die ITV Geomatik AG umfirmiert.')}
+          {t('To give a better expression of our activities the company changed its name to ITV Geomatik AG')}
           </li>
         <li>
-          {t('Seit 2002 ist die ITV Geomatik AG im Mehrheitsbesitz des Managements.')}
+          {t('Since 2002, the ITV Geomatik AG is majority-owned by the management')}
           </li>
         <li>
-          {t('Seit Mitte 2013 tritt die ITV unter dem Namen ITV Consult AG auf.')}
+          {t('Since mid-2013, the ITV occurs under the name "ITV Consult AG"')}
           </li>
         <li>
-          {t('Der langjährige Geschäftsführer Rudolf Schneeberger übergibt die Geschäftsleitung per 01.01.2019 an Dominik Angst, der seit 2010 als Senior Consultant bei der ITV Consult AG tätig ist.')}
+          {t('Rudolf Schneeberger, managing director for many years, hands over the management to Dominik Angst on 01.01.2019.')}
         </li>
         </ul>
         </p>

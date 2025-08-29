@@ -15,7 +15,7 @@ const Training = () => {
       icon: <FaChalkboardTeacher className="text-secondary text-2xl" />,
       title: t('Tailored Content Delivery'),
       description:
-       t('We prepare relevant topics so they are clearly understood by all participants. We prioritize clarity and context-driven explanations.'),
+       t('We prepare relevant topics so they are clearly understood by all participants. We prioritise clarity and context-driven explanations.'),
     },
     {
       icon: <FaUsersCog className="text-secondary text-2xl" />,
@@ -33,8 +33,8 @@ const Training = () => {
 
   const benefits = [
     {
-      title: t('Focused & customized'),
-      description: t('Focused and customized training aligned to your needs.',
+      title: t('Focused & customised'),
+      description: t('Focused and customised training aligned to your needs.',
       )
       },
     {

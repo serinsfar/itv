@@ -56,7 +56,7 @@ const Data_Modeling = () => {
     t('dataModel.services.list.1', 'Semantic description facilitation'),
     t('dataModel.services.list.2', 'Object catalogue drafting & rules'),
     t('dataModel.services.list.3', 'Conceptual modeling (UML/ERD)'),
-    t('dataModel.services.list.4', 'Validation, governance & handover.'),
+    t('dataModel.services.list.4', 'Validation, governance & handover'),
   ];
 
   return (
@@ -65,13 +65,12 @@ const Data_Modeling = () => {
       pageTitle={t('dataModel.pageTitle', 'Data Modeling')}
       hero={{
         imageSrc: dataModelImg,
-        imageAlt: t('dataModel.hero.alt', 'Data model diagram'),
-        title: t('dataModel.hero.title', 'The Foundation of'),
-        subtitle: t('dataModel.hero.subtitle', 'Structured Data'),
+        imageAlt: t('Data model diagram'),
+        title: t('The Foundation of'),
+        subtitle: t('Structured Data'),
         body: (
           <p>
             {t(
-              'dataModel.hero.body',
               'A data model is composed of several interrelated components that together provide a clear, structured understanding of real-world information. It begins with a semantic description ... Finally, the conceptual data model represents the real world using structured text and diagrams, providing the foundation for implementation and system integration.'
             )}
           </p>

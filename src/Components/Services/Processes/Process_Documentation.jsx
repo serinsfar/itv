@@ -13,7 +13,7 @@ function Process_Documentation() {
     {
       icon: <FaProjectDiagram className="text-secondary text-2xl" />,
       title: t('Process Mapping'),
-      description: t('We analyze your daily operations with your team and convert them into structured process diagrams and documentation.'),
+      description: t('We analyse your daily operations with your team and convert them into structured process diagrams and documentation.'),
     },
     {
       icon: <FaClipboardList className="text-secondary text-2xl" />,
@@ -35,7 +35,7 @@ function Process_Documentation() {
   const benefits = [
     {
       title: t('Documented actual processes'),
-      description: t('Your actual processes are documented and the base for optimization is set.'),
+      description: t('Your actual processes are documented and the base for optimisation is set.'),
     },
     {
       title: t('Clarity & transparency'),
@@ -58,7 +58,7 @@ function Process_Documentation() {
         subtitle: t('Enable Efficient Operations'),
         body: (
           <p>
-            {t('Process documentation is a key factor for enabling employees to truly understand their daily work. With a common understanding of workflows, your team can operate efficiently and consistently. Moreover, comprehensive and accessible documentation forms the foundation for identifying optimization opportunities.')}
+            {t('Process documentation is a key factor for enabling employees to truly understand their daily work. With a common understanding of workflows, your team can operate efficiently and consistently. Moreover, comprehensive and accessible documentation forms the foundation for identifying optimisation opportunities.')}
           </p>
         ),
       }}

@@ -13,7 +13,7 @@ const Awareness = () => {
   const features = [
     {
       icon: <FaInfoCircle className="text-secondary text-2xl" />,
-      title: t('awareness.features.0.title', 'Simplified Interpretation'),
+      title: t('Simplified Interpretation'),
       description: t(
         'We distill the essence of new laws and regulations, helping employees understand what matters and how it impacts their role.'
       ),

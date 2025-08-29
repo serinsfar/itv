@@ -7,7 +7,7 @@ function Infra() {
     const { t } = useTranslation();
   const services = [
     { name: t("System Architecture"), path: "/System_Arch" },
-    { name: t("Specification"), path: "/Specification" },
+    { name: t("Specifications"), path: "/Specification" },
     { name: t("Procurement of a System"), path: "/Procurment_System" },
     { name: t("Test Management"), path: "/Test_Management" },
   ];

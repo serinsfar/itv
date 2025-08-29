@@ -70,7 +70,7 @@ function Procurment_System() {
         subtitle: t('From Specification to Implementation'),
         body: (
           <p>
-            {t('The procurement of a system typically involves the phases &quot;specification&quot;, &quot;tendering and evaluation&quot;, and &quot;implementation&quot;. You decide which phase—or parts of a phase—you hand over to our responsibility. Our experts guide your project to success, flexibly supporting you where needed most.')}
+            {t('The procurement of a system typically involves the phases \"specification\", \"tendering and evaluation\", and \"implementation\". You decide which phase—or parts of a phase—you hand over to our responsibility. Our experts guide your project to success, flexibly supporting you where needed most.')}
           </p>
         ),
       }}

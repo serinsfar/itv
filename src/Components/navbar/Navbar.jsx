@@ -48,10 +48,10 @@ const Navbar = ({ contactRef }) => {
       { title: t('Awareness'), Link: '/Awareness' },
       { title: t('Training'), Link: '/Training' },
     ]},
-    { title: t('Process'), subMenu: [
+    { title: t('Processes'), subMenu: [
       { title: t('Process Documentation'), Link: '/Process_Documentation' },
       { title: t('Process Design'), Link: '/Process_Design' },
-      { title: t('Process Optimization'), Link: '/Process_Optimisation' },
+      { title: t('Process Optimisation'), Link: '/Process_Optimisation' },
     ]},
     { title: t('Organisation'), subMenu: [
       { title: t('Strategy'), Link: '/Strategy' },
@@ -105,7 +105,8 @@ const Navbar = ({ contactRef }) => {
           <div className="relative" data-keep-open="true">
             <button
               onClick={() => toggleDropdown('services')}
-              className="text-xl hover:text-secondary focus:outline-none inline-flex"
+                  className={`text-xl focus:outline-none inline-flex hover:text-secondary
+                  ${openDropdown === 'services' ? "text-secondary" : ""}`}
             >
               {t('Services')}
               <svg
@@ -127,6 +128,7 @@ const Navbar = ({ contactRef }) => {
                     <button
                       onClick={() => toggleSubDropdown(option.title)}
                       className="block w-full text-left px-4 py-4 hover:bg-light rounded-md hover:scale-100 hover:shadow-sm focus:outline-none"
+                      
                     >
                       {option.title}
                     </button>
@@ -156,7 +158,8 @@ const Navbar = ({ contactRef }) => {
           <div className="relative" data-keep-open="true">
             <button
               onClick={() => toggleDropdown('businessUnits')}
-              className="text-xl hover:text-secondary focus:outline-none inline-flex"
+              className={`text-xl focus:outline-none inline-flex hover:text-secondary
+                  ${openDropdown === 'businessUnits' ? "text-secondary" : ""}`}
             >
               {t('Business Units')}
               <svg

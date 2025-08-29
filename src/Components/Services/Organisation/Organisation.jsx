@@ -2,11 +2,13 @@ import React from 'react';
 import { IoIosArrowForward } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import ApartmentIcon from '@mui/icons-material/Apartment';
+import { useTranslation } from 'react-i18next';
 
 const Organisation = () => {
+  const { t } = useTranslation();
   const services = [
-    { name: "Strategy", path: "/Strategy" },
-    { name: "Organisational Development", path: "/Organisational_Development" },
+    { name: t("Strategy"), path: "/Strategy" },
+    { name: t("Organisational Development"), path: "/Organisational_Development" },
   ];
 
   return (

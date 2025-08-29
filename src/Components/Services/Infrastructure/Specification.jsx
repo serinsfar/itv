@@ -43,7 +43,7 @@ function Specification() {
     },
     {
       title: t('Reduced internal effort'),
-      description: t('Minimizes your internal workload and resource needs.'),
+      description: t('Minimises your internal workload and resource needs.'),
     },
   ];
 
@@ -53,9 +53,9 @@ function Specification() {
       pageTitle= {t("Specification & Requirements")}
       hero={{
         imageSrc: infraImg,
-        imageAlt: t('Specification'),
+        imageAlt: t('Specifications'),
         title: t('Clear & Consistent'),
-        subtitle: t('Specifications that Deliver'),
+        subtitle: t('Specifications that Fit'),
         body: (
             t('Be it for the procurement of a new system, the purchase of services, or the acquisition of data, you always need a consistent and clear specification of your wishes and requirements. With our long-standing experience, we ensure that your specifications are complete, clearly understood by suppliers, and require minimal effort from your team.')
         ),

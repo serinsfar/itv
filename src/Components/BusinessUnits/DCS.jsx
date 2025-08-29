@@ -66,7 +66,7 @@ function DCS() {
         </div>
         <div className="mb:pl-12">
           <div className="font-bold sm:text-[1.875rem] text-[1.5rem] mb-2">
-            {t('Modernizing Aeronautical Data Management')}
+            {t('Modernising Aeronautical Data Management')}
             <br />
             <span className="text-secondary font-normal">
               {t('with')}{' '}
@@ -74,7 +74,7 @@ function DCS() {
                 href="https://obstacleportal.ch/#/changes/1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:shadow-sm hover:bg-light rounded-md p-2 "
+                className="underline hover:shadow-sm hover:bg-light rounded-md"
               >
                 {t('DCS')}
               </a>

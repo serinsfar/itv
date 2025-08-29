@@ -45,7 +45,7 @@ function SDI() {
   const spatialBenefits = [
     {
       title: t('Future-ready organisation'),
-      description: t('Your organization is prepared for the challenges of the future.'),
+      description: t('Your organisation is prepared for the challenges of the future.'),
     },
     {
       title: t('Learning organisation'),
@@ -77,7 +77,7 @@ function SDI() {
         body: (
           <p>
             {t(
-              'The core business of ITV Consult AG is consulting and delivering solutions in the field of Spatial Information Management. We specialize in integrating spatially related components into the broader information management of administrations or companies — always considering organisational, economic, and technical dimensions.'
+              'The core business of ITV Consult AG is consulting and delivering solutions in the field of Spatial Information Management. We specialise in integrating spatially related components into the broader information management of administrations or companies — always considering organisational, economic, and technical dimensions.'
             )}
           </p>
         ),

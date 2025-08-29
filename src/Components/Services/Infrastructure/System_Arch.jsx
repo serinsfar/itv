@@ -28,9 +28,9 @@ function System_Arch() {
     },
     {
       icon: <FaServer className="text-secondary text-2xl" />,
-      title: t('systemArch.features.optimization.title3', 'Technical Optimization'),
+      title: t('systemArch.features.optimization.title3', 'Technical Optimisation'),
       description: t(
-        'systemArch.features.optimization.desc3','Our approach also includes optimizing your existing IT infrastructure for better performance and future scalability.'
+        'systemArch.features.optimization.desc3','Our approach also includes optimising your existing IT infrastructure for better performance and future scalability.'
       ),
     },
   ];
@@ -87,7 +87,7 @@ function System_Arch() {
       servicesTitle={t('systemArch.services.title', 'Our Services')}
       servicesIntro={t(
         'systemArch.services.intro',
-        'In a first step, we analyze and describe your existing environment together with your team. Based on this analysis, we elaborate a future-ready system architecture that fits your technical and operational requirements. This analysis can also be used to optimize your existing setup. The newly defined architecture will be documented in both text and visual diagrams.'
+        'In a first step, we analyse and describe your existing environment together with your team. Based on this analysis, we elaborate a future-ready system architecture that fits your technical and operational requirements. This analysis can also be used to optimise your existing setup. The newly defined architecture will be documented in both text and visual diagrams.'
       )}
        servicesLeadText={t('systemArch.services.lead', 'We offer the following services:')}
       servicesList={[

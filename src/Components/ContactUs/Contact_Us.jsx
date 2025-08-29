@@ -9,7 +9,7 @@ const Contact_Us = () => {
   const { t } = useTranslation();
   return (
     <div className="container mt-12 mb-16">
-    <h1 className=" text-3xl font-bold mb-16">Contact Us</h1>
+    <h1 className=" text-3xl font-bold mb-16">{t('Contact Us')}</h1>
     <div className="container lg:max-w-[1270px] md:max-w-[700px] sm:p-4 2xl:gap-20 lg:gap-16 md:gap-12 sm:gap-8 flex flex-col 2xl:px-20 lg:px-8 sm:items-center
      px-4 gap-16 lg:items-center">
       {/* Contact Info Section */}

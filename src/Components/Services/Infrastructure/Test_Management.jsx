@@ -14,7 +14,7 @@ function Test_Management() {
       icon: <FaTasks className="text-secondary text-2xl" />,
       title: t('Test Management'),
       description:
-        t('Plan, control and monitor the entire testing process tailored to your organization’s resources and goals.'),
+        t('Plan, control and monitor the entire testing process tailored to your organisation’s resources and goals.'),
     },
     {
       icon: <FaClipboardCheck className="text-secondary text-2xl" />,

@@ -40,7 +40,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
     {
       icon: <AiOutlineSolution className="text-2xl" />,
       title: t("Tailored Solutions"),
-      details: t("We understand that every business is unique. Our team works closely with each client to develop customized solutions that address specific needs, ensuring optimal results and long-term success."),
+      details: t("We understand that every business is unique. Our team works closely with each client to develop customised solutions that address specific needs, ensuring optimal results and long-term success."),
     },
     {
       icon: <GrTechnology className="text-2xl" />,
@@ -50,7 +50,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
     {
       icon: <FaBuildingUser className="text-2xl" />,
       title: t("Trusted by Industry Leaders"),
-      details: t("Leading organizations across various sectors rely on our expertise. Our proven track record of delivering quality and consistency has earned us the trust of top-tier clients worldwide."),
+      details: t("Leading organisations across various sectors rely on our expertise. Our proven track record of delivering quality and consistency has earned us the trust of top-tier clients worldwide."),
     },
   ];
   const markers = [

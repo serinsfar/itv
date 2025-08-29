@@ -15,14 +15,14 @@ function Organisational_Development() {
       icon: <FaSearch className="text-secondary text-2xl" />,
       title: t('Analysis'),
       description: t(
-        'We analyze your organization from an external perspective, identifying strengths, weaknesses, and opportunities while also considering technical and economic aspects.'
+        'We analyse your organisation from an external perspective, identifying strengths, weaknesses, and opportunities while also considering technical and economic aspects.'
       ),
     },
     {
       icon: <FaLightbulb className="text-secondary text-2xl" />,
       title: t('Conception'),
       description: t(
-        'Based on the analysis, we create a concept collaboratively with your team — ensuring ownership, alignment, and broad acceptance across the organization.'
+        'Based on the analysis, we create a concept collaboratively with your team — ensuring ownership, alignment, and broad acceptance across the organisation.'
       ),
     },
     {
@@ -38,7 +38,7 @@ function Organisational_Development() {
   const devBenefits = [
     {
       title: t('Future-ready organisation'),
-      description: t('Your organization is prepared for the challenges of the future.'),
+      description: t('Your organisation is prepared for the challenges of the future.'),
     },
     {
       title: t('Learning organisation'),
@@ -76,7 +76,7 @@ function Organisational_Development() {
       checkIconSrc={check}
       servicesTitle={t('Our Services')}
       servicesIntro={t(
-        'With our extensive project experience, we guide change processes with structure and clarity — from analysis to implementation. We activate transformation in a controlled manner and support your organization as a coach, enabler, or project leader. Our goal is to lead you toward a future-proof, efficient, and agile organisation.'
+        'With our extensive project experience, we guide change processes with structure and clarity — from analysis to implementation. We activate transformation in a controlled manner and support your organisation as a coach, enabler, or project leader. Our goal is to lead you toward a future-proof, efficient, and agile organisation.'
       )}
       // No servicesList on this page
     />

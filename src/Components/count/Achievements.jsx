@@ -11,7 +11,7 @@ const Achievements = () => {
       <div>
       <div className="container grid grid-cols-1 md:grid-cols-3 gap-8 text-center ">
        
-        <AchievementCounter end={70} suffix="+" title="Organizations Served" />
+        <AchievementCounter end={70} suffix="+" title="Organisations Served" />
         <AchievementCounter end={1000} suffix="+" title="Hours of Training Delivered" />
         <AchievementCounter end={100} suffix="+" title="Successful Projects in 20+ Countries" />
       </div>

@@ -50,7 +50,7 @@ function Data_Organisation() {
         imageSrc: dataorg,
         imageClassName: 'rounded-md max-w-[450px] max-h-[300px]',
         imageAlt: t('dataOrg.hero.alt', 'Data organisation'),
-        title: t('dataOrg.hero.title', 'Organization-wide'),
+        title: t('dataOrg.hero.title', 'Organisation-Wide'),
         subtitle: t('dataOrg.hero.subtitle', 'Geodata Management'),
         body: (
           <p className="text-gray-700">

@@ -13,7 +13,7 @@ function Process_Design() {
     {
       icon: <FaSitemap className="text-secondary text-2xl" />,
       title: t('Process Drivers Analysis'),
-      description: t('We identify and analyze relevant parameters such as customer needs, supplier inputs, employee roles, and cross-organization interfaces.'),
+      description: t('We identify and analyse relevant parameters such as customer needs, supplier inputs, employee roles, and cross-organisation interfaces.'),
     },
     {
       icon: <FaUsers className="text-secondary text-2xl" />,
@@ -28,7 +28,7 @@ function Process_Design() {
     {
       icon: <FaRetweet className="text-secondary text-2xl" />,
       title: t('Final Documentation'),
-      description: t('Once consensus is reached, we formalize your new processes in clear and consistent process documentation.'),
+      description: t('We guide you and your team in identifying key process drivers, lead design workshops to (re)structure your workflows, and iterate until consensus is reached. Our job is to moderate, question, provoke new thinking, and help finalise your optimised processes through structured documentation.')
     },
   ];
 
@@ -50,7 +50,7 @@ function Process_Design() {
   return (
     <FourPartPageTemplate
       prelude={<Processes />}
-      pageTitle={t('Process Design & Optimization')}
+      pageTitle={t('Process Design & Optimisation')}
       hero={{
         imageSrc: processesImg,
         imageAlt: t('Process Design'),
@@ -58,7 +58,7 @@ function Process_Design() {
         subtitle: t('Through Iteration & Insight'),
         body: (
           <p>
-            {t('What is the best sequence of tasks? What can be done in parallel? Every organization faces these questions. To find the right answers, we analyze a variety of influencing factors — from customer requirements to internal and external interfaces. Your employees are the most valuable source of insight in this process, and we work with them to create effective, optimized operations.')}
+            {t('What is the best sequence of tasks? What can be done in parallel? Every organisation faces these questions. To find the right answers, we analyse a variety of influencing factors — from customer requirements to internal and external interfaces. Your employees are the most valuable source of insight in this process, and we work with them to create effective, optimised operations.')}
           </p>
         ),
       }}
@@ -70,7 +70,7 @@ function Process_Design() {
       benefitsCols="md:grid-cols-2"
       checkIconSrc={check}
       servicesTitle={t('Our Services')}
-      servicesIntro={t('We guide you and your team in identifying key process drivers, lead design workshops to (re)structure your workflows, and iterate until consensus is reached. Our job is to moderate, question, provoke new thinking, and help finalize your optimized processes through structured documentation.')}
+      servicesIntro={t('We guide you and your team in identifying key process drivers, lead design workshops to (re)structure your workflows, and iterate until consensus is reached. Our job is to moderate, question, provoke new thinking, and help finalise your optimised processes through structured documentation.')}
     />
   );
 }

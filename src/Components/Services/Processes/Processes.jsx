@@ -10,7 +10,7 @@ function Processes() {
   const services = [
     { name: t("Process Documentation"), path: "/Process_Documentation" },
     { name: t("Process Design"), path: "/Process_Design" },
-    { name: t("Process Optimization"), path: "/Process_Optimisation" },
+    { name: t("Process Optimisation"), path: "/Process_Optimisation" },
   ];
  
 

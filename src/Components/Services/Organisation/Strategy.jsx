@@ -22,14 +22,14 @@ function Strategy() {
       icon: <FaBullseye className="text-secondary text-2xl" />,
       title: t('Clear Vision & Direction'),
       description: t(
-        'Together we develop a documented vision and concrete measures to achieve it, aligned with your organizations values and goals.'
+        'Together we develop a documented vision and concrete measures to achieve it, aligned with your organisations values and goals.'
       ),
     },
     {
       icon: <FaPeopleArrows className="text-secondary text-2xl" />,
       title: t('Inclusive Review & Commitment'),
       description: t(
-        'The broader organization is involved in reviewing the strategy to ensure understanding, support, and readiness for implementation.'
+        'The broader organisation is involved in reviewing the strategy to ensure understanding, support, and readiness for implementation.'
       ),
     },
     {
@@ -81,7 +81,7 @@ function Strategy() {
         body: (
           <p>
             {t(
-              'We apply recognized strategic planning methods and tailor them to your unique needs. Based on our extensive experience, the best results are achieved by working closely with a core team in workshops, each focusing on a specific theme. The resulting strategy is then reviewed by a wider group to ensure organization-wide support, which is key for successful implementation.'
+              'We apply recognised strategic planning methods and tailor them to your unique needs. Based on our extensive experience, the best results are achieved by working closely with a core team in workshops, each focusing on a specific theme. The resulting strategy is then reviewed by a wider group to ensure organisation-wide support, which is key for successful implementation.'
             )}
           </p>
         ),

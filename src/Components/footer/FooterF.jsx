@@ -8,25 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const sections = [
-  {
-    title: "Menu",
-    items: ["Home", "Services", "Business units", "Company", "Contact Us"],
-  },
-  {
-    title: "Address",
-    items: [
-      "Dorfstrasse 53",
-      "8105 Regensdorf-Watt",
-      "Tel.: +41 44 871 21 90",
-      "Mail: info@itv.ch",
-    ],
-  },
-  {
-    title: "Company",
-    items: ["Impressum Datenschutzerklärung", "Soziale Netzwerke"],
-  },
-];
 
 const Callto = ({ phone, children }) => {
   return <a href={`tel:${phone}`}>{children}</a>;
@@ -64,7 +45,7 @@ const FooterF = () => {
                   <Link to="/Metadata" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('Services')}</Link>
                 </li>
                 <li className="cursor-pointer hover:text-white">
-                  <Link to="/AIM" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('Business units')}</Link>
+                  <Link to="/AIM" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('Business Units')}</Link>
                 </li>
                 <li className="cursor-pointer hover:text-white">
                   <Link to="/company">{t('Company')}</Link>

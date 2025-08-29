@@ -115,7 +115,7 @@ const AIMRef = [
       link: "https://caanepal.gov.np/",
     },
       {imageLink: caa,
-      name: "Soudan Civil Aviation Authority",
+      name: "Sudan Civil Aviation Authority",
       link: "https://scaa.gov.sd/",
     },
  ];
