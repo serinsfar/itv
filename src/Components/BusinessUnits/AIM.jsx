@@ -83,7 +83,6 @@ function AIM() {
       pageTitle={t('Aeronautical Information Management')}
       hero={{
         imageSrc: areo,
-        imageClassName: 'max-w-[449px] object-cover',
         imageAlt: t('Aeronautical Information Management'),
         title: t('Your Partner for'),
         subtitle: t('Aeronautical Information Evolution'),

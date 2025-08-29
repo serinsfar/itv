@@ -48,7 +48,7 @@ function Data_Organisation() {
       pageTitle={t('dataOrg.pageTitle', 'Data Organisation')}
       hero={{
         imageSrc: dataorg,
-        imageClassName: 'rounded-md max-w-[450px] max-h-[300px]',
+        imageClassName: 'rounded-md',
         imageAlt: t('dataOrg.hero.alt', 'Data organisation'),
         title: t('dataOrg.hero.title', 'Organisation-Wide'),
         subtitle: t('dataOrg.hero.subtitle', 'Geodata Management'),
