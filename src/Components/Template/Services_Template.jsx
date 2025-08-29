@@ -58,7 +58,7 @@ const FourPartPageTemplate = ({
             >
             {hero?.imageSrc ? (
                 <img
-                className={`rounded-md max-w-[550px] max-h-[300px] ${hero?.imageClassName || ''}`}
+                className={`rounded-md max-w-[320px] lg:max-w-[550px] max-h-[300px] ${hero?.imageClassName || ''}`}
                 src={hero.imageSrc}
                 alt={hero.imageAlt || ''}
                 />
