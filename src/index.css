@@ -65,10 +65,7 @@ cursor: pointer;
   width: 20px;
   margin-left: 10px;
 }
-/* Add this to your global CSS file */
-.swiper-pagination-bullet {
-  background-color: #4f46e5; /* Change pagination dot color */
-}
+
 
 /*.language-options {
 

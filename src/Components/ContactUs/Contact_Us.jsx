@@ -30,8 +30,8 @@ const Contact_Us = () => {
               <MdMail className="text-lg "/>
               <p><strong>{t("Email")} :</strong></p>
               </div>
-              <a href="mailto:Info@itv.ch" className="text-secondary underline">
-                Info@itv.ch
+              <a href="mailto:info@itv.ch" className="text-secondary underline">
+                info@itv.ch
               </a>
             </p>
             <p className="mt-4"></p>
@@ -46,7 +46,7 @@ const Contact_Us = () => {
                 rel="noopener noreferrer"
                 className="text-secondary underline"
               >
-                Dorfstrasse 53,<br/> 8105 Regensdorf-Watt, <br/> Switzerland
+                Dorfstrasse 53,<br/> 8105 Regensdorf-Watt, <br/> {t("Switzerland")}
               </a>
             </p>
           </div>

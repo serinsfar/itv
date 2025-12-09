@@ -66,14 +66,14 @@ const FooterF = () => {
                 <li>Dorfstrasse 53</li>
                 <li>8105 Regensdorf-Watt</li>
                 <li>
-                  {t('Telefon')}:{" "}
+                  {t('Phone')}:{" "}
                   <a className="hover:text-white" href="tel:+41 44 871 21 90">
                     +41 44 871 21 90
                   </a>
                 </li>
                 <li className="cursor-pointer hover:text-white duration-200">
-                  <a href="mailto:Info@itv.ch" className="hover:text-white">
-                    {t('Email')} : Info@itv.ch
+                  <a href="mailto:info@itv.ch" className="hover:text-white">
+                    {t('Email')} : info@itv.ch
                   </a>
                 </li>
               </ul>
@@ -90,9 +90,11 @@ const FooterF = () => {
                 <li>
                   <div className="flex items-center gap-2">
                     <Footer.Icon
-                      className="cursor-pointer hover:text-white duration-200"
-                      href="https://www.linkedin.com/company/97985639"
-                      icon={FaLinkedin}
+                        className="cursor-pointer hover:text-white duration-200"
+                        href="https://www.linkedin.com/company/97985639"
+                        icon={FaLinkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     />
                     <Footer.Icon
                       className="cursor-pointer hover:text-white duration-200"

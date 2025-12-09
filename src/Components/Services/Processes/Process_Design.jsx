@@ -28,7 +28,7 @@ function Process_Design() {
     {
       icon: <FaRetweet className="text-secondary text-2xl" />,
       title: t('Final Documentation'),
-      description: t('We guide you and your team in identifying key process drivers, lead design workshops to (re)structure your workflows, and iterate until consensus is reached. Our job is to moderate, question, provoke new thinking, and help finalise your optimised processes through structured documentation.')
+      description: t('We moderate and document all work steps so that we can provide you and your team with a complete, structured documentation of your processes.')
     },
   ];
 

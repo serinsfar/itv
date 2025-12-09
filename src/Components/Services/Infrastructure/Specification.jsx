@@ -50,7 +50,7 @@ function Specification() {
   return (
     <FourPartPageTemplate
       prelude={<Infrastructure />}
-      pageTitle= {t("Specification & Requirements")}
+      pageTitle= {t("Specifications & Requirements")}
       hero={{
         imageSrc: infraImg,
         imageAlt: t('Specifications'),
@@ -67,7 +67,7 @@ function Specification() {
       benefits={specificationBenefits}
       benefitsCols="md:grid-cols-3"
       checkIconSrc={check}
-      servicesTitle={t("Our Service")}
+      servicesTitle={t("Our Services")}
       servicesIntro={t("Our services in establishing a specification include requirements engineering, use case definition, functionality description, and compiling the specification as part of your tender documentation. With our background and project experience, we translate user requirements into clear, actionable language that suppliers understand.")}
       // servicesLeadText="We offer the following services:"
       // servicesList={[

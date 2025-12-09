@@ -55,7 +55,7 @@ const [selectedMarker, setSelectedMarker] = useState(null);
   ];
   const markers = [
   {
-    name: "Zürich",
+    name: t("Switzerland"),
     coordinates: [4.7000, 51.5000],
     countryName: t("Switzerland"),
   },

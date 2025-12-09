@@ -23,7 +23,7 @@ function DCS() {
     {
       icon: <FaShieldAlt className="text-secondary text-2xl" />,
       title: t('Regulatory Compliance'),
-      description: t('Ensures adherence to FOCA regulations for obstacle registration and approval.'),
+      description: t('Ensures adherence to FOCA and international regulations registration and approval of aeronautical data.'),
     },
     {
       icon: <FaTools className="text-secondary text-2xl" />,
@@ -35,7 +35,7 @@ function DCS() {
   const dcsBenefits = [
     {
       title: t('Streamlined process'),
-      description: t('Streamlined process for obstacle registration and approval.'),
+      description: t('Streamlined process for registration and approval of aeronautical data, including obstacles.'),
     },
     {
       title: t('Data accuracy'),

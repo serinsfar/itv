@@ -19,7 +19,7 @@ const data = [
     },
     { imageLink: rs,
       name: "Rudolf Schneeberger",
-      title: "Senior Consultant" },
+      title: "Managing director" },
     { imageLink: son,
       name: "Peter Sonnenfeld",
       title: "Senior Consultant" },

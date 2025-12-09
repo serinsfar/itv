@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 import 'swiper/css';
+import { NavLink, useLocation } from "react-router-dom";
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import axios from 'axios'; // 
@@ -65,9 +66,6 @@ export const newsData = [
         imageUrl: datacat,
     },
 ];
-
-
-
 const VerticalCarousel = () => {
     const swiperRef = useRef(null);
     const prevRef = useRef(null);
@@ -76,30 +74,6 @@ const VerticalCarousel = () => {
     const [loading, setLoading] = useState(true);
     const [expandedItems, setExpandedItems] = useState({});
     const [activeIndex, setActiveIndex] = useState(0);
-
-    /*useEffect(() => {
-        const fetchNews = async () => {
-            try {
-                const res = await axios.get('http://localhost:3000/api/news');
-                setNewsData(res.data);
-            } catch (error) {
-                console.error('Error fetching news:', error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchNews();
-    }, []);
-    if (loading) {
-        return <div className="text-center py-20">Loading news...</div>;
-    }
-    if (newsData.length === 0) {
-        return <div className="text-center py-20">No news available.</div>;
-    }
-    if (!Array.isArray(newsData)) {
-        return <div className="text-center py-20">Invalid data format.</div>;
-    }   */
  
     return (
  <div className="bg-light pt-12 pb-3">
@@ -159,7 +133,7 @@ const VerticalCarousel = () => {
           >
             {newsData.map(({ id, title, content, imageUrl }) => (
               <SwiperSlide key={id}>
-                <Link to={`/news/${id}`}>
+                <Link to={`/news/${id}`} onClick={() => window.scrollTo(0, 0)}>
                   <div className="group relative overflow-hidden h-[300px] w-full max-w-[350px] mx-auto rounded-lg shadow-lg cursor-pointer transition duration-300 ease-in-out">
                     <img src={imageUrl} alt={title} className="w-full h-full object-contain rounded-lg" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/100 to-transparent flex items-end p-4">

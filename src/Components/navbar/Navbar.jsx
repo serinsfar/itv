@@ -62,7 +62,7 @@ const Navbar = ({ contactRef }) => {
   const businessUnits = [
     { title: t('Aeronautical Information Management'), Link: '/AIM' },
     { title: t('Spatial Data Infrastructure'), Link: '/SDI' },
-    { title: t('Data collection service'), Link: '/DCS' },
+    { title: t('Data Collection Service'), Link: '/DCS' },
   ];
 
   const navigate = useNavigate();

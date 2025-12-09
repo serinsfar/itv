@@ -71,12 +71,12 @@ const Data_Modeling = () => {
         body: (
           <p>
             {t(
-              'A data model is composed of several interrelated components that together provide a clear, structured understanding of real-world information. It begins with a semantic description ... Finally, the conceptual data model represents the real world using structured text and diagrams, providing the foundation for implementation and system integration.'
+              'A data model is composed of several interrelated components that together provide a clear, structured understanding of real-world information. It begins with a semantic description. This is followed by a catalogue of objects that defines each element – such as classes and attributes – together with rules for data collection. This catalogue, which was developed in collaboration between experts and modelling specialists, serves as an important interface between semantics and the formal structure of the model. Finally, the conceptual data model represents the real world using structured text and diagrams, providing the foundation for implementation and system integration.'
             )}
           </p>
         ),
       }}
-      featuresTitle={t('dataModel.features.title', 'Data Model')}
+      featuresTitle={t('Data Model')}
       features={features}
       featuresCols="md:grid-cols-2 lg:grid-cols-3"
       benefitsTitle={t('dataModel.benefits.title', 'Your Benefits')}

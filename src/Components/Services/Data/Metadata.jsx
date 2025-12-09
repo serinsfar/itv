@@ -70,7 +70,7 @@ function Metadata() {
 
   const servicesList = [
     t('services.list.0', 'Analysis of your requirements with regard to metadata.'),
-    t('services.list.1', 'Mapping your requirements to ISO 19115:2003.'),
+    t('services.list.1', 'Mapping your requirements to ISO 19115:2014.'),
     t('services.list.2', 'Establishment of a concept for your metadata system.'),
     t('services.list.3', 'Specification, tender documentation, and evaluation of the best-fitting metadata system.'),
   ];
@@ -88,7 +88,7 @@ function Metadata() {
           <p>
             {t(
               'hero.body',
-              'Metadata describing your (geo-) data are needed to better administrate, actualise, and document your data and much more. The necessity of metadata is well acknowledged by a wide circle of persons. With the norm 19115:2003 published by the ISO, the guidelines how to deal with metadata for geoinformation is given.'
+              'Metadata describing your (geo-) data are needed to better administrate, actualise, and document your data and much more. The necessity of metadata is well acknowledged by a wide circle of persons. With the norm 19115:2014 published by the ISO, the guidelines how to deal with metadata for geoinformation is given.'
             )}
           </p>
         ),
