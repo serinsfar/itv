@@ -15,6 +15,7 @@ import history from '../../assets/history.jpg'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useTranslation } from "react-i18next";
+import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 
 
 const Company = () => {
@@ -50,18 +51,6 @@ useEffect(() => {
 
         fetchTeams();
       }, []);
-      if (loading) {
-          return (
-              <div className="bg-light pt-12 pb-3">
-                  <h1 className="container text-3xl font-bold mb-16">Team</h1>
-                  <div className="container lg:max-w-[1324px] mx-auto md:max-w-[700px]">
-                      <div className="flex items-center justify-center mb-10 px-2 w-full">
-                          <p className="text-lg">Loading team...</p>
-                      </div>
-                  </div>
-              </div>
-          );
-      }
 
     return (
                         
@@ -91,8 +80,8 @@ useEffect(() => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-10">
 
               {loading && (
-                <div className="col-span-full text-center text-lg">
-                  Loading team...
+                <div className="col-span-full">
+                  <LoadingIndicator size="medium" text={t('Loading team...')} />
                 </div>
               )}
 
@@ -171,4 +160,3 @@ useEffect(() => {
 };
 
 export default Company;
-

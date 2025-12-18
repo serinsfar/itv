@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import LoadingIndicator from './LoadingIndicator/LoadingIndicator';
 
 const NewsDetail = () => {
   const { id } = useParams();
@@ -47,7 +48,7 @@ const NewsDetail = () => {
   if (loading) {
     return (
       <div className="py-20 max-w-4xl mx-auto">
-        <p className="text-lg text-center">Loading...</p>
+        <LoadingIndicator size="large" text="Loading article..." />
       </div>
     );
   }
