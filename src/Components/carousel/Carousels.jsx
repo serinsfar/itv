@@ -8,6 +8,8 @@ import 'swiper/css/scrollbar';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const VerticalCarousel = () => {
     const swiperRef = useRef(null);
@@ -136,9 +138,11 @@ const VerticalCarousel = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/100 to-transparent flex items-end p-4">
                       <div>
                         <h3 className="text-white text-base font-semibold">{title}</h3>
-                        <p className={`text-white text-sm my-2 ${!expandedItems[id] ? 'line-clamp-2' : ''}`}>
-                          {content}
-                        </p>
+                        <div className={`text-white text-sm my-2 ${!expandedItems[id] ? 'line-clamp-2' : ''}`}>
+                          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                            {content}
+                          </ReactMarkdown>
+                        </div>
                         <button className="primary-btn py-1 px-5 text-xs w-50">
                           Read More
                         </button>

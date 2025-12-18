@@ -12,38 +12,56 @@ import rs from '../../assets/RS.jpg'
 import son from '../../assets/SON.jpg'
 import ser from '../../assets/Serin.jpg'
 import history from '../../assets/history.jpg'
-const data = [
-    { imageLink: ang,
-      name: "Dominik Angst",
-      title: "Managing Director - Senior Consultant"
-    },
-    { imageLink: rs,
-      name: "Rudolf Schneeberger",
-      title: "Managing director" },
-    { imageLink: son,
-      name: "Peter Sonnenfeld",
-      title: "Senior Consultant" },
-    { imageLink: kle,
-      name: "Christoph Kleiner",
-      title: "Head of DCS" },
-    { imageLink: bau,
-      name: "Roland Baumann",
-      title: "Senior Consultant"}, 
-    { imageLink: pet,
-      name: "Nicole Peter",
-      title: "Assistant" },
-    { imageLink: ger,
-      name: "Raphaël Gerth",
-      title: "DCS / Consultant " },
-    { imageLink: ser,
-        name: "Serin Sfar Chaabane",
-        title: "DCS / Junior Consultant" },
-  ];
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import { useTranslation } from "react-i18next";
 
 
 const Company = () => {
   const { t } = useTranslation();
+  const [teamData, setTeamData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+
+useEffect(() => {
+    const fetchTeams = async () => {
+        try {
+            setLoading(true);
+
+            const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/team`;
+            const response = await axios.get(apiUrl);
+
+            // Transform API response to match component's data structure
+            const transformedData = response.data.map(item => ({
+                id: item.id,
+                name: item.name,
+                title: item.title,
+                imageUrl: item.image_url,
+            }));
+
+            setTeamData(transformedData);
+        } catch (error) {
+            console.error('Error fetching team:', error);
+            setTeamData([]);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+        fetchTeams();
+      }, []);
+      if (loading) {
+          return (
+              <div className="bg-light pt-12 pb-3">
+                  <h1 className="container text-3xl font-bold mb-16">Team</h1>
+                  <div className="container lg:max-w-[1324px] mx-auto md:max-w-[700px]">
+                      <div className="flex items-center justify-center mb-10 px-2 w-full">
+                          <p className="text-lg">Loading team...</p>
+                      </div>
+                  </div>
+              </div>
+          );
+      }
 
     return (
                         
@@ -65,28 +83,55 @@ const Company = () => {
         </ul>
      </div>
       </div>
-      
       <div>
-      <h2 className=' pt-5 text-3xl font-bold text-left'>{t('Team')}</h2>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-10'>
-       
-      {data.map(({ imageLink, name, title }, index) => (
-      <div key={index} className="group relative items-center justify-center overflow-hidden cursor pointer rounded-lg shadow-lg  transition duration-300 ease-in-out">
-        <img src={imageLink} alt="" className="rounded-lg" />
-        <div className="absolute inset-0 flex items-center justify-center  bg-gradient-to-t opacity-0 from-gray-900 to-transparent group-hover:opacity-100 transition duration-300 ease-in-out">
-        <div className='absolute bottom-0 left-0 right-0 p-4'>
-        <h3 className="text-white text-lg font-semibold pb-2">{name}</h3>
-        <h6 className='text-white font-semibold'>{t(title)}</h6>
-        </div>
-        </div>
+            <h2 className="pt-5 text-3xl font-bold text-left">
+              {t('Team')}
+            </h2>
 
-      </div>
-       ))}
-      </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-10">
 
+              {loading && (
+                <div className="col-span-full text-center text-lg">
+                  Loading team...
+                </div>
+              )}
 
+              {!loading && teamData.length === 0 && (
+                <div className="col-span-full text-center text-lg">
+                  No team members available
+                </div>
+              )}
 
-    </div>    
+              {!loading && teamData.length > 0 &&
+                teamData.map(({ id, imageUrl, name, title }) => (
+                  <div
+                    key={id}
+                    className="group relative items-center justify-center overflow-hidden cursor-pointer rounded-lg shadow-lg transition duration-300 ease-in-out"
+                  >
+                    <img
+                      src={imageUrl || '/placeholder-user.jpg'}
+                      alt={name}
+                      className="rounded-lg w-full h-full object-cover"
+                    />
+
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="text-white text-lg font-semibold pb-2">
+                          {name}
+                        </h3>
+                        <h6 className="text-white font-semibold">
+                          {t(title)}
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
+
+            </div>
+
+          </div>
+  
      <h1 className='pt-20 text-3xl font-bold text-left '>{t('History')}</h1>
      <div className='grid xl:grid-cols-2 gap-8 place-items-center py-10'>
      <div className='mb:pl-12'>

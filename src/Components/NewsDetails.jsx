@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const NewsDetail = () => {
   const { id } = useParams();
@@ -18,15 +20,14 @@ const NewsDetail = () => {
         const language = i18n.language === 'DE' ? 'de' : 'en';
         const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/news/public/list?language=${language}`;
         const response = await axios.get(apiUrl);
-        
-        // Find the specific news item by ID
+
         const item = response.data.find(news => news.id === parseInt(id));
-        
+
         if (item) {
           setNewsItem({
             id: item.id,
             title: item.title,
-            content: item.body,
+            content: item.body, // Markdown
             imageUrl: item.image_url,
           });
         } else {
@@ -45,7 +46,7 @@ const NewsDetail = () => {
 
   if (loading) {
     return (
-      <div className="py-20 max-w-4xl mx-auto items-center justify-center">
+      <div className="py-20 max-w-4xl mx-auto">
         <p className="text-lg text-center">Loading...</p>
       </div>
     );
@@ -53,17 +54,30 @@ const NewsDetail = () => {
 
   if (error || !newsItem) {
     return (
-      <div className="py-20 max-w-4xl mx-auto items-center justify-center">
+      <div className="py-20 max-w-4xl mx-auto">
         <p className="text-lg text-center">{error || 'News item not found'}</p>
       </div>
     );
   }
 
   return (
-    <div className="py-20 max-w-4xl mx-auto items-center justify-center ">
-     <h1 className="text-3xl font-bold mb-10">{newsItem.title}</h1>
-      <img src={newsItem.imageUrl} alt={newsItem.title} className="group relative overflow-hidden max-h-[500px] mx-auto mb-6 object-cover rounded-xl" />
-      <p className="text-lg leading-relaxed whitespace-pre-line">{newsItem.content}</p>
+    <div className="py-20 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-10">{newsItem.title}</h1>
+
+      {newsItem.imageUrl && (
+        <img
+          src={newsItem.imageUrl}
+          alt={newsItem.title}
+          className="max-h-[500px] mx-auto mb-8 object-cover rounded-xl"
+        />
+      )}
+
+      {/* ✅ Wrapper holds the styling */}
+      <div className="prose prose-lg max-w-none">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {newsItem.content}
+        </ReactMarkdown>
+      </div>
     </div>
   );
 };
