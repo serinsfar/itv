@@ -170,7 +170,7 @@ const VerticalCarousel = () => {
                         </h3>
 
                         <div className="text-white text-sm my-2 line-clamp-2">
-                          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                          <ReactMarkdown>
                             {content}
                           </ReactMarkdown>
                         </div>
