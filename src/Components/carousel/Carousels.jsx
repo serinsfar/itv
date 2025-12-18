@@ -148,7 +148,14 @@ const VerticalCarousel = () => {
           >
             {newsData.map(({ id, title, content, imageUrl }) => (
               <SwiperSlide key={id}>
-                <Link to={`/news/${id}`} onClick={() => window.scrollTo(0, 0)}>
+                <Link 
+                  to={`/news/${id}`}
+                  className="block"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.scrollTo(0, 0);
+                  }}
+                >
                   <div className="group relative overflow-hidden h-[300px] w-full max-w-[350px] mx-auto rounded-lg shadow-lg cursor-pointer">
                     <img
                       src={imageUrl}
@@ -168,9 +175,9 @@ const VerticalCarousel = () => {
                           </ReactMarkdown>
                         </div>
 
-                        <button className="primary-btn py-1 px-5 text-xs">
+                        <span className="primary-btn py-1 px-5 text-xs inline-block">
                           Read More
-                        </button>
+                        </span>
                       </div>
                     </div>
                   </div>
