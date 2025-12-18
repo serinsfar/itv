@@ -73,9 +73,20 @@ const NewsDetail = () => {
         />
       )}
 
-      {/* ✅ Wrapper holds the styling */}
       <div className="prose prose-lg max-w-none">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            a: ({ node, ...props }) => (
+              <a
+                {...props}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline font-medium hover:text-blue-800"
+              />
+            ),
+          }}
+        >
           {newsItem.content}
         </ReactMarkdown>
       </div>
