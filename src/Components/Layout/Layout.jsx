@@ -9,7 +9,7 @@ const Layout = () => {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden bg white text-gray-800">
+    <div className="flex flex-col min-h-screen overflow-x-hidden bg white text-primary">
       <Navbar contactRef={contactRef} />
       <main className="flex-grow">
         <Outlet />

@@ -73,7 +73,7 @@ const NewsDetail = () => {
         />
       )}
 
-      <div className="prose prose-lg max-w-none prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-primary prose-strong:font-bold prose-ul:list-disc prose-ol:list-decimal prose-li:text-black prose-li:marker:text-black prose-blockquote:border-l-4 prose-blockquote:border-secondary prose-blockquote:bg-gray-50 prose-blockquote:italic prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-gray-900 prose-pre:text-white prose-img:rounded-lg prose-img:shadow-md">
+      <div className="prose prose-lg max-w-none prose-headings:text-primary prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-strong:font-bold prose-ul:list-disc prose-ol:list-decimal prose-li:text-black prose-li:marker:text-black prose-blockquote:border-l-4 prose-blockquote:border-secondary prose-blockquote:bg-gray-50 prose-blockquote:italic prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-pre:bg-gray-900 prose-pre:text-white prose-img:rounded-lg prose-img:shadow-md">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
@@ -98,16 +98,16 @@ const NewsDetail = () => {
               <h4 {...props} className="text-xl font-bold text-primary mt-4 mb-2" />
             ),
             p: ({ node, ...props }) => (
-              <p {...props} className="text-primary leading-relaxed mb-4" />
+              <p {...props} className="text-gray-700 leading-relaxed mb-4" />
             ),
             ul: ({ node, ...props }) => (
-              <ul {...props} className="list-disc text-primary list-inside mb-4 space-y-2" />
+              <ul {...props} className="list-disc list-inside mb-4 space-y-2" />
             ),
             ol: ({ node, ...props }) => (
-              <ol {...props} className="list-decimal text-primary list-inside mb-4 space-y-2" />
+              <ol {...props} className="list-decimal list-inside mb-4 space-y-2" />
             ),
             li: ({ node, ...props }) => (
-              <li {...props} className="text-primary" />
+              <li {...props} className="text-black" />
             ),
             blockquote: ({ node, ...props }) => (
               <blockquote {...props} className="border-l-4 border-secondary bg-gray-50 p-4 my-4 italic" />
