@@ -98,16 +98,16 @@ const NewsDetail = () => {
               <h4 {...props} className="text-xl font-bold text-primary mt-4 mb-2" />
             ),
             p: ({ node, ...props }) => (
-              <p {...props} className="text-gray-700 leading-relaxed mb-4" />
+              <p {...props} className="text-primary leading-relaxed mb-4" />
             ),
             ul: ({ node, ...props }) => (
-              <ul {...props} className="list-disc list-inside mb-4 space-y-2" />
+              <ul {...props} className="list-disc text-primary list-inside mb-4 space-y-2" />
             ),
             ol: ({ node, ...props }) => (
-              <ol {...props} className="list-decimal list-inside mb-4 space-y-2" />
+              <ol {...props} className="list-decimal text-primary list-inside mb-4 space-y-2" />
             ),
             li: ({ node, ...props }) => (
-              <li {...props} className="text-black" />
+              <li {...props} className="text-primary" />
             ),
             blockquote: ({ node, ...props }) => (
               <blockquote {...props} className="border-l-4 border-secondary bg-gray-50 p-4 my-4 italic" />
