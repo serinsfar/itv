@@ -14,6 +14,7 @@ const LoadingIndicator = ({ size = 'medium', text = 'Loading...' }) => {
         {/* Outer rotating ring */}
         <div
           className={`${sizeClasses[size]} rounded-full border-gray-200 border-t-secondary border-r-primary animate-spin`}
+          style={{ animationDuration: '2.5s' }}
         ></div>
       </div>
 
