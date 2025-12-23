@@ -48,7 +48,7 @@ const FooterF = () => {
                   <Link to="/AIM" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('Business Units')}</Link>
                 </li>
                 <li className="cursor-pointer hover:text-white">
-                  <Link to="/company">{t('Company')}</Link>
+                  <Link to="/company" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{t('Company')}</Link>
                 </li>
                 <li className="cursor-pointer hover:text-white">
                   {/* Use a button that navigates with state */}

@@ -13,37 +13,68 @@ const NewsDetail = () => {
   const [newsItem, setNewsItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showContent, setShowContent] = useState(false);
 
-  useEffect(() => {
-    const fetchNewsItem = async () => {
-      try {
-        setLoading(true);
-        const language = i18n.language === 'DE' ? 'de' : 'en';
-        const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/news/public/list?language=${language}`;
-        const response = await axios.get(apiUrl);
 
-        const item = response.data.find(news => news.id === parseInt(id));
+useEffect(() => {
+  let isActive = true;
 
-        if (item) {
-          setNewsItem({
-            id: item.id,
-            title: item.title,
-            content: item.body, // Markdown
-            imageUrl: item.image_url,
-          });
-        } else {
-          setError('News item not found');
-        }
-      } catch (error) {
-        console.error('Error fetching news item:', error);
-        setError('Failed to load news item');
-      } finally {
-        setLoading(false);
+  const fetchNewsItem = async () => {
+    setLoading(true);
+    setError(null);
+
+    const MIN_LOADING_TIME = 800;
+    const startTime = Date.now();
+
+    try {
+      const language = i18n.language === 'DE' ? 'de' : 'en';
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/news/public/list?language=${language}`;
+
+      const response = await axios.get(apiUrl);
+
+      if (!isActive) return;
+
+      const item = response.data.find(
+        news => news.id === Number(id)
+      );
+
+      if (item) {
+        setNewsItem({
+          id: item.id,
+          title: item.title,
+          content: item.body,
+          imageUrl: item.image_url,
+        });
+      } else {
+        setError('News item not found');
+        setNewsItem(null);
       }
-    };
+    } catch (error) {
+      console.error('Error fetching news item:', error);
+      if (isActive) {
+        setError('Failed to load news item');
+        setNewsItem(null);
+      }
+    } finally {
+      const elapsed = Date.now() - startTime;
+      const remaining = Math.max(0, MIN_LOADING_TIME - elapsed);
 
-    fetchNewsItem();
-  }, [id, i18n.language]);
+      await new Promise(resolve => setTimeout(resolve, remaining));
+
+      if (isActive) {
+        setLoading(false);
+        requestAnimationFrame(() => setShowContent(true));
+      }
+    }
+  };
+
+  fetchNewsItem();
+
+  return () => {
+    isActive = false;
+  };
+}, [id, i18n.language]);
+
 
   if (loading) {
     return (

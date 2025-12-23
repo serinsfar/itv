@@ -55,11 +55,13 @@ import meteoschweiz from '../../assets/meteoschweiz.png'
 import glarus from '../../assets/glarus.jpg'
 import Graubünden from '../../assets/Graubünden.png'
 import { useTranslation } from 'react-i18next';
+import FourPartPageTemplate from '../Template/Services_Template';
+import { motion } from 'framer-motion';
 
 const AIMRef = [
     { imageLink: bazl,  
-      name: "Bundesamt für Zivilluftfahrt (BAZL)",
-      link: "https://www.bazl.admin.ch/bazl/de/home.html",
+      name: "Bundesamt für Zivilluftfahrt - BAZL",
+      link: "https://www.bazl.admin.ch/de",
     },
     { imageLink: flughafen,  
       name: "Flughafen Zürich AG",
@@ -123,7 +125,7 @@ const AIMRef = [
 const SDIRefConf = [
     { imageLink: swisstopo, 
       name: "Bundesamt für Landestopographie - Swisstopo",
-      link: "https://www.swisstopo.admin.ch/home.html",
+      link: "https://www.geo.admin.ch/de/swisstopo-organisation",
     },
     { imageLink: strassen,
       name: "Bundesamt für Strassen - ASTRA",
@@ -135,11 +137,11 @@ const SDIRefConf = [
     },
     { imageLink: bav,
       name: "Bundesamt für Verkehr - BAV",
-      link: "https://www.bav.admin.ch/bav/de/home.html",
+      link: "https://www.bav.admin.ch/de/das-bav",
     },
     {imageLink: bazl,
       name: "Bundesamt für Zivilluftfahrt - BAZL",
-      link: "https://www.bazl.admin.ch/bazl/de/home.html",
+      link: "https://www.bazl.admin.ch/de",
     },
     {imageLink: uvek,
       name: "Eidgenössisches Departement für Umwelt, Verkehr, Energie und Kommunikation - UVEK",
@@ -306,175 +308,251 @@ const SDIRefCan = [
       link: "https://www.stadt-zuerich.ch/de/politik-und-verwaltung/stadtverwaltung/ted/erz.html",          
     },
   ]
+  const lazyReveal = (delay = 0) => ({
+  initial: { opacity: 0 },
+  whileInView: {
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      delay,
+      
+    },
+  },
+  viewport: { once: true, margin: '-80px' },
+});
+
+const lazyItem = (delay = 0) => ({
+  initial: { opacity: 0, y: 2 },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      
+      
+    },
+  },
+  viewport: { once: true, margin: '-60px' },
+});
 
 const References = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='container col-span-5 pb-10'>
-      <div className='flex flex-col justify-center md:py-0 sm:z-20'>
-        <h2 className=' pt-20 pb-10 text-3xl font-bold text-left'>{t('References')}</h2>
+    <>
+      <FourPartPageTemplate/>
+        {/* CONTENT */}
+      <div className="container col-span-5 pb-20">
 
-        <h4 className=' text-2xl text-secondary font-semibold text-left'>
+        {/* AIM */}
+        <motion.h4
+          {...lazyReveal(0)}
+          className="pt-10 pb-6 text-2xl text-secondary font-semibold text-left"
+        >
           {t('Aeronautical Information Management (AIM)')}
-        </h4>
+        </motion.h4>
 
-        <div className="px-10 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5">
+        <motion.div
+          {...lazyReveal(0.1)}
+          className="px-10 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-5"
+        >
           {AIMRef.map(({ imageLink, name, link }, index) => (
-            <div
+            <motion.div
               key={index}
-              className="col-span-1 flex flex-col items-center group overflow-hidden cursor-pointer transition duration-300 ease-in-out rounded-lg"
+              {...lazyItem(index * 0.06)}
+              className="flex flex-col items-center"
             >
-              {/* Image Container */}
-              <div className="w-full h-48 relative">
+              <div className="w-full h-48">
                 {link ? (
                   <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
+                    <img
+                      src={imageLink}
+                      alt={name}
+                      className="w-full h-full object-contain"
+                    />
                   </a>
                 ) : (
-                  <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
+                  <img
+                    src={imageLink}
+                    alt={name}
+                    className="w-full h-full object-contain"
+                  />
                 )}
               </div>
-
-              {/* Always-visible name under image */}
-              <div className="mt-2 text-center text-black text-sm font-semibold">
-                {name}
-              </div>
-            </div>
+              <p className="mt-2 text-center text-sm font-semibold">{name}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <h4 className='pt-16 pb-5 text-2xl text-secondary font-semibold text-left'>
+        {/* SDI */}
+        <motion.h4
+          {...lazyReveal(0.15)}
+          className="pt-16 pb-4 text-2xl text-secondary font-semibold text-left"
+        >
           {t('Spatial Data Infrastructure (SDI)')}
-        </h4>
-        <h3 className='text-2xl text-primary font-semibold text-left'><li>{t('Confederation')}</li></h3>
-        <div className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
+        </motion.h4>
+
+        {/* Confederation */}
+        <motion.h3
+          {...lazyReveal(0.2)}
+          className="text-xl font-semibold text-left"
+        >
+          {t('Confederation')}
+        </motion.h3>
+
+        <motion.div
+          {...lazyReveal(0.25)}
+          className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5 mb-10"
+        >
           {SDIRefConf.map(({ imageLink, name, link }, index) => (
-            <div
+            <motion.div
               key={index}
-              className="col-span-1 flex flex-col items-center group overflow-hidden cursor-pointer transition duration-300 ease-in-out rounded-lg"
+              {...lazyItem(index * 0.06)}
+              className="flex flex-col items-center"
             >
-              {/* Image Container */}
-              <div className="w-full h-48 relative">
-                {link ? (
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                  </a>
-                ) : (
-                  <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                )}
+              <div className="w-full h-48">
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={imageLink}
+                    alt={name}
+                    className="w-full h-full object-contain"
+                  />
+                </a>
               </div>
-
-              {/* Always-visible name under image */}
-              <div className="mt-2 text-center text-black text-sm font-semibold">
-                {name}
-              </div>
-            </div>
+              <p className="mt-2 text-center text-sm font-semibold">{name}</p>
+            </motion.div>
           ))}
-        </div>
-        <h3 className='text-2xl text-primary font-semibold text-left'><li>{t('Cantons')}</li></h3>
-        <div className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
+        </motion.div>
+
+        {/* Cantons */}
+        <motion.h3
+          {...lazyReveal(0.3)}
+          className="text-xl font-semibold text-left"
+        >
+          {t('Cantons')}
+        </motion.h3>
+
+        <motion.div
+          {...lazyReveal(0.35)}
+          className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5 mb-10"
+        >
           {SDIRefCan.map(({ imageLink, name, link }, index) => (
-            <div
+            <motion.div
               key={index}
-              className="col-span-1 flex flex-col items-center group overflow-hidden cursor-pointer transition duration-300 ease-in-out rounded-lg"
+              {...lazyItem(index * 0.06)}
+              className="flex flex-col items-center"
             >
-              {/* Image Container */}
-              <div className="w-full h-48 relative">
-                {link ? (
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                  </a>
-                ) : (
-                  <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                )}
+              <div className="w-full h-48">
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={imageLink}
+                    alt={name}
+                    className="w-full h-full object-contain"
+                  />
+                </a>
               </div>
-
-              {/* Always-visible name under image */}
-              <div className="mt-2 text-center text-black text-sm font-semibold">
-                {name}
-              </div>
-            </div>
+              <p className="mt-2 text-center text-sm font-semibold">{name}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <h3 className='text-2xl text-primary font-semibold text-left'><li>{t('Cities and Municipalities')}</li></h3>
-        <div className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
+        {/* Municipalities */}
+        <motion.h3
+          {...lazyReveal(0.4)}
+          className="text-xl font-semibold text-left"
+        >
+          {t('Cities and Municipalities')}
+        </motion.h3>
+
+        <motion.div
+          {...lazyReveal(0.45)}
+          className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5 mb-10"
+        >
           {SDIRefMun.map(({ imageLink, name, link }, index) => (
-            <div
+            <motion.div
               key={index}
-              className="col-span-1 flex flex-col items-center group overflow-hidden cursor-pointer transition duration-300 ease-in-out rounded-lg"
+              {...lazyItem(index * 0.06)}
+              className="flex flex-col items-center"
             >
-              {/* Image Container */}
-              <div className="w-full h-48 relative">
-                {link ? (
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                  </a>
-                ) : (
-                  <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                )}
+              <div className="w-full h-48">
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={imageLink}
+                    alt={name}
+                    className="w-full h-full object-contain"
+                  />
+                </a>
               </div>
-
-              {/* Always-visible name under image */}
-              <div className="mt-2 text-center text-black text-sm font-semibold">
-                {name}
-              </div>
-            </div>
+              <p className="mt-2 text-center text-sm font-semibold">{name}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <h3 className='text-2xl text-primary font-semibold text-left'>
-          <li>{t('Various and international projects')}</li>
-        </h3>
-        <div className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
+        {/* Projects */}
+        <motion.h3
+          {...lazyReveal(0.5)}
+          className="text-xl font-semibold text-left"
+        >
+          {t('Various and international projects')}
+        </motion.h3>
+
+        <motion.div
+          {...lazyReveal(0.55)}
+          className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5 mb-10"
+        >
           {SDIRefProjects.map(({ imageLink, name }, index) => (
-            <div
+            <motion.div
               key={index}
-              className="col-span-1 flex flex-col items-center group overflow-hidden transition duration-300 ease-in-out rounded-lg"
+              {...lazyItem(index * 0.06)}
+              className="flex flex-col items-center"
             >
-              {/* Image Container */}
-              <div className="w-full h-48 relative">
-                <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
+              <div className="w-full h-48">
+                <img
+                  src={imageLink}
+                  alt={name}
+                  className="w-full h-full object-contain"
+                />
               </div>
-
-              {/* Always-visible name under image */}
-              <div className="mt-2 text-center text-black text-sm font-semibold">
-                {name}
-              </div>
-            </div>
+              <p className="mt-2 text-center text-sm font-semibold">{name}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <h3 className='text-2xl text-primary font-semibold text-left'>
-          <li>{t('Infrastructure Management (Utilities, Public Transportation, ... )')}</li>
-        </h3>
-        <div className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 justify-center gap-5 mb-10">
+        {/* Infrastructure */}
+        <motion.h3
+          {...lazyReveal(0.6)}
+          className="text-xl font-semibold text-left"
+        >
+          {t('Infrastructure Management')}
+        </motion.h3>
+
+        <motion.div
+          {...lazyReveal(0.65)}
+          className="px-10 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-5 mb-10"
+        >
           {SDIRefInfra.map(({ imageLink, name, link }, index) => (
-            <div
+            <motion.div
               key={index}
-              className="col-span-1 flex flex-col items-center group overflow-hidden cursor-pointer transition duration-300 ease-in-out rounded-lg"
+              {...lazyItem(index * 0.06)}
+              className="flex flex-col items-center"
             >
-              {/* Image Container */}
-              <div className="w-full h-48 relative">
-                {link ? (
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                  </a>
-                ) : (
-                  <img loading="lazy" src={imageLink} alt={name} className="w-full h-full object-contain" />
-                )}
+              <div className="w-full h-48">
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={imageLink}
+                    alt={name}
+                    className="w-full h-full object-contain"
+                  />
+                </a>
               </div>
-
-              {/* Always-visible name under image */}
-              <div className="mt-2 text-center text-black text-sm font-semibold">
-                {name}
-              </div>
-            </div>
+              <p className="mt-2 text-center text-sm font-semibold">{name}</p>
+            </motion.div>
           ))}
-        </div>
-      </div>  
-    </div>
-  )
-}
-export default References
+        </motion.div>
+
+      </div>
+    </>
+  );
+};
+
+export default References;

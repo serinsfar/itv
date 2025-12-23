@@ -35,33 +35,45 @@ const VerticalCarousel = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        setLoading(true);
-        const language = i18n.language === 'DE' ? 'de' : 'en';
-        const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/news/public/list?language=${language}`;
+useEffect(() => {
+  const fetchNews = async () => {
+    try {
+      setLoading(true);
 
-        const response = await axios.get(apiUrl);
+      const language = i18n.language === 'DE' ? 'de' : 'en';
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/news/public/list?language=${language}`;
 
-        const transformedData = response.data.map(item => ({
-          id: item.id,
-          title: item.title,
-          content: item.body,
-          imageUrl: item.image_url,
-        }));
+      const startTime = Date.now();
 
-        setNewsData(transformedData);
-      } catch (error) {
-        console.error('Error fetching news:', error);
-        setNewsData([]);
-      } finally {
-        setLoading(false);
+      const response = await axios.get(apiUrl);
+
+      const transformedData = response.data.map(item => ({
+        id: item.id,
+        title: item.title,
+        content: item.body,
+        imageUrl: item.image_url,
+      }));
+
+      setNewsData(transformedData);
+      
+      const elapsed = Date.now() - startTime;
+      const MIN_LOADING_TIME = 1000;
+
+      if (elapsed < MIN_LOADING_TIME) {
+        await new Promise(resolve =>
+          setTimeout(resolve, MIN_LOADING_TIME - elapsed)
+        );
       }
-    };
+    } catch (error) {
+      console.error('Failed to fetch news', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchNews();
-  }, [i18n.language]);
+  fetchNews();
+}, [i18n.language]);
+
 
   if (loading) {
     return (
@@ -86,7 +98,7 @@ const VerticalCarousel = () => {
   }
 
   return (
-    <div className="bg-light pt-12 pb-3">
+    <div className="bg-light pt-12 pb-12">
       <h1 className="container text-3xl font-bold mb-16">News</h1>
 
       <div className="container lg:max-w-[1324px] md:max-w-[700px] mx-auto">
